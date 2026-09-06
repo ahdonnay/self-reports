@@ -156,8 +156,9 @@ function biomarkerRow(item) {
   const study = document.createElement('span');
   study.id = `study-${item.id}`;
   study.className = 'study-result';
-  study.textContent = item.expected || '—';
-  study.title = `Direction reported in MCS study: ${item.expected || 'not specified'}`;
+  const studyDirection = item.expected === 'P' ? 'H' : item.expected;
+  study.textContent = studyDirection ? `[${studyDirection}]` : '—';
+  study.title = `Abnormal direction reported in MCS study: ${studyDirection || 'not specified'}`;
   studyCell.appendChild(study);
   row.appendChild(studyCell);
 
@@ -300,8 +301,8 @@ function summaryRow(name, summary, total = false) {
   if (total) row.className = 'total-row';
   row.innerHTML = `<th scope="row">${escapeHtml(name)}</th>` +
     `<td>${summary.total}</td>` +
-    `<td>${summary.reported} (${summary.reportedPct}%)</td>` +
     `<td>${summary.notTested}</td>` +
+    `<td>${summary.reported}</td>` +
     `<td>${summary.controlPct}%</td>` +
     `<td>${summary.abnormalPct}%</td>` +
     `<td>${summary.matchingPct}%</td>`;
