@@ -1,0 +1,25 @@
+name: Apply BAACSS print layout
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - baacss-print-layout.tar.gz
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install BAACSS print layout
+        run: |
+          tar -xzf baacss-print-layout.tar.gz
+          git rm -f baacss-print-layout.tar.gz .github/workflows/apply-baacss-print-layout.yml
+          git add MCS/MCSbm/index.html MCS/MCSbm/css/styles.css
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Compact BAACSS printed checklist"
+          git push
