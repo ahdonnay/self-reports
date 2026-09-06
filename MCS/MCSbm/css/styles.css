@@ -213,16 +213,39 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .kpi-label, .dash-foot { color: #000; font-size: 6.8pt; }
   .dash-table { margin-top: 5px; font-size: 7.5pt; }
   .dash-table th, .dash-table td { padding: 3px 4px; border-color: #999; }
-  .cat { margin-bottom: 6px; border: 1px solid #888; overflow: visible; break-inside: auto; }
-  .cat > h3 { padding: 4px 7px; background: #eee !important; border-color: #888; break-after: avoid; }
-  .column-head, .biomarker { display: grid; grid-template-columns: 95px 58px minmax(220px, 1fr) 105px; gap: 5px; }
-  .column-head { padding: 3px 6px; }
-  .biomarker { min-height: 0; padding: 2px 6px; opacity: 1 !important; break-inside: avoid; }
-  .opts { gap: 2px; }
-  .opts .opt { min-width: 20px; min-height: 20px; padding: 0 2px; color: #000 !important; background: #fff !important; border: 1px solid #aaa; border-radius: 3px; font-size: 7.5pt; }
-  .opts input:checked + .opt { border: 2px solid #000; font-weight: 900; }
-  .study-result { color: #000 !important; font-size: 7.5pt; }
-  .result-date { min-height: 20px; padding: 1px 3px; color: #000; background: #fff !important; border: 1px solid #777 !important; font-size: 7.5pt; animation: none; }
+  .checklist { break-before: page; page-break-before: always; }
+  .wrap-h { margin: 0 0 3px; font-size: 11pt; }
+  .wrap-h::after {
+    content: "Selected result · MCS study direction · Biomarker; dates appear below reported results";
+    display: block; margin-top: 1px; font-size: 6pt; font-weight: 400;
+  }
+  #categories { column-count: 4; column-gap: .16in; column-rule: .5pt solid #aaa; }
+  .cat { margin: 0 0 5px; border: 0; overflow: visible; break-inside: auto; }
+  .cat > h3 {
+    display: block; margin: 0 0 1px; padding: 2px 3px; background: #eee !important;
+    border: 1px solid #888; font-size: 7pt; line-height: 1.1; break-after: avoid;
+  }
+  .cat-count, .column-head { display: none; }
+  .biomarker {
+    display: grid; grid-template-columns: 14px 20px minmax(0, 1fr); gap: 2px;
+    min-height: 0; padding: 1.2px 2px; opacity: 1 !important;
+    border-bottom: .4pt solid #bbb; font-size: 6.6pt; line-height: 1.08; break-inside: avoid;
+  }
+  .opts { display: block; }
+  .opts label { display: none; }
+  .opts label:has(input:checked) { display: block; }
+  .opts .opt {
+    min-width: 0; min-height: 0; padding: 0; color: #000 !important; background: none !important;
+    border: 0 !important; border-radius: 0; font-size: 6.6pt; line-height: 1.08; font-weight: 900;
+  }
+  .study-result { color: #000 !important; font-size: 6.6pt; line-height: 1.08; }
+  .biomarker-name { overflow-wrap: anywhere; }
+  .date-cell { display: none; grid-column: 3; }
+  .biomarker.is-reported .date-cell { display: block; }
+  .result-date {
+    width: auto; min-height: 0; padding: 0; color: #000; background: none !important;
+    border: 0 !important; font-size: 5.8pt; line-height: 1; animation: none;
+  }
   .date-help { display: none !important; }
   a { color: #000 !important; text-decoration: none; }
   body.print-color .site-header { background: linear-gradient(180deg, var(--header-top), var(--header-bottom)) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
