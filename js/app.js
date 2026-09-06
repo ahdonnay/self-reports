@@ -86,7 +86,12 @@ function disorderRow(it) {
   if (it.coPoisoning) markers.push('^ reported after CO poisoning');
 
   const name = document.createElement('div');
-  name.innerHTML = `<p class="name">${escapeHtml(it.name)}</p>` +
+  const nameHtml = it.url
+    ? `<a href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer" ` +
+      `style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px;">` +
+      `${escapeHtml(it.name)}</a>`
+    : escapeHtml(it.name);
+  name.innerHTML = `<p class="name">${nameHtml}</p>` +
     (markers.length ? `<p class="markers">${escapeHtml(markers.join('  ·  '))}</p>` : '');
   row.appendChild(name);
 

@@ -12,7 +12,8 @@
           "displayIndex": "1.1",
           "name": "Alcohol Abuse Disorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.webmd.com/mental-health/addiction/what-is-alcohol-abuse"
         },
         {
           "id": "dacss-affective-02",
@@ -20,7 +21,8 @@
           "displayIndex": "1.2",
           "name": "Anxiety",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/anxiety"
         },
         {
           "id": "dacss-affective-03",
@@ -28,7 +30,8 @@
           "displayIndex": "1.3",
           "name": "Attention Deficit Hyperactivity Disorder ADHD",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/attention+deficit+hyperactivity+disorder"
         },
         {
           "id": "dacss-affective-04",
@@ -36,7 +39,8 @@
           "displayIndex": "1.4",
           "name": "Bipolar Disorder aka Manic Depression",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/bipolar+disorder"
         },
         {
           "id": "dacss-affective-05",
@@ -44,7 +48,8 @@
           "displayIndex": "1.5",
           "name": "Major Depression or Depressive Disorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/major+depression"
         },
         {
           "id": "dacss-affective-06",
@@ -52,7 +57,8 @@
           "displayIndex": "1.6",
           "name": "Panic Attacks",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/panic+attacks"
         },
         {
           "id": "dacss-affective-07",
@@ -60,7 +66,8 @@
           "displayIndex": "1.7",
           "name": "Post Traumatic Stress DIsorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/ptsd"
         },
         {
           "id": "dacss-affective-08",
@@ -68,7 +75,8 @@
           "displayIndex": "1.8",
           "name": "Schizophrenia",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/schizophrenia"
         },
         {
           "id": "dacss-affective-09",
@@ -76,7 +84,8 @@
           "displayIndex": "1.9",
           "name": "Seasonal Affective DIsorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/seasonal+affective+disorder"
         },
         {
           "id": "dacss-affective-10",
@@ -84,7 +93,8 @@
           "displayIndex": "1.1",
           "name": "Somatization or Somatoform Disorder, aka Bodily Stress Disorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/somatization+disorder"
         },
         {
           "id": "dacss-affective-11",
@@ -92,7 +102,8 @@
           "displayIndex": "1.11",
           "name": "Survivor of physical, sexual, or emotional abuse before illness began (not just trauma but abuse)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.thefreedictionary.com/Abuse"
         }
       ]
     },
@@ -106,7 +117,8 @@
           "displayIndex": "2.1",
           "name": "Acute COVID, any variant",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.definition-of.com/COVID-19"
         },
         {
           "id": "dacss-autoimmune-02",
@@ -114,7 +126,8 @@
           "displayIndex": "2.2",
           "name": "Celiac Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/celiac"
         },
         {
           "id": "dacss-autoimmune-03",
@@ -122,7 +135,8 @@
           "displayIndex": "2.3",
           "name": "Chronic Fatigue Syndrome/ME",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/chronic+fatigue+syndrome"
         },
         {
           "id": "dacss-autoimmune-04",
@@ -130,7 +144,8 @@
           "displayIndex": "2.4",
           "name": "Eczema / Atopic Dermatitis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/eczema"
         },
         {
           "id": "dacss-autoimmune-05",
@@ -138,7 +153,8 @@
           "displayIndex": "2.5",
           "name": "Encephalitis, autoimmune or allergic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/encephalitis"
         },
         {
           "id": "dacss-autoimmune-06",
@@ -146,7 +162,8 @@
           "displayIndex": "2.6",
           "name": "Hashimoto’s Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Hashimoto+thyroiditis"
         },
         {
           "id": "dacss-autoimmune-07",
@@ -154,7 +171,8 @@
           "displayIndex": "2.7",
           "name": "Histamine Intolerance",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/histimane+intolerance"
         },
         {
           "id": "dacss-autoimmune-08",
@@ -162,7 +180,8 @@
           "displayIndex": "2.8",
           "name": "Long COVID Syndrome (and other post infection syndromes)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.nhsinform.scot/long-term-effects-of-covid-19-long-covid/about-long-covid/what-is-long-covid/"
         },
         {
           "id": "dacss-autoimmune-09",
@@ -170,7 +189,8 @@
           "displayIndex": "2.9",
           "name": "Lyme Disease, chronic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Lyme+Disease"
         },
         {
           "id": "dacss-autoimmune-10",
@@ -178,7 +198,8 @@
           "displayIndex": "2.1",
           "name": "Mast Cell Activation Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://pubmed.ncbi.nlm.nih.gov/23409940/"
         },
         {
           "id": "dacss-autoimmune-11",
@@ -186,7 +207,8 @@
           "displayIndex": "2.11",
           "name": "Mastocytosis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/mastocytosis"
         },
         {
           "id": "dacss-autoimmune-12",
@@ -194,7 +216,8 @@
           "displayIndex": "2.12",
           "name": "Raynaud’s Disease or Phenomenon",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Raynaud's"
         },
         {
           "id": "dacss-autoimmune-13",
@@ -202,7 +225,8 @@
           "displayIndex": "2.13",
           "name": "Sjögren’s Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Sjogren%27s"
         },
         {
           "id": "dacss-autoimmune-14",
@@ -210,7 +234,8 @@
           "displayIndex": "2.14",
           "name": "Systemic Lupus Erythematosus",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Systemic+lupus+erythematosis"
         },
         {
           "id": "dacss-autoimmune-15",
@@ -218,7 +243,8 @@
           "displayIndex": "2.15",
           "name": "Systemic Sclerosis/Scleroderma",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Systemic+sclerosis"
         },
         {
           "id": "dacss-autoimmune-16",
@@ -226,7 +252,8 @@
           "displayIndex": "2.16",
           "name": "Systemic Vasculitis aka Behçet Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Systemic+vasculitis"
         },
         {
           "id": "dacss-autoimmune-17",
@@ -234,7 +261,8 @@
           "displayIndex": "2.17",
           "name": "Thyroiditis, autoimmune",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/thyroiditis"
         },
         {
           "id": "dacss-autoimmune-18",
@@ -242,7 +270,8 @@
           "displayIndex": "2.18",
           "name": "Urticaria (rashes), chronic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/urticaria"
         },
         {
           "id": "dacss-autoimmune-19",
@@ -250,7 +279,8 @@
           "displayIndex": "2.19",
           "name": "Vasculitis of small vessels",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/vasculitis"
         }
       ]
     },
@@ -264,7 +294,8 @@
           "displayIndex": "3.1",
           "name": "Addison's Disease / Adrenal Insufficiency Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/addison%27s"
         },
         {
           "id": "dacss-endocrine-02",
@@ -272,7 +303,8 @@
           "displayIndex": "3.2",
           "name": "Anemia from Beta Thalessmia",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://my.clevelandclinic.org/health/diseases/23574-beta-thalassemia"
         },
         {
           "id": "dacss-endocrine-03",
@@ -280,7 +312,8 @@
           "displayIndex": "3.3",
           "name": "Anemia from Iron Deficiency",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/anemia"
         },
         {
           "id": "dacss-endocrine-04",
@@ -288,7 +321,8 @@
           "displayIndex": "3.4",
           "name": "Diabetes",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/diabetes"
         },
         {
           "id": "dacss-endocrine-05",
@@ -296,7 +330,8 @@
           "displayIndex": "3.5",
           "name": "Hyperthyroidism / Graves Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/hyperthyroidism"
         },
         {
           "id": "dacss-endocrine-06",
@@ -304,7 +339,8 @@
           "displayIndex": "3.6",
           "name": "Hypothyroidism",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/hypothyroidism"
         },
         {
           "id": "dacss-endocrine-07",
@@ -312,7 +348,8 @@
           "displayIndex": "3.7",
           "name": "Metabolic Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/metabolic+syndrome"
         },
         {
           "id": "dacss-endocrine-08",
@@ -320,7 +357,8 @@
           "displayIndex": "3.8",
           "name": "Perimenopause through Menopause Transition",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/perimenopause"
         },
         {
           "id": "dacss-endocrine-09",
@@ -328,7 +366,8 @@
           "displayIndex": "3.9",
           "name": "Premenstrual Dysphoric Disorder (PMDD, more severe than PMS)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/premenstrual+syndrome"
         },
         {
           "id": "dacss-endocrine-10",
@@ -336,7 +375,8 @@
           "displayIndex": "3.1",
           "name": "Porphyria, genetic (any type of inherited)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/porphyrinopathy"
         },
         {
           "id": "dacss-endocrine-11",
@@ -344,7 +384,8 @@
           "displayIndex": "3.11",
           "name": "Porphyrinopathies (acquired, not genetic)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/porphyrinopathy"
         }
       ]
     },
@@ -358,7 +399,8 @@
           "displayIndex": "4.1",
           "name": "Crohn's Disease (a type of inflammatory bowel disease)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/crohn%27s"
         },
         {
           "id": "dacss-gastrointestinal-02",
@@ -366,7 +408,8 @@
           "displayIndex": "4.2",
           "name": "Eosinophilic Esophagitis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/esophagitis"
         },
         {
           "id": "dacss-gastrointestinal-03",
@@ -374,7 +417,8 @@
           "displayIndex": "4.3",
           "name": "Food Intolerances or Sensitivities",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/food+sensitivity"
         },
         {
           "id": "dacss-gastrointestinal-04",
@@ -382,7 +426,8 @@
           "displayIndex": "4.4",
           "name": "Gastroesophageal Reflux Disease aka GERD",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/GERD"
         },
         {
           "id": "dacss-gastrointestinal-05",
@@ -390,7 +435,8 @@
           "displayIndex": "4.5",
           "name": "Irritable Bowel Syndrome (different from inflammatory bowel diseases)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/irritable+bowel+syndrome"
         },
         {
           "id": "dacss-gastrointestinal-06",
@@ -398,7 +444,8 @@
           "displayIndex": "4.6",
           "name": "Ulcerative Colitis (type of inflammatory bowel disease)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Ulcerative+colitis"
         }
       ]
     },
@@ -412,7 +459,8 @@
           "displayIndex": "5.1",
           "name": "Ehlers‑Danlos Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/ehlers-danlos"
         },
         {
           "id": "dacss-musculoskeletal-02",
@@ -420,7 +468,8 @@
           "displayIndex": "5.2",
           "name": "Endometriosis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/endometriosis"
         },
         {
           "id": "dacss-musculoskeletal-03",
@@ -428,7 +477,8 @@
           "displayIndex": "5.3",
           "name": "Interstitial Cystitis / Bladder Pain Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/interstitial+cystitis"
         },
         {
           "id": "dacss-musculoskeletal-04",
@@ -436,7 +486,8 @@
           "displayIndex": "5.4",
           "name": "Mitral Valve Prolapse",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/mitral+valve+prolapse"
         },
         {
           "id": "dacss-musculoskeletal-05",
@@ -444,7 +495,8 @@
           "displayIndex": "5.5",
           "name": "Myasthenia Gravis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/myasthenia+gravis"
         },
         {
           "id": "dacss-musculoskeletal-06",
@@ -452,7 +504,8 @@
           "displayIndex": "5.6",
           "name": "Rheumatoid Arthritis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/rheumatoid+arthritis"
         },
         {
           "id": "dacss-musculoskeletal-07",
@@ -460,7 +513,8 @@
           "displayIndex": "5.7",
           "name": "Temporomandibular (joint) Disorders",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/temporomandibular"
         },
         {
           "id": "dacss-musculoskeletal-08",
@@ -468,7 +522,8 @@
           "displayIndex": "5.8",
           "name": "Whiplash",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/whiplash"
         }
       ]
     },
@@ -482,7 +537,8 @@
           "displayIndex": "6.1",
           "name": "Alzheimer's Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/alzheimer%27s"
         },
         {
           "id": "dacss-neurological-02",
@@ -490,7 +546,8 @@
           "displayIndex": "6.2",
           "name": "Autism Spectrum DIsorder",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/autism"
         },
         {
           "id": "dacss-neurological-03",
@@ -498,7 +555,8 @@
           "displayIndex": "6.3",
           "name": "Brain Tumor",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/brain+tumor"
         },
         {
           "id": "dacss-neurological-04",
@@ -506,7 +564,8 @@
           "displayIndex": "6.4",
           "name": "Complex Regional Pain Syndrome and other chronic pain syndromes",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Complex+Regional+Pain+syndrome"
         },
         {
           "id": "dacss-neurological-05",
@@ -514,7 +573,8 @@
           "displayIndex": "6.5",
           "name": "Dysautonomia",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/dysautonomia"
         },
         {
           "id": "dacss-neurological-06",
@@ -522,7 +582,8 @@
           "displayIndex": "6.6",
           "name": "Fibromyalgia",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/fibromyalgia"
         },
         {
           "id": "dacss-neurological-07",
@@ -530,7 +591,8 @@
           "displayIndex": "6.7",
           "name": "Hyperacusis / Misophonia",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/hyperacusis"
         },
         {
           "id": "dacss-neurological-08",
@@ -538,7 +600,8 @@
           "displayIndex": "6.8",
           "name": "Migraine",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/migraine"
         },
         {
           "id": "dacss-neurological-09",
@@ -546,7 +609,8 @@
           "displayIndex": "6.9",
           "name": "Multiple Sclerosis",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/multiple+sclerosis"
         },
         {
           "id": "dacss-neurological-10",
@@ -554,7 +618,8 @@
           "displayIndex": "6.1",
           "name": "Parkinson's Disease",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Parkinson%27s"
         },
         {
           "id": "dacss-neurological-11",
@@ -562,7 +627,8 @@
           "displayIndex": "6.11",
           "name": "Peripheral Neuropathy of any kind, eg Small Fiber Neuropathy",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Peripheral+Neuropathy"
         },
         {
           "id": "dacss-neurological-12",
@@ -570,7 +636,8 @@
           "displayIndex": "6.12",
           "name": "Postural Orthostatic Tachycardia Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Postural+Orthostatic+tachycardia+syndrome"
         },
         {
           "id": "dacss-neurological-13",
@@ -578,7 +645,8 @@
           "displayIndex": "6.13",
           "name": "Restless Legs Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Restless+legs+syndrome"
         },
         {
           "id": "dacss-neurological-14",
@@ -586,7 +654,8 @@
           "displayIndex": "6.14",
           "name": "Sensory Processing Disorders that include odor sensitivity by any name (such as Multi-Sensory Sensitivity, aka MUSES Syndrome, the only known cause of which is hangover after CO poisoning)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/sensory+processing+disorder"
         },
         {
           "id": "dacss-neurological-15",
@@ -594,7 +663,8 @@
           "displayIndex": "6.15",
           "name": "Stroke",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Stroke"
         },
         {
           "id": "dacss-neurological-16",
@@ -602,7 +672,8 @@
           "displayIndex": "6.16",
           "name": "Temporal Lobe Epilepsy",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Temporal+Lobe+Epilepsy"
         },
         {
           "id": "dacss-neurological-17",
@@ -610,7 +681,8 @@
           "displayIndex": "6.17",
           "name": "Tourette's Syndrome (tic disorder)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Tourette%27s"
         },
         {
           "id": "dacss-neurological-18",
@@ -618,7 +690,8 @@
           "displayIndex": "6.18",
           "name": "Traumatic Brain Injury",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/traumatic+brain+injury"
         }
       ]
     },
@@ -632,7 +705,8 @@
           "displayIndex": "7.1",
           "name": "Rhinitis, Allergic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/allergic+rhinitis"
         },
         {
           "id": "dacss-respiratory-02",
@@ -640,7 +714,8 @@
           "displayIndex": "7.2",
           "name": "Asthma",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/asthma"
         },
         {
           "id": "dacss-respiratory-03",
@@ -648,7 +723,8 @@
           "displayIndex": "7.3",
           "name": "Chronic Obstructive Pulmonary Disease (COPD)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/chronic+obstructive+pulmonary+disease"
         },
         {
           "id": "dacss-respiratory-04",
@@ -656,7 +732,8 @@
           "displayIndex": "7.4",
           "name": "Reactive Airways Dysfunction Syndrome, aka RADS",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/RADS"
         },
         {
           "id": "dacss-respiratory-05",
@@ -664,7 +741,8 @@
           "displayIndex": "7.5",
           "name": "Rhinitis, Vasomotor, Chronic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/chronic+rhinitis"
         },
         {
           "id": "dacss-respiratory-06",
@@ -672,7 +750,8 @@
           "displayIndex": "7.6",
           "name": "Sinusitis, chronic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/chronic+sinusitis"
         },
         {
           "id": "dacss-respiratory-07",
@@ -680,7 +759,8 @@
           "displayIndex": "7.7",
           "name": "Tinnitus, chronic",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/tinnitus"
         }
       ]
     },
@@ -694,7 +774,8 @@
           "displayIndex": "8.1",
           "name": "Arsenic Poisoning",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/arsenic+poisoning"
         },
         {
           "id": "dacss-toxic-02",
@@ -702,7 +783,8 @@
           "displayIndex": "8.2",
           "name": "Carbon Monoxide Poisoning, Acute, when total CO in person is rising and senses are dulled to varying degrees up to senseless coma. The acute phase is not defined in medical dictionaries.",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.thefreedictionary.com/CO+poisoning"
         },
         {
           "id": "dacss-toxic-03",
@@ -710,7 +792,8 @@
           "displayIndex": "8.3",
           "name": "Carbon Monoxide Poisoning Chronic, aka Multisensory Sensitivity or MUSES Syndrome, when total CO in person is falling and senses are sharpened to varying degrees. The chronic phase is not defined in medical dictionaries.",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://emj.bmj.com/content/emermed/19/5/386.full.pdf"
         },
         {
           "id": "dacss-toxic-04",
@@ -718,7 +801,8 @@
           "displayIndex": "8.4",
           "name": "Electromagnetic Hypersensitivity Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/Electromagnetic+Hypersensitivity"
         },
         {
           "id": "dacss-toxic-05",
@@ -726,7 +810,8 @@
           "displayIndex": "8.5",
           "name": "Gulf War Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/Gulf+War+syndrome"
         },
         {
           "id": "dacss-toxic-06",
@@ -734,7 +819,8 @@
           "displayIndex": "8.6",
           "name": "Mercury Poisoning",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/mercury+poisoning"
         },
         {
           "id": "dacss-toxic-07",
@@ -742,7 +828,8 @@
           "displayIndex": "8.7",
           "name": "Mold Hypersensitivity Syndrome",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC5554125/"
         },
         {
           "id": "dacss-toxic-08",
@@ -750,7 +837,8 @@
           "displayIndex": "8.8",
           "name": "Multiple Chemical Sensitivity by any definition",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/multiple+chemical+sensitivity"
         },
         {
           "id": "dacss-toxic-09",
@@ -758,7 +846,8 @@
           "displayIndex": "8.9",
           "name": "Organophosphate Pesticide Poisoning",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://encyclopedia.thefreedictionary.com/organophosphate+poisoning"
         },
         {
           "id": "dacss-toxic-10",
@@ -766,7 +855,8 @@
           "displayIndex": "8.1",
           "name": "Solvent Exposure Syndrome, aka Solvent-Induced Encephalopathy",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://en.wikipedia.org/wiki/Chronic_solvent-induced_encephalopathy"
         },
         {
           "id": "dacss-toxic-11",
@@ -774,7 +864,8 @@
           "displayIndex": "8.11",
           "name": "Stevens‑Johnson Syndrome (drug reaction)",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://medical-dictionary.thefreedictionary.com/Stevens-Johnson+syndrome"
         },
         {
           "id": "dacss-toxic-12",
@@ -782,7 +873,8 @@
           "displayIndex": "8.12",
           "name": "Toxic Encephalopathy (from specified or unspecified exposures(s))",
           "centralSensitization": false,
-          "coPoisoning": false
+          "coPoisoning": false,
+          "url": "https://www.thefreedictionary.com/Toxic+Encephalopathy"
         }
       ]
     }
