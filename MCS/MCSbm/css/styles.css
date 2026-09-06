@@ -216,7 +216,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .checklist { break-before: page; page-break-before: always; }
   .wrap-h { margin: 0 0 3px; font-size: 11pt; }
   .wrap-h::after {
-    content: "Selected result · MCS study direction · Biomarker; dates appear below reported results";
+    content: "Biomarker; selected result · MCS study direction · date (when reported)";
     display: block; margin-top: 1px; font-size: 6pt; font-weight: 400;
   }
   #categories { column-count: 4; column-gap: .16in; column-rule: .5pt solid #aaa; }
@@ -227,11 +227,17 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   }
   .cat-count, .column-head { display: none; }
   .biomarker {
-    display: grid; grid-template-columns: 14px 20px minmax(0, 1fr); gap: 2px;
+    display: grid; grid-template-columns: 14px 20px minmax(0, 1fr); grid-template-areas: none; gap: 2px;
     min-height: 0; padding: 1.2px 2px; opacity: 1 !important;
     border-bottom: .4pt solid #bbb; font-size: 6.6pt; line-height: 1.08; break-inside: avoid;
   }
-  .opts { display: block; }
+  .opts, .study-cell, .biomarker-name, .date-cell { grid-area: auto; min-width: 0; }
+  .biomarker-name {
+    grid-column: 1 / -1; grid-row: 1; width: auto; max-width: none;
+    overflow-wrap: normal; word-break: normal;
+  }
+  .opts { display: block; grid-column: 1; grid-row: 2; }
+  .study-cell { grid-column: 2; grid-row: 2; }
   .opts label { display: none; }
   .opts label:has(input:checked) { display: block; }
   .opts .opt {
@@ -239,8 +245,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
     border: 0 !important; border-radius: 0; font-size: 6.6pt; line-height: 1.08; font-weight: 900;
   }
   .study-result { color: #000 !important; font-size: 6.6pt; line-height: 1.08; }
-  .biomarker-name { overflow-wrap: anywhere; }
-  .date-cell { display: none; grid-column: 3; }
+  .date-cell { display: none; grid-column: 3; grid-row: 2; }
   .biomarker.is-reported .date-cell { display: block; }
   .result-date {
     width: auto; min-height: 0; padding: 0; color: #000; background: none !important;
