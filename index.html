@@ -1,155 +1,66 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>DACSS — Disorders Associated with Chemical Sensitivity in Some</title>
-<link rel="stylesheet" href="css/styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Self-Reports</title>
+  <style>
+    :root {
+      color-scheme: light;
+      font-family: Arial, Helvetica, sans-serif;
+      color: #102a36;
+      background: #f4f7f9;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      min-height: 100vh;
+      margin: 0;
+      display: grid;
+      place-items: center;
+      padding: 24px;
+    }
+
+    main {
+      width: min(100%, 640px);
+      text-align: center;
+    }
+
+    h1 {
+      margin: 0 0 28px;
+      font-size: clamp(2rem, 6vw, 3rem);
+    }
+
+    .choice {
+      display: block;
+      padding: 28px 32px;
+      border: 2px solid #1f6f8b;
+      border-radius: 16px;
+      color: #fff;
+      background: #1f6f8b;
+      font-size: clamp(1.25rem, 4vw, 1.75rem);
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 6px 18px rgba(16, 42, 54, 0.14);
+    }
+
+    .choice:hover,
+    .choice:focus-visible {
+      background: #164f63;
+      border-color: #164f63;
+    }
+
+    .choice:focus-visible {
+      outline: 4px solid #9fd2e1;
+      outline-offset: 4px;
+    }
+  </style>
 </head>
 <body>
-
-<!-- ============ SCREEN HEADER ============ -->
-<header class="site-header" role="banner">
-  <div class="wrap">
-    <h1>DACSS</h1>
-    <p class="subtitle">Disorders Associated with Chemical Sensitivity in Some</p>
-    <p class="version" id="version">v26.08.23</p>
-  </div>
-</header>
-
-<main class="wrap" id="main">
-
-  <!-- ============ INSTRUCTIONS ============ -->
-  <section class="card instructions" aria-labelledby="instr-h">
-    <h2 id="instr-h">About this checklist</h2>
-    <p>The DACSS is a checklist of medical disorders associated with Chemical Sensitivity in some people. 
-      Not everyone with these disorders has MCS, but they are more likely to have MCS, 
-      and people with MCS are more likely to have these disorders. 
-      The DACSS is designed for people to record which of these disorders they have 
-      had in the past, always had, or have currently but not always, so they and their clinicians
-      can see where their illness is coming from in terms of what disorders are involved. 
-      (The list was compiled by an independent toxicologist, from whom the references are available:
-      <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.) </p>
-
-    <h3>How to complete the DACSS checklist</h3>
-    <p>For each disorder, choose one:</p>
-    <ul class="legend">
-      <li><span class="code code-N">N</span> <strong>Never</strong> = NEVER had disorder, or cannot recall</li>
-      <li><span class="code code-P">P</span> <strong>Past</strong> = had disorder in PAST, but not now</li>
-      <li><span class="code code-A">A</span> <strong>Always</strong> = ALWAYS has disorder, since childhood</li>
-      <li><span class="code code-C">C</span> <strong>Current</strong> — CURRENTLY have disorder, but not always</li>
-    </ul>
-    <p>Every disorder starts at <strong>Never</strong>. Change only the ones you have experienced.
-      The dashboard updates as you go. You can stop and come back to finish anytime; your answers are
-      saved in this browser on your device. The checklist takes about 20 minutes to complete.</p>
-
-    <p class="note"><strong>Bottom Line</strong> Although all of these disorders are correlated with MCS, 
-      the correlation is not always causal. The disorder may be co-factor that contributes to the risk of getting MCS, 
-      or it may be a consequence of getting MCS, a co-morbidity, or just a coincidence. The DACSS you had in the past 
-      and recovered from are as important for clinicians to consider as those you still have. </p>
-    <details class="privacy">
-      <summary>Privacy &amp; your data</summary>
-      <p>Your answers are stored only in this web browser, on this device. Nothing is sent to any
-        server. Anyone who uses this browser profile will be able to see your answers, so on a shared or public
-        computer, use <strong>Clear answers</strong> when you finish. To move your report to another
-        device, use your browser's Print &rarr; Save as PDF.</p>
-    </details>
-  </section>
-
-  <!-- ============ PATIENT INFO ============ -->
-  <section class="card" aria-labelledby="who-h">
-    <h2 id="who-h">Your information</h2>
-    <div class="fields">
-      <div class="field field-wide">
-        <label for="patient-id">Name or codename</label>
-        <input type="text" id="patient-id" maxlength="60" autocomplete="off"
-               placeholder="e.g. Jane Smith — or a 3-word codename like redbikedog">
-        <p class="hint">Enter your name so your clinician knows whose report this is — or, if you
-          prefer to stay anonymous, a private 3-word codename up to 12 letters (e.g.&nbsp;redbikedog).
-          Your choice.</p>
-      </div>
-      <div class="field">
-        <label for="sex">Sex at birth</label>
-        <select id="sex">
-          <option value="">—</option>
-          <option>Female</option>
-          <option>Male</option>
-          <option>Intersex</option>
-          <option>Prefer not to say</option>
-        </select>
-      </div>
-      <div class="field field-narrow">
-        <label for="age-years">Age — years</label>
-        <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Years">
-      </div>
-      <div class="field field-narrow">
-        <label for="age-months">Age — months</label>
-        <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Months">
-      </div>
-      <div class="field">
-        <label for="date-completed">Date completed</label>
-        <input type="date" id="date-completed">
-        <p class="hint">Fills in automatically when the checklist is complete; you can change it.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ============ DASHBOARD ============ -->
-  <section class="card dashboard" aria-labelledby="dash-h">
-    <h2 id="dash-h">Dashboard</h2>
-    <p class="dash-progress" id="progress" aria-live="polite"></p>
-
-    <div class="kpis" role="group" aria-label="Overall summary">
-      <div class="kpi"><span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">Ever experienced</span></div>
-      <div class="kpi"><span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">Never</span></div>
-      <div class="kpi"><span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">Past</span></div>
-      <div class="kpi"><span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">Always</span></div>
-      <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">Current</span></div>
-      <div class="kpi kpi-trend"><span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">Load with age</span></div>
-    </div>
-    <p class="dash-foot">All percentages are of the total <span id="total-count">92</span> disorders.
-      <span class="trend-note">“Load with age” = Current − Past (positive suggests load rising with age,
-      negative suggests falling). It does not include “Always.”</span></p>
-
-    <table class="dash-table" aria-live="polite">
-      <caption class="sr-only">Percentages by category</caption>
-      <thead>
-        <tr><th scope="col">Category</th><th scope="col">Never</th><th scope="col">Past</th>
-            <th scope="col">Always</th><th scope="col">Current</th><th scope="col">Any (P/A/C)</th></tr>
-      </thead>
-      <tbody id="dash-rows"></tbody>
-    </table>
-  </section>
-
-  <!-- ============ CHECKLIST ============ -->
-  <section class="checklist" aria-labelledby="check-h">
-    <h2 id="check-h" class="wrap-h">Checklist</h2>
-    <div id="categories"></div>
-  </section>
-
-  <!-- ============ ACTIONS ============ -->
-  <section class="card actions no-print" aria-labelledby="act-h">
-    <h2 id="act-h">Finish</h2>
-    <p class="share-tip">To share your report: save it as a PDF first (buttons below), then attach the
-      PDF to an email to your clinician.</p>
-    <div class="buttons">
-      <button type="button" id="btn-print-bw" class="btn btn-primary">Print report (black &amp; white, dashboard on top)</button>
-      <button type="button" id="btn-print-color" class="btn">Save report as color PDF</button>
-      <button type="button" id="btn-clear" class="btn btn-danger">Clear answers</button>
-    </div>
-    <p class="hint">“Save as PDF” appears as a destination in your browser’s print window. Clearing answers
-      removes all data from this device.</p>
-  </section>
-
-</main>
-
-<footer class="site-footer no-print">
-  <div class="wrap">
-    <p>© 2026 Albert Donnay. Part of ACCEPTT — Advance Communication of Chemosensory Experiences,
-      Phenotypes, Tests, and Treatments. Questions: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
-  </div>
-</footer>
-
-<script src="js/app.js"></script>
+  <main>
+    <h1>Self-Reports</h1>
+    <a class="choice" href="MCS/">MCS SELF-REPORTS</a>
+  </main>
 </body>
 </html>

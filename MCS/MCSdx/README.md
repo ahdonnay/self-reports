@@ -13,14 +13,17 @@ Because the app fetches `data/list.json`, open it through a local web server rat
 double-clicking `index.html` (browsers block `fetch` from `file://`):
 
 ```bash
-cd dacss-website
+cd self-reports
 python3 -m http.server 8000
-# then open http://localhost:8000
+# then open http://localhost:8000/MCS/MCSdx/
 ```
 
 ## Deploy
 
-Copy the folder to any static host (e.g. GitHub Pages). No build step.
+The app is deployed with the rest of the repository through GitHub Pages. No build
+step is required. Its public address is:
+
+`https://ahdonnay.github.io/self-reports/MCS/MCSdx/`
 
 ## Update the disorder list
 

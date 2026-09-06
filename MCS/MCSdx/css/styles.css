@@ -44,6 +44,13 @@ a { color: var(--accent-d); }
   color: #fff;
   padding: 22px 0 20px;
 }
+.site-header .suite-link {
+  display: inline-block;
+  margin-bottom: 8px;
+  color: #fff;
+  font-size: .9rem;
+  font-weight: 600;
+}
 .site-header h1 { margin: 0; font-size: 2rem; letter-spacing: .04em; }
 .site-header .subtitle { margin: 2px 0 0; font-size: 1.05rem; opacity: .95; }
 .site-header .version { margin: 6px 0 0; font-size: .8rem; opacity: .8; }
