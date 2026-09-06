@@ -1,0 +1,811 @@
+{
+  "version": "v26.09.06",
+  "report": "BAACSS",
+  "title": "Biomarker Abnormalities Associated with Chemical Sensitivity in Some",
+  "categories": [
+    {
+      "id": "blood",
+      "name": "A. Blood Tests",
+      "items": [
+        {
+          "id": "bm-25",
+          "expected": "H",
+          "name": "Chemiluminescence Assay for Free Radicals (in blood, plasma or serum)",
+          "url": "https://en.wikipedia.org/wiki/Chemiluminescence"
+        },
+        {
+          "id": "bm-26",
+          "expected": "H",
+          "name": "Fasting Plasma Glucose",
+          "url": "https://www.webmd.com/diabetes/fasting-bloodwork"
+        },
+        {
+          "id": "bm-27",
+          "expected": "H",
+          "name": "Fasting Plasma Insulin",
+          "url": "https://en.wikipedia.org/wiki/Insulin"
+        },
+        {
+          "id": "bm-28",
+          "expected": "H",
+          "name": "Fasting Plasma Insulin Resistance = HOMA-IR score = (0.144 * (fasting plasma insulin [in pmol/L]) * (fasting plasma glucose [in pmol/L]/22.5)",
+          "url": "https://en.wikipedia.org/wiki/Homeostatic_model_assessment"
+        },
+        {
+          "id": "bm-29",
+          "expected": "L",
+          "name": "Plasma Acetylcarnitine (from metabolomic study)",
+          "url": "https://en.wikipedia.org/wiki/Acetylcarnitine"
+        },
+        {
+          "id": "bm-30",
+          "expected": "L",
+          "name": "Plasma ATP (lower than RBC ATP)",
+          "url": "https://en.wikipedia.org/wiki/Adenosine_triphosphate"
+        },
+        {
+          "id": "bm-31",
+          "expected": "L",
+          "name": "Plasma GABA",
+          "url": "https://en.wikipedia.org/wiki/Gamma-Aminobutyric_acid"
+        },
+        {
+          "id": "bm-32",
+          "expected": "H",
+          "name": "Plasma Glutamate",
+          "url": "https://en.wikipedia.org/wiki/Glutamic_acid"
+        },
+        {
+          "id": "bm-33",
+          "expected": "H",
+          "name": "Plasma Hexanoic Acid (from metabolomic study)",
+          "url": "https://en.wikipedia.org/wiki/Hexanoic_acid"
+        },
+        {
+          "id": "bm-34",
+          "expected": "H",
+          "name": "Plasma Histamine",
+          "url": "https://en.wikipedia.org/wiki/Histamine"
+        },
+        {
+          "id": "bm-35",
+          "expected": "L",
+          "name": "Plasma Homocysteine",
+          "url": "https://en.wikipedia.org/wiki/Homocysteine"
+        },
+        {
+          "id": "bm-36",
+          "expected": "H",
+          "name": "Plasma IL-1 beta",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_1_beta"
+        },
+        {
+          "id": "bm-37",
+          "expected": "H",
+          "name": "Plasma IL-10",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_10"
+        },
+        {
+          "id": "bm-38",
+          "expected": "L",
+          "name": "Plasma IL-13",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_13"
+        },
+        {
+          "id": "bm-39",
+          "expected": "H",
+          "name": "Plasma IL-2",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_2"
+        },
+        {
+          "id": "bm-40",
+          "expected": "H",
+          "name": "Plasma IL-4",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_4"
+        },
+        {
+          "id": "bm-41",
+          "expected": "H",
+          "name": "Plasma IL-6",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_6"
+        },
+        {
+          "id": "bm-42",
+          "expected": "H",
+          "name": "Plasma IL-8",
+          "url": "https://en.wikipedia.org/wiki/Interleukin_8"
+        },
+        {
+          "id": "bm-43",
+          "expected": "H",
+          "name": "Plasma Interferon-Gamma (IFN-γ)",
+          "url": "https://en.wikipedia.org/wiki/Interferon_gamma"
+        },
+        {
+          "id": "bm-44",
+          "expected": "H",
+          "name": "Plasma Malondialdehyde (MDA)",
+          "url": "https://en.wikipedia.org/wiki/Malondialdehyde"
+        },
+        {
+          "id": "bm-45",
+          "expected": "H",
+          "name": "Plasma Monocyte Chemoattractant Protein-1 (MCP-1)",
+          "url": "https://en.wikipedia.org/wiki/CCL2"
+        },
+        {
+          "id": "bm-46",
+          "expected": "H",
+          "name": "Plasma Nerve Growth Factor (NGF)",
+          "url": "https://en.wikipedia.org/wiki/Nerve_growth_factor"
+        },
+        {
+          "id": "bm-47",
+          "expected": "H",
+          "name": "Plasma Nitrite and Nitrate (total NOx, aka Plasma Nitrite/Nitrate, NO2−/NO3−)",
+          "url": "https://en.wikipedia.org/wiki/Nitric_oxide"
+        },
+        {
+          "id": "bm-48",
+          "expected": "H",
+          "name": "Plasma or Serum Heat Shock Protein 27 (HSP27)",
+          "url": "https://en.wikipedia.org/wiki/HSPB1"
+        },
+        {
+          "id": "bm-49",
+          "expected": "H",
+          "name": "Plasma or Serum Heat Shock Protein 70 (HSP70)",
+          "url": "https://en.wikipedia.org/wiki/HSPA1A"
+        },
+        {
+          "id": "bm-50",
+          "expected": "H",
+          "name": "Plasma or Serum High-Sensitivity C Reactive Protein (hs-CRP)",
+          "url": "https://www.webmd.com/a-to-z-guides/c-reactive-protein-test"
+        },
+        {
+          "id": "bm-51",
+          "expected": "H",
+          "name": "Plasma or Serum Immunoglobulin E (IgE)",
+          "url": "https://www.webmd.com/a-to-z-guides/immunoglobulin-test"
+        },
+        {
+          "id": "bm-52",
+          "expected": "H",
+          "name": "Plasma Pelargonic Acid (from metabolomic study)",
+          "url": "https://en.wikipedia.org/wiki/Pelargonic_acid"
+        },
+        {
+          "id": "bm-53",
+          "expected": "H",
+          "name": "Plasma Platelet Derived Growth Factor (PDGF)",
+          "url": "https://en.wikipedia.org/wiki/Platelet-derived_growth_factor"
+        },
+        {
+          "id": "bm-54",
+          "expected": "H",
+          "name": "Plasma Substance P (SP)",
+          "url": "https://en.wikipedia.org/wiki/Substance_P"
+        },
+        {
+          "id": "bm-55",
+          "expected": "H",
+          "name": "Plasma Tumor Necrosis Factor-alpha (TNF-α)",
+          "url": "https://en.wikipedia.org/wiki/Tumor_necrosis_factor"
+        },
+        {
+          "id": "bm-56",
+          "expected": "L",
+          "name": "Plasma Ubiquinol (reduced form of coenzyme Q10, CoQ10, aka CoQ10H2)",
+          "url": "https://en.wikipedia.org/wiki/Coenzyme_Q10"
+        },
+        {
+          "id": "bm-57",
+          "expected": "L",
+          "name": "Plasma Ubiquinone (oxidized form of CoQ10)",
+          "url": "https://en.wikipedia.org/wiki/Coenzyme_Q10"
+        },
+        {
+          "id": "bm-58",
+          "expected": "H",
+          "name": "Plasma Vascular Endothelial Growth Factor (VEGF)",
+          "url": "https://en.wikipedia.org/wiki/Vascular_endothelial_growth_factor"
+        },
+        {
+          "id": "bm-59",
+          "expected": "H",
+          "name": "Plasma Vasoactive Intestinal Peptide (VIP)",
+          "url": "https://en.wikipedia.org/wiki/Vasoactive_intestinal_peptide"
+        },
+        {
+          "id": "bm-60",
+          "expected": "L",
+          "name": "RBC lysate (intracellular) Catalase (CAT)",
+          "url": "https://en.wikipedia.org/wiki/Catalase"
+        },
+        {
+          "id": "bm-61",
+          "expected": "L",
+          "name": "RBC lysate (intracellular) Glutathione (GSH)",
+          "url": "https://en.wikipedia.org/wiki/Glutathione"
+        },
+        {
+          "id": "bm-62",
+          "expected": "H",
+          "name": "RBC lysate (intracellular) Glutathione Disulfide to Glutathione Ratio (GSSG / GSH)",
+          "url": "https://en.wikipedia.org/wiki/Glutathione_disulfide"
+        },
+        {
+          "id": "bm-63",
+          "expected": "L",
+          "name": "RBC lysate (intracellular) Glutathione S-Transferase (GST)",
+          "url": "https://en.wikipedia.org/wiki/Glutathione_S-transferase"
+        },
+        {
+          "id": "bm-64",
+          "expected": "H",
+          "name": "RBC membrane 4-Hydroxynonenal (4-HNE) adducts",
+          "url": "https://en.wikipedia.org/wiki/4-Hydroxynonenal"
+        },
+        {
+          "id": "bm-65",
+          "expected": "H",
+          "name": "RBC membrane Fatty Acid Profile, saturated component",
+          "url": "https://en.wikipedia.org/wiki/Fatty_acid"
+        },
+        {
+          "id": "bm-66",
+          "expected": "H",
+          "name": "RBC membrane Glutathione Peroxidase (Gpx)",
+          "url": "https://en.wikipedia.org/wiki/Glutathione_peroxidase"
+        },
+        {
+          "id": "bm-67",
+          "expected": "L",
+          "name": "RBC membrane Polyunsaturated Fatty Acids (PUFAs), including omega-6 PUFA, linoleic acid (C18:2 ω6), arachidonic acid (C20:4 ω6) and dihomo-γ-linolenic acid (C20:3 ω6), as well as the omega-3 FA, eicosapentaenoic acid (C20:5 ω3), docosatetraenoic acid (DTA C22:4 ω3), docosapentaenoic acid (C22:5 ω3) and docosahexaenoic acid (C22:6 ω3)",
+          "url": "https://en.wikipedia.org/wiki/Polyunsaturated_fatty_acid"
+        },
+        {
+          "id": "bm-68",
+          "expected": "H",
+          "name": "RBC membrane Polyunsaturated Fatty Acids, ω6/ω3 ratio",
+          "url": "https://en.wikipedia.org/wiki/Omega-6_fatty_acid"
+        },
+        {
+          "id": "bm-69",
+          "expected": "H",
+          "name": "RBC membrane Saturated Fatty Acids (SFAs), primarily represented by palmitic acid (C16:0) and stearic acid (C18:0)",
+          "url": "https://en.wikipedia.org/wiki/Saturated_fat"
+        },
+        {
+          "id": "bm-70",
+          "expected": "H",
+          "name": "Serum Alanine Aminotransferase (ALT)",
+          "url": "https://en.wikipedia.org/wiki/Alanine_transaminase"
+        },
+        {
+          "id": "bm-71",
+          "expected": "H",
+          "name": "Serum Auto-Antibodies against Myelin P0 Protein",
+          "url": "https://en.wikipedia.org/wiki/Myelin_protein_zero"
+        },
+        {
+          "id": "bm-72",
+          "expected": "P",
+          "name": "Serum Chloroform",
+          "url": "https://en.wikipedia.org/wiki/Chloroform"
+        },
+        {
+          "id": "bm-73",
+          "expected": "L",
+          "name": "Serum HDL Cholesterol",
+          "url": "https://www.webmd.com/cholesterol-management/hdl-cholesterol-the-good-cholesterol"
+        },
+        {
+          "id": "bm-74",
+          "expected": "L",
+          "name": "Serum levels of 1,2,3-trimethylbenzene",
+          "url": "https://en.wikipedia.org/wiki/1,2,3-Trimethylbenzene"
+        },
+        {
+          "id": "bm-75",
+          "expected": "L",
+          "name": "Serum levels of 1,3,5-trimethylbenzene",
+          "url": "https://en.wikipedia.org/wiki/Mesitylene"
+        },
+        {
+          "id": "bm-76",
+          "expected": "L",
+          "name": "Serum levels of 2-methylpentane",
+          "url": "https://en.wikipedia.org/wiki/2-Methylpentane"
+        },
+        {
+          "id": "bm-77",
+          "expected": "L",
+          "name": "Serum levels of 3-methylpentane",
+          "url": "https://en.wikipedia.org/wiki/3-Methylpentane"
+        },
+        {
+          "id": "bm-78",
+          "expected": "L",
+          "name": "Serum levels of ethylbenzene",
+          "url": "https://en.wikipedia.org/wiki/Ethylbenzene"
+        },
+        {
+          "id": "bm-79",
+          "expected": "L",
+          "name": "Serum levels of hexane",
+          "url": "https://en.wikipedia.org/wiki/Hexane"
+        },
+        {
+          "id": "bm-80",
+          "expected": "L",
+          "name": "Serum levels of m&p-xylene",
+          "url": "https://en.wikipedia.org/wiki/Xylene"
+        },
+        {
+          "id": "bm-81",
+          "expected": "H",
+          "name": "Serum Nitrotyrosine (NTT)",
+          "url": "https://en.wikipedia.org/wiki/Nitrotyrosine"
+        },
+        {
+          "id": "bm-82",
+          "expected": "H",
+          "name": "Serum Prolactin",
+          "url": "https://en.wikipedia.org/wiki/Prolactin"
+        },
+        {
+          "id": "bm-83",
+          "expected": "H",
+          "name": "Serum S100B Protein (S100B)",
+          "url": "https://en.wikipedia.org/wiki/S100B"
+        },
+        {
+          "id": "bm-84",
+          "expected": "L",
+          "name": "Serum Triglycerides",
+          "url": "https://www.webmd.com/cholesterol-management/high-triglycerides-what-you-need-to-know"
+        },
+        {
+          "id": "bm-85",
+          "expected": "L",
+          "name": "Serum Vitamin B12",
+          "url": "https://en.wikipedia.org/wiki/Vitamin_B12"
+        },
+        {
+          "id": "bm-86",
+          "expected": "H",
+          "name": "Serum Vitamin B6",
+          "url": "https://en.wikipedia.org/wiki/Vitamin_B6"
+        },
+        {
+          "id": "bm-87",
+          "expected": "L",
+          "name": "Whole Blood Lymphocyte Count",
+          "url": "https://en.wikipedia.org/wiki/Lymphocyte"
+        },
+        {
+          "id": "bm-88",
+          "expected": "H",
+          "name": "Whole Blood Mean Cell Hemoglobin Concentration (MCHC)",
+          "url": "https://en.wikipedia.org/wiki/Mean_corpuscular_hemoglobin_concentration"
+        },
+        {
+          "id": "bm-89",
+          "expected": "H",
+          "name": "Whole Blood Mercury (Hg)",
+          "url": "https://en.wikipedia.org/wiki/Mercury_(element)"
+        },
+        {
+          "id": "bm-90",
+          "expected": "L",
+          "name": "Whole Blood Superoxide Dismutase (SOD) see notes below table on SOD1, 2, and 3",
+          "url": "https://en.wikipedia.org/wiki/Superoxide_dismutase"
+        }
+      ]
+    },
+    {
+      "id": "functional",
+      "name": "B. Functional Tests",
+      "items": [
+        {
+          "id": "bm-93",
+          "expected": "H",
+          "name": "Breath test, Olfactory Real-Time Volatile Organic Compounds (ORT-VOC) test of exhaled breath",
+          "url": "https://en.wikipedia.org/wiki/Volatile_organic_compound"
+        },
+        {
+          "id": "bm-94",
+          "expected": "L",
+          "name": "Cerebral Blood Flow measured by Transcranial Doppler Ultrasonography (TDU) is Low and shows defect in the middle cerebral artery hemodynamics",
+          "url": "https://en.wikipedia.org/wiki/Transcranial_Doppler"
+        },
+        {
+          "id": "bm-95",
+          "expected": "L",
+          "name": "Cerebral Blood Flow specifically mean pulsometric index measurement from temporal lobes using Ultrasonic Cerebral Tomosphygmography (UCT)",
+          "url": ""
+        },
+        {
+          "id": "bm-96",
+          "expected": "L",
+          "name": "Forced Expiratory Volume in one minute (FEV1)",
+          "url": "https://www.webmd.com/lung/copd/gold-criteria-for-copd"
+        },
+        {
+          "id": "bm-97",
+          "expected": "L",
+          "name": "Forced Vital Capacity (FVC)",
+          "url": "https://www.webmd.com/lung/copd/gold-criteria-for-copd"
+        },
+        {
+          "id": "bm-98",
+          "expected": "L",
+          "name": "Muscle Function Hand Grip Strength",
+          "url": "https://en.wikipedia.org/wiki/Grip_strength"
+        },
+        {
+          "id": "bm-99",
+          "expected": "L",
+          "name": "Muscle Function Step Test (METS count)",
+          "url": "https://en.wikipedia.org/wiki/Metabolic_equivalent_of_task"
+        },
+        {
+          "id": "bm-100",
+          "expected": "H",
+          "name": "Nasal Airway Resistance (Rna) assessed by anterior rhinomanometry",
+          "url": "https://en.wikipedia.org/wiki/Rhinomanometry"
+        },
+        {
+          "id": "bm-101",
+          "expected": "H",
+          "name": "Rod and Disc Test (visual-dependency error) — high (P < 0.01)",
+          "url": "https://en.wikipedia.org/wiki/Rod_and_frame_test"
+        },
+        {
+          "id": "bm-102",
+          "expected": "H",
+          "name": "Static posturography (Romberg Index, sway area/length/speed)",
+          "url": "https://en.wikipedia.org/wiki/Posturography"
+        },
+        {
+          "id": "bm-103",
+          "expected": "H",
+          "name": "Stool test of Gut Microbiome using shotgun metagenomics",
+          "url": "https://en.wikipedia.org/wiki/Metagenomics"
+        },
+        {
+          "id": "bm-104",
+          "expected": "L",
+          "name": "Urine test (24-hours) for 6-Hydroxymelatonin Sulfate (6-OHMS) / Creatinine ratio",
+          "url": "https://en.wikipedia.org/wiki/Melatonin"
+        },
+        {
+          "id": "bm-105",
+          "expected": "L",
+          "name": "Urine test (24-hours) for 6‐Hydroxymelatonin Sulfate (6‐OHMS, a metabolite of melatonin)",
+          "url": "https://en.wikipedia.org/wiki/Melatonin"
+        },
+        {
+          "id": "bm-106",
+          "expected": "L",
+          "name": "Video Head Impulse Test (vHIT) gain — low (P < 0.01) (both L and R)",
+          "url": "https://en.wikipedia.org/wiki/Vestibulo-ocular_reflex"
+        }
+      ]
+    },
+    {
+      "id": "genetic",
+      "name": "C. Genetic Tests",
+      "items": [
+        {
+          "id": "bm-109",
+          "expected": "L",
+          "name": "ADORA2A rs2298383 CT genotype",
+          "url": "https://en.wikipedia.org/wiki/Adenosine_A2A_receptor"
+        },
+        {
+          "id": "bm-110",
+          "expected": "H",
+          "name": "ADORA2A rs2298383 TT genotype",
+          "url": "https://en.wikipedia.org/wiki/Adenosine_A2A_receptor"
+        },
+        {
+          "id": "bm-111",
+          "expected": "H",
+          "name": "CCK-B receptor allele 7 (abn in 40.9% of IEI alleles versus 9.1% of control alleles)",
+          "url": "https://en.wikipedia.org/wiki/Cholecystokinin_B_receptor"
+        },
+        {
+          "id": "bm-112",
+          "expected": "H",
+          "name": "DNA Fragmentation by Comet Assay",
+          "url": "https://en.wikipedia.org/wiki/Comet_assay"
+        },
+        {
+          "id": "bm-113",
+          "expected": "H",
+          "name": "heterozygous for PON1-192 (OR vs control = 1.57, P = 0.04)",
+          "url": "https://en.wikipedia.org/wiki/PON1"
+        },
+        {
+          "id": "bm-114",
+          "expected": "H",
+          "name": "heterozygous for PON1-55 (OR vs control = 2.05, P = 0.04)",
+          "url": "https://en.wikipedia.org/wiki/PON1"
+        },
+        {
+          "id": "bm-115",
+          "expected": "P",
+          "name": "homozygous for 13 Solute Carrier (SLC) genes from SLC Superfamily: any one or more homozygous SLC4A2, SLC6A1, SLC6A14, SLC9A7, SLC13A3, SLC13A4, SLC35D2, SLCO1A2, SLC39A10, SLC9B1, SLC22A25, SLC38A6, and SPNS2, none of which are seen in controls",
+          "url": "https://en.wikipedia.org/wiki/Solute_carrier_family"
+        },
+        {
+          "id": "bm-116",
+          "expected": "H",
+          "name": "homozygous active CYP2D6 (OR vs control = 3.36, P = 0.01, specifically CYP2D6*4); note this is also risk factor for Post Operative Nausea and Vomiting in people with adverse reaction to anesthesia",
+          "url": "https://en.wikipedia.org/wiki/CYP2D6"
+        },
+        {
+          "id": "bm-117",
+          "expected": "H",
+          "name": "homozygously deleted GSTM1 (OR vs control = 2.08, 95% CI = 1.46-2.96, P = 0.0001)",
+          "url": "https://en.wikipedia.org/wiki/Glutathione_S-transferase_Mu_1"
+        },
+        {
+          "id": "bm-118",
+          "expected": "H",
+          "name": "homozygously deleted GSTT1 (OR vs control = 2.80, 95% CI = 1.65-4.75, P = 0.0001)",
+          "url": "https://en.wikipedia.org/wiki/GSTT1"
+        },
+        {
+          "id": "bm-119",
+          "expected": "H",
+          "name": "polymorphisms in CYP2C9∗2, CYP2C9∗3, CYP2C19∗2, CYP2D6∗4 and/or CYP2D6∗41 . compound heterozygosity for CYP2C9∗2 and ∗3 variants was useful to discriminate between either MCS or FM/CFS versus SMCS, while the PM ∗41/∗41 genotype discriminated between MCS and either SMCS or FM/CFS. The compound heterozygosity for CYP2C9 ∗1/∗3 and CYP2D6 ∗1/∗4 differentiated MCS and SMCS cases from FM/CFS ones. Interestingly, despite the distribution of the AHR Arg554Lys variant did not result significantly different between SRI cases and controls, it resulted useful for the discrimination between MCS and SMCS cases when considered within haplotypes in combination with CYP2C19 ∗1/∗2 and CYP2D6 ∗1/∗4. Results allowed us to propose the genotyping for these specific CYP variants, together with the AHR Arg554Lys variant, as reliable, cost-effective genetic parameters to be included in the still undefined biomarkers' panel for laboratory diagnosis of the main types of environmental-borne SRI",
+          "url": "https://en.wikipedia.org/wiki/Cytochrome_P450"
+        },
+        {
+          "id": "bm-120",
+          "expected": "H",
+          "name": "rapid NAT2 (OR vs controls = 4.14, P = 0.01)",
+          "url": "https://en.wikipedia.org/wiki/N-acetyltransferase_2"
+        },
+        {
+          "id": "bm-121",
+          "expected": "P",
+          "name": "Superoxide Dismutase 2 abnormalities (including Gulf War vets study reporting: SOD2 Ala16 compared to Val16) significantly predicted self-rated chemical sensitivity; and Japanese study reporting: significant adjusted OR of 4.30 (95% CI, 1.23–15.03) and 4.53 (95% CI, 1.52-13.51) were observed in SOD2 Ala/Ala and Val/Ala compared to Val/Val and in SOD2 Ala/Ala compared to Val/Ala genetic analysis in the high chemical sensitivity cases vs controls; Italian study found risk associated with SOD2 AA16 wild type and protection from VV16 homozygous)",
+          "url": "https://en.wikipedia.org/wiki/SOD2"
+        }
+      ]
+    },
+    {
+      "id": "imaging",
+      "name": "D. Imaging Tests",
+      "items": [
+        {
+          "id": "bm-124",
+          "expected": "L",
+          "name": "Brain Oxygen Flow in right parietal, temporal, fronto-orbital cortex regions imaged by SPECT, aka Single Positron Emission Computed Tomography",
+          "url": "https://en.wikipedia.org/wiki/Single-photon_emission_computed_tomography"
+        },
+        {
+          "id": "bm-125",
+          "expected": "P",
+          "name": "EEG waveform abnormalities including dysrhythmias, intermittent slowing, and sharp waves in temporal leads",
+          "url": "https://www.webmd.com/epilepsy/electroencephalogram-eeg"
+        },
+        {
+          "id": "bm-126",
+          "expected": "H",
+          "name": "Overall Resting Absolute Alpha Activity with eyes closed, especially at the parietal midline site (Pz), imaged by qEEG, aka quantitative EEG",
+          "url": "https://en.wikipedia.org/wiki/Quantitative_electroencephalography"
+        },
+        {
+          "id": "bm-127",
+          "expected": "P",
+          "name": "PET scan abnormal",
+          "url": "https://www.webmd.com/a-to-z-guides/pet-scan"
+        },
+        {
+          "id": "bm-128",
+          "expected": "P",
+          "name": "Various findings from MESSY study, which included: white matter demyelination; Plummeting FA on DTI; Functional sensory cortex errors; Parietal & temporal hypoperfusion on Brain SPECT; Loss of sensory gating / attention; and Thalamocortical pathway and hippocampal lesions",
+          "url": ""
+        },
+        {
+          "id": "bm-129",
+          "expected": "P",
+          "name": "White Matter Atrophy imaged by Brain MRI, aka magnetic resonance imaging",
+          "url": "https://www.webmd.com/a-to-z-guides/what-is-an-mri"
+        }
+      ]
+    },
+    {
+      "id": "neuropsych",
+      "name": "E. Neuropsych Tests and Behavioral Questionnaires",
+      "items": [
+        {
+          "id": "bm-132",
+          "expected": "H",
+          "name": "Autonomic Perception Questionnaire (APQ)",
+          "url": ""
+        },
+        {
+          "id": "bm-133",
+          "expected": "H",
+          "name": "Beck Depression Inventory (BDI)",
+          "url": "https://en.wikipedia.org/wiki/Beck_Depression_Inventory"
+        },
+        {
+          "id": "bm-134",
+          "expected": "H",
+          "name": "Chemical Sensitivity Scale for Sensory Hyper-reactivity (CSS-SHR)",
+          "url": ""
+        },
+        {
+          "id": "bm-135",
+          "expected": "H",
+          "name": "Chemical Sensitivity Scale sum score from Miller (CSS)",
+          "url": ""
+        },
+        {
+          "id": "bm-136",
+          "expected": "H",
+          "name": "Cohens Stress Scale (also CSS)",
+          "url": "https://en.wikipedia.org/wiki/Perceived_Stress_Scale"
+        },
+        {
+          "id": "bm-137",
+          "expected": "H",
+          "name": "Complex Reaction Time [duration] as part of Neuropsych Test Battery",
+          "url": "https://en.wikipedia.org/wiki/Mental_chronometry"
+        },
+        {
+          "id": "bm-138",
+          "expected": "H",
+          "name": "Electromagnetic Field Sensitivity Scale sum score (EMFSS)",
+          "url": "https://en.wikipedia.org/wiki/Electromagnetic_hypersensitivity"
+        },
+        {
+          "id": "bm-139",
+          "expected": "H",
+          "name": "Hospital Anxiety and Depression Scale for Anxiety (HADS-A)",
+          "url": "https://en.wikipedia.org/wiki/Hospital_Anxiety_and_Depression_Scale"
+        },
+        {
+          "id": "bm-140",
+          "expected": "H",
+          "name": "Hospital Anxiety and Depression Scale for Depression (HADS-D)",
+          "url": "https://en.wikipedia.org/wiki/Hospital_Anxiety_and_Depression_Scale"
+        },
+        {
+          "id": "bm-141",
+          "expected": "H",
+          "name": "Karolinska Sleep Questionnaire sum score (KSQ)",
+          "url": ""
+        },
+        {
+          "id": "bm-142",
+          "expected": "H",
+          "name": "Noise Sensitivity Scale sum score (NSS)",
+          "url": ""
+        },
+        {
+          "id": "bm-143",
+          "expected": "H",
+          "name": "Shirom-Melamed Burnout Questionnaire sum score (SMBQ)",
+          "url": ""
+        },
+        {
+          "id": "bm-144",
+          "expected": "H",
+          "name": "Symptom Checklist for Anxiety (SCL-A)",
+          "url": "https://en.wikipedia.org/wiki/Symptom_Checklist_90"
+        },
+        {
+          "id": "bm-145",
+          "expected": "H",
+          "name": "Symptom Checklist for Depression (SCL-D)",
+          "url": "https://en.wikipedia.org/wiki/Symptom_Checklist_90"
+        },
+        {
+          "id": "bm-146",
+          "expected": "L",
+          "name": "Theoretically Originated Measure of the Cognitive Activation Theory of Stress for Coping (TOMCATS-Coping)",
+          "url": ""
+        },
+        {
+          "id": "bm-147",
+          "expected": "H",
+          "name": "Theoretically Originated Measure of the Cognitive Activation Theory of Stress for Helplessness (TOMCATS)",
+          "url": ""
+        },
+        {
+          "id": "bm-148",
+          "expected": "H",
+          "name": "Theoretically Originated Measure of the Cognitive Activation Theory of Stress for Hopelessness (TOMCATS)",
+          "url": ""
+        },
+        {
+          "id": "bm-149",
+          "expected": "H",
+          "name": "Toronto Alexithymia Scale-20 for Difficulty Identifying Feelings (TAS20-DIF)",
+          "url": "https://en.wikipedia.org/wiki/Toronto_Alexithymia_Scale"
+        }
+      ]
+    },
+    {
+      "id": "exam",
+      "name": "F. Signs Seen in Biopsy or Physical Exam",
+      "items": [
+        {
+          "id": "bm-152",
+          "expected": "P",
+          "name": "Biopsy of skin for Epidermal Nerve Fiber Density (ENFD), calculated by considering a single epidermal fiber marked by PGP 9.5 crossings of the dermal-epidermal junction. ENFD is test for Small Fiber Neuropathy (SFN) characterized by involvement of Aδ and C fibers that causes sensory and/or autonomic symptoms including pain.",
+          "url": "https://en.wikipedia.org/wiki/Small_fiber_peripheral_neuropathy"
+        },
+        {
+          "id": "bm-153",
+          "expected": "P",
+          "name": "Biopsy of skin for signs of Small Vessel Vasculitis",
+          "url": "https://en.wikipedia.org/wiki/Cutaneous_small-vessel_vasculitis"
+        },
+        {
+          "id": "bm-154",
+          "expected": "H",
+          "name": "Biopsy of skin from back for Mast Cell Number",
+          "url": "https://en.wikipedia.org/wiki/Mast_cell"
+        },
+        {
+          "id": "bm-155",
+          "expected": "H",
+          "name": "Blood Pressure, seated at rest",
+          "url": "https://www.webmd.com/hypertension-high-blood-pressure/high-blood-pressure"
+        },
+        {
+          "id": "bm-156",
+          "expected": "H",
+          "name": "Body Mass Index BMI",
+          "url": "https://www.webmd.com/obesity/what-obesity-is"
+        },
+        {
+          "id": "bm-157",
+          "expected": "P",
+          "name": "Cold Hands and Feet, at rest",
+          "url": ""
+        },
+        {
+          "id": "bm-158",
+          "expected": "H",
+          "name": "Heart Rate, at rest",
+          "url": "https://www.webmd.com/heart-disease/how-to-lower-your-heart-rate"
+        },
+        {
+          "id": "bm-159",
+          "expected": "P",
+          "name": "Nasal Epithelium damage at rest seen by scope (or smart phone photo)",
+          "url": ""
+        },
+        {
+          "id": "bm-160",
+          "expected": "H",
+          "name": "Percent Body Fat",
+          "url": "https://en.wikipedia.org/wiki/Body_fat_percentage"
+        },
+        {
+          "id": "bm-161",
+          "expected": "H",
+          "name": "Respiratory Rate, at rest",
+          "url": "https://www.webmd.com/lung/breathing-problems"
+        },
+        {
+          "id": "bm-162",
+          "expected": "H",
+          "name": "Waist Circumference",
+          "url": "https://en.wikipedia.org/wiki/Waist-to-height_ratio"
+        }
+      ]
+    }
+  ]
+}

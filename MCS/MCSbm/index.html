@@ -3,18 +3,156 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MCS Biomarkers</title>
-  <link rel="stylesheet" href="../suite.css">
+  <title>BAACSS — Biomarker Abnormalities Associated with Chemical Sensitivity in Some</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <main class="page">
-    <a class="back" href="../">&larr; MCS Self-Reports</a>
-    <p class="eyebrow">Multiple Chemical Sensitivity</p>
-    <h1>MCS Biomarkers</h1>
-    <section class="notice">
-      <h2>Coming soon</h2>
-      <p>This self-report is being prepared.</p>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; MCS Self-Reports</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Biomarker Abnormalities Associated with Chemical Sensitivity in Some</p>
+      <p class="version" id="version">v26.09.06</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">About this checklist</h2>
+      <p>The BAACSS is a checklist of biomarker abnormalities associated with chemical sensitivity in some people.
+        Not everyone with these abnormalities has MCS. But statistically significantly more people with MCS have
+        these abnormalities than controls. The BAACSS is designed for people to record their most recent results as
+        High, Low, or in the Control range, so they and their clinicians can see how closely their results match MCS
+        and which tests they have never or not recently had. (The list was compiled by an independent toxicologist,
+        from whom the references are available: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+      <h3>How to complete the BAACSS checklist</h3>
+      <p>For each biomarker, choose one:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Never / no result</strong> = never had this test, or do not have access to the result</li>
+        <li><span class="code code-C">C</span> <strong>Control</strong> = result in the control or normal range</li>
+        <li><span class="code code-L">L</span> <strong>Low</strong> = result below the control range</li>
+        <li><span class="code code-H">H</span> <strong>High / present</strong> = result above the control range, or present if normally absent</li>
+      </ul>
+      <p>Every biomarker starts at <strong>N</strong>. Change N to C, L, or H only when you have the lab or EHR result
+        in hand. You must then enter its date as <strong>YYYY</strong>, <strong>YYYY.MM</strong>, or
+        <strong>YYYY.MM.DD</strong> before continuing. The dashboard updates automatically. You can stop and come
+        back anytime; your answers are saved in this browser on your device.</p>
+
+      <p class="note"><strong>Bottom Line</strong> Although all of these biomarkers are significantly more abnormal
+        in people with MCS than controls, the correlation is not always causal. The biomarker may be a co-factor that
+        contributes to the risk of getting MCS, or it may be a consequence of getting MCS, a co-morbidity, or just a
+        coincidence. BAACSS results that do not match MCS are as important as results that do.</p>
+      <p class="clinical-note"><strong>Important:</strong> Record the classification shown on your own report and
+        discuss results with a qualified clinician. This checklist does not establish a diagnosis or replace the
+        reference range and interpretation supplied by the testing laboratory.</p>
+
+      <details class="privacy">
+        <summary>Privacy &amp; your data</summary>
+        <p>Your answers are stored only in this web browser, on this device. Nothing is sent to any server. Anyone who
+          uses this browser profile can see your answers, so on a shared or public computer use <strong>Clear
+          answers</strong> when you finish. To move your report to another device, use your browser's Print &rarr;
+          Save as PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Your information</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Name or codename</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="e.g. Jane Smith — or a 3-word codename like redbikedog">
+          <p class="hint">Enter your name so your clinician knows whose report this is — or, if you prefer to stay
+            anonymous, a private 3-word codename up to 12 letters (e.g. redbikedog). Your choice.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sex at birth</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Intersex</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Age — years</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Years">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Age — months</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Months">
+        </div>
+        <div class="field">
+          <label for="date-completed">Date completed</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Fills in automatically when the checklist is complete; you can change it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Overall summary">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Results reported</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-not-tested">128</span><span class="kpi-label">N: not tested / no result</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-control">0%</span><span class="kpi-label">C: control range</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A: abnormal (L or H)</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M: matches MCS study</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Dates needed</span></div>
+      </div>
+      <p class="dash-foot">Reported = C, L, or H with a valid result date. C, A, and M percentages use reported
+        results as the denominator. “MCS study” describes the direction reported in the source spreadsheet; P
+        (present) matches an H entry because H includes “present if normally absent.”</p>
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable category summary">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Results by biomarker category</caption>
+          <thead>
+            <tr>
+              <th scope="col">Category</th><th scope="col">Tests</th><th scope="col">Reported</th>
+              <th scope="col">N</th><th scope="col">C</th><th scope="col">A</th><th scope="col">M</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Biomarker checklist</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>Result date required before you continue.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Accepted date formats">
+          <span>YYYY</span><span>YYYY.MM</span><span>YYYY.MM.DD</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Finish</h2>
+      <p class="share-tip">To share your report, save it as a PDF first using a button below, then attach the PDF
+        to an email to your clinician.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Print report (black &amp; white, dashboard on top)</button>
+        <button type="button" id="btn-print-color" class="btn">Save report as color PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Clear answers</button>
+      </div>
+      <p class="hint">“Save as PDF” appears as a destination in your browser's print window. Clearing answers removes
+        all BAACSS data from this device; it does not clear DACSS.</p>
     </section>
   </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. Part of ACCEPTT — Advance Communication of Chemosensory Experiences, Phenotypes,
+        Tests, and Treatments. Questions: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js"></script>
 </body>
 </html>
