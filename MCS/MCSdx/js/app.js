@@ -6,23 +6,42 @@
 const STORAGE_KEY = 'dacss.v1';
 const CODES = ['N', 'P', 'A', 'C'];
 const CODE_LABEL = { N: 'Never', P: 'Past', A: 'Always', C: 'Current' };
+const IMPACT_VALUES = ['0', '1', '2', '3'];
+const IMPACT_LABEL = {
+  0: 'No significant impact',
+  1: 'Mildly disabling',
+  2: 'Severely disabling, but still independent',
+  3: 'Disabled by the condition to the point of needing assistance'
+};
 
 let DATA = null;          // list.json
-let state = null;         // { answers:{id:code}, patient:{...} }
+let state = null;         // { answers:{id:code}, impacts:{id:score}, patient:{...} }
+let pendingId = '';
 
 /* ---------- persistence ---------- */
 function blankState() {
   return {
-    schema: 1,
+    schema: 2,
     report: 'DACSS',
     answers: {},          // id -> code; missing = default 'N'
+    impacts: {},          // id -> 0–3; required when answer is not N
     patient: { id: '', sex: '', ageYears: '', ageMonths: '', dateCompleted: '' }
   };
 }
 function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
-    if (raw) return Object.assign(blankState(), JSON.parse(raw));
+    if (raw) {
+      const parsed = JSON.parse(raw);
+      return {
+        ...blankState(),
+        ...parsed,
+        schema: 2,
+        answers: parsed.answers && typeof parsed.answers === 'object' ? parsed.answers : {},
+        impacts: parsed.impacts && typeof parsed.impacts === 'object' ? parsed.impacts : {},
+        patient: { ...blankState().patient, ...(parsed.patient || {}) }
+      };
+    }
   } catch (e) { /* ignore corrupt storage */ }
   return blankState();
 }
@@ -33,6 +52,12 @@ function save() {
 
 /* code for an item, defaulting to 'N' (dashboard starts all-N per spec) */
 function codeOf(id) { return state.answers[id] || 'N'; }
+function impactOf(id) {
+  const value = state.impacts[id];
+  const text = value === undefined || value === null ? '' : String(value);
+  return IMPACT_VALUES.includes(text) ? text : '';
+}
+function hasImpact(id) { return impactOf(id) !== ''; }
 
 /* ---------- rollup engine (ports of the sheet's COUNTIF logic) ---------- */
 function allItems() { return DATA.categories.flatMap(c => c.items); }
@@ -48,14 +73,21 @@ function pct(n, total) { return total ? Math.round((n / total) * 100) : 0; }
 function rollup(items) {
   const total = items.length;
   const c = countByCode(items);
+  const impactScores = items
+    .filter(it => codeOf(it.id) !== 'N' && hasImpact(it.id))
+    .map(it => Number(impactOf(it.id)));
   return {
     total,
     N: pct(c.N, total), P: pct(c.P, total), A: pct(c.A, total), C: pct(c.C, total),
     any: pct(c.P + c.A + c.C, total),          // ever experienced
     trend: pct(c.C, total) - pct(c.P, total),  // load with age = %Current − %Past
+    avgImpact: impactScores.length
+      ? impactScores.reduce((sum, score) => sum + score, 0) / impactScores.length
+      : null,
     counts: c
   };
 }
+function formatImpact(value) { return value === null ? '—' : value.toFixed(1); }
 
 /* ---------- rendering: checklist ---------- */
 function buildChecklist() {
@@ -70,6 +102,11 @@ function buildChecklist() {
     h.innerHTML = `<span>${escapeHtml(cat.name)}</span>` +
       `<span class="cat-count" id="count-${cat.id}">${marked} of ${cat.items.length} marked</span>`;
     sec.appendChild(h);
+
+    const columns = document.createElement('div');
+    columns.className = 'column-head';
+    columns.innerHTML = '<span>Your answer</span><span>Disorder</span><span>Current Impact</span>';
+    sec.appendChild(columns);
 
     cat.items.forEach(it => sec.appendChild(disorderRow(it)));
     root.appendChild(sec);
@@ -124,17 +161,98 @@ function disorderRow(it) {
     group.appendChild(label);
   });
   row.appendChild(group);
+
+  const impactGroup = document.createElement('div');
+  impactGroup.className = 'impact-opts';
+  impactGroup.setAttribute('role', 'radiogroup');
+  impactGroup.setAttribute('aria-label', `Current Impact for ${it.name}`);
+  IMPACT_VALUES.forEach(score => {
+    const id = `${it.id}-impact-${score}`;
+    const label = document.createElement('label');
+    label.setAttribute('for', id);
+    label.title = `${score}: ${IMPACT_LABEL[score]}`;
+    const input = document.createElement('input');
+    input.type = 'radio';
+    input.name = `${it.id}-impact`;
+    input.id = id;
+    input.value = score;
+    input.checked = impactOf(it.id) === score;
+    input.addEventListener('change', () => setImpact(it.id, score));
+    const face = document.createElement('span');
+    face.className = 'impact-opt';
+    face.textContent = score;
+    face.setAttribute('aria-hidden', 'true');
+    const sr = document.createElement('span');
+    sr.className = 'sr-only';
+    sr.textContent = IMPACT_LABEL[score];
+    label.append(input, face, sr);
+    impactGroup.appendChild(label);
+  });
+  row.appendChild(impactGroup);
   return row;
 }
 
 /* ---------- state changes ---------- */
 function setAnswer(id, code) {
-  if (code === 'N') delete state.answers[id]; else state.answers[id] = code;
-  const row = document.getElementById('row-' + id);
-  if (row) row.classList.toggle('is-marked', code !== 'N');
+  if (code === 'N') {
+    delete state.answers[id];
+    delete state.impacts[id];
+    if (pendingId === id) pendingId = '';
+  } else {
+    state.answers[id] = code;
+    if (!hasImpact(id)) pendingId = id;
+  }
   save();
-  refreshDashboard();
+  refreshAll();
+  if (pendingId === id) {
+    const impact = document.querySelector(`#row-${id} .impact-opts input`);
+    if (impact) impact.focus({ preventScroll: true });
+    document.getElementById('row-' + id).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  } else {
+    maybeAutofillDate();
+  }
+}
+
+function setImpact(id, score) {
+  if (codeOf(id) === 'N' || !IMPACT_VALUES.includes(score)) return;
+  state.impacts[id] = score;
+  if (pendingId === id) pendingId = '';
+  save();
+  refreshAll();
   maybeAutofillDate();
+}
+
+function updateRow(id) {
+  const row = document.getElementById('row-' + id);
+  if (!row) return;
+  const code = codeOf(id);
+  const needsImpact = code !== 'N' && !hasImpact(id);
+  const locked = Boolean(pendingId && pendingId !== id);
+  row.classList.toggle('is-marked', code !== 'N');
+  row.classList.toggle('needs-impact', needsImpact);
+  row.classList.toggle('is-locked', locked);
+  row.querySelectorAll('.opts input').forEach(input => {
+    input.disabled = locked;
+    input.checked = input.value === code;
+  });
+  row.querySelectorAll('.impact-opts input').forEach(input => {
+    input.disabled = code === 'N' || locked;
+    input.checked = input.value === impactOf(id);
+  });
+}
+
+function refreshPendingAlert() {
+  const alertBox = document.getElementById('pending-alert');
+  alertBox.hidden = !pendingId;
+  if (!pendingId) return;
+  const item = allItems().find(it => it.id === pendingId);
+  document.getElementById('pending-name').textContent = item ? item.name : '';
+}
+
+function refreshAll() {
+  allItems().forEach(it => updateRow(it.id));
+  refreshPendingAlert();
+  refreshDashboard();
 }
 
 /* autofill "date completed" once every item has been actively touched.
@@ -177,8 +295,10 @@ function refreshDashboard() {
   document.getElementById('kpi-trend-label').textContent = label;
 
   const markedTotal = items.filter(it => codeOf(it.id) !== 'N').length;
+  const missingImpact = items.filter(it => codeOf(it.id) !== 'N' && !hasImpact(it.id)).length;
   document.getElementById('progress').textContent =
-    `${markedTotal} of ${r.total} disorders marked as had or having (the rest are Never).`;
+    `${markedTotal} of ${r.total} disorders marked as had or having (the rest are Never).` +
+    (missingImpact ? ` ${missingImpact} ${missingImpact === 1 ? 'needs' : 'need'} a Current Impact score.` : '');
 
   // category table + per-category counts
   const tb = document.getElementById('dash-rows');
@@ -188,7 +308,8 @@ function refreshDashboard() {
     const tr = document.createElement('tr');
     tr.innerHTML =
       `<th scope="row">${escapeHtml(cat.name)}</th>` +
-      `<td>${cr.N}%</td><td>${cr.P}%</td><td>${cr.A}%</td><td>${cr.C}%</td><td>${cr.any}%</td>`;
+      `<td>${cr.N}%</td><td>${cr.P}%</td><td>${cr.A}%</td><td>${cr.C}%</td><td>${cr.any}%</td>` +
+      `<td>${formatImpact(cr.avgImpact)}</td>`;
     tb.appendChild(tr);
     const cnt = document.getElementById('count-' + cat.id);
     if (cnt) cnt.textContent =
@@ -211,18 +332,35 @@ function bindPatientFields() {
 
 /* ---------- actions ---------- */
 function printReport(color) {
+  if (focusPendingImpact('Complete the highlighted Current Impact score before printing or saving the report.')) return;
   document.body.classList.toggle('print-color', !!color);
   window.print();
+}
+function focusPendingImpact(message) {
+  if (!pendingId) {
+    const missing = allItems().find(it => codeOf(it.id) !== 'N' && !hasImpact(it.id));
+    pendingId = missing ? missing.id : '';
+    if (pendingId) refreshAll();
+  }
+  if (!pendingId) return false;
+  const item = allItems().find(it => it.id === pendingId);
+  alert(message || `Choose a Current Impact score for ${item ? item.name : 'this disorder'} before continuing.`);
+  const impact = document.querySelector(`#row-${pendingId} .impact-opts input`);
+  if (impact) impact.focus();
+  document.getElementById('row-' + pendingId).scrollIntoView({ behavior: 'smooth', block: 'center' });
+  return true;
 }
 function clearAll() {
   if (!confirm('Clear all your answers and personal details from this device? This cannot be undone.')) return;
   try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
   state = blankState();
+  pendingId = '';
   document.querySelectorAll('.opts input[value="N"]').forEach(i => { i.checked = true; });
+  document.querySelectorAll('.impact-opts input').forEach(i => { i.checked = false; });
   ['patient-id', 'sex', 'age-years', 'age-months', 'date-completed']
     .forEach(id => { document.getElementById(id).value = ''; });
   document.querySelectorAll('.disorder.is-marked').forEach(r => r.classList.remove('is-marked'));
-  refreshDashboard();
+  refreshAll();
 }
 
 /* ---------- util ---------- */
@@ -246,7 +384,9 @@ async function init() {
   document.getElementById('version').textContent = DATA.version || '';
   buildChecklist();
   bindPatientFields();
-  refreshDashboard();
+  const missing = allItems().find(it => codeOf(it.id) !== 'N' && !hasImpact(it.id));
+  pendingId = missing ? missing.id : '';
+  refreshAll();
 
   document.getElementById('btn-print-bw').addEventListener('click', () => printReport(false));
   document.getElementById('btn-print-color').addEventListener('click', () => printReport(true));

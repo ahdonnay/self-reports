@@ -14,7 +14,7 @@
     <a class="suite-link no-print" href="../">&larr; MCS Self-Reports</a>
     <h1>DACSS</h1>
     <p class="subtitle">Disorders Associated with Chemical Sensitivity in Some</p>
-    <p class="version" id="version">v26.08.23</p>
+    <p class="version" id="version">v26.09.06</p>
   </div>
 </header>
 
@@ -39,6 +39,14 @@
       <li><span class="code code-P">P</span> <strong>Past</strong> = had disorder in PAST, but not now</li>
       <li><span class="code code-A">A</span> <strong>Always</strong> = ALWAYS has disorder, since childhood</li>
       <li><span class="code code-C">C</span> <strong>Current</strong> — CURRENTLY have disorder, but not always</li>
+    </ul>
+    <p>For every disorder changed from N to P, A, or C, also select its required
+      <strong>Current Impact</strong>:</p>
+    <ul class="impact-legend">
+      <li><span class="impact-code">0</span> <strong>No significant impact</strong></li>
+      <li><span class="impact-code">1</span> <strong>Mildly disabling</strong></li>
+      <li><span class="impact-code">2</span> <strong>Severely disabling, but still independent</strong></li>
+      <li><span class="impact-code">3</span> <strong>Disabled by the condition to the point of needing assistance</strong></li>
     </ul>
     <p>Every disorder starts at <strong>Never</strong>. Change only the ones you have experienced.
       The dashboard updates as you go. You can stop and come back to finish anytime; your answers are
@@ -110,13 +118,16 @@
     </div>
     <p class="dash-foot">All percentages are of the total <span id="total-count">92</span> disorders.
       <span class="trend-note">“Load with age” = Current − Past (positive suggests load rising with age,
-      negative suggests falling). It does not include “Always.”</span></p>
+      negative suggests falling). It does not include “Always.”</span>
+      <span class="trend-note">“Avg Impact” is the mathematical average of the 0–3 Current Impact scores
+      entered within each category; — means no impact score has been entered.</span></p>
 
     <table class="dash-table" aria-live="polite">
       <caption class="sr-only">Percentages by category</caption>
       <thead>
         <tr><th scope="col">Category</th><th scope="col">Never</th><th scope="col">Past</th>
-            <th scope="col">Always</th><th scope="col">Current</th><th scope="col">Any (P/A/C)</th></tr>
+            <th scope="col">Always</th><th scope="col">Current</th><th scope="col">Any (P/A/C)</th>
+            <th scope="col">Avg Impact</th></tr>
       </thead>
       <tbody id="dash-rows"></tbody>
     </table>
@@ -125,6 +136,11 @@
   <!-- ============ CHECKLIST ============ -->
   <section class="checklist" aria-labelledby="check-h">
     <h2 id="check-h" class="wrap-h">Checklist</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden>
+      <strong>Current Impact is required before you continue.</strong>
+      <span id="pending-name"></span>
+      <span class="impact-scale">Choose 0, 1, 2, or 3.</span>
+    </div>
     <div id="categories"></div>
   </section>
 
