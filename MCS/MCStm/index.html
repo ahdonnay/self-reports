@@ -3,18 +3,168 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>MCS Treatments</title>
-  <link rel="stylesheet" href="../suite.css">
+  <title>TRACTSS — Treatments you'd Retry, Avoid, or Currently Take due to any Sensory Sensitivities</title>
+  <link rel="stylesheet" href="css/styles.css?v=26.09.10">
 </head>
 <body>
-  <main class="page">
-    <a class="back" href="../">&larr; MCS Self-Reports</a>
-    <p class="eyebrow">Multiple Chemical Sensitivity</p>
-    <h1>MCS Treatments</h1>
-    <section class="notice">
-      <h2>Coming soon</h2>
-      <p>This self-report is being prepared.</p>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; MCS Self-Reports</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Treatments you'd Retry, Avoid, or Currently Take due to any Sensory Sensitivities</p>
+      <p class="version" id="version">v26.09.10</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">About this checklist</h2>
+      <p>TRACTSS records treatments you have tried because of chemical or other sensory sensitivities. For every
+        treatment, indicate whether you would retry it, would avoid it, or currently take or use it. This gives you
+        and your clinicians a compact record of your treatment experience. The treatment list was compiled by an
+        independent toxicologist, from whom references are available:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+      <h3>How to complete the TRACTSS checklist</h3>
+      <p>For each treatment, choose one status:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Never / no memory</strong> = never tried the treatment, or do not remember its effects</li>
+        <li><span class="code code-R">R</span> <strong>Retry</strong> = tried it and would be willing to retry it</li>
+        <li><span class="code code-A">A</span> <strong>Avoid</strong> = tried it and want to avoid trying it again</li>
+        <li><span class="code code-C">C</span> <strong>Currently take</strong> = currently take or use the treatment</li>
+      </ul>
+      <p>Every treatment starts at <strong>N</strong>. If you select <strong>R</strong> or <strong>A</strong>, you must
+        select one or more reasons why you stopped it before continuing. The dashboard updates automatically. You can
+        stop and come back anytime; your answers are saved in this browser on your device.</p>
+
+      <h3>Reasons for stopping a treatment</h3>
+      <ul class="reason-legend">
+        <li><span class="reason-code">eRx</span> End of prescription</li>
+        <li><span class="reason-code">$$$</span> Expense</li>
+        <li><span class="reason-code">MDa</span> Medical advice (e.g., contraindicated for any reason)</li>
+        <li><span class="reason-code">NLN</span> No Longer Needed</li>
+        <li><span class="reason-code">ROT</span> Replace with Other Treatment(s)</li>
+        <li><span class="reason-code">sFx</span> Side effects</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Important:</strong> TRACTSS records your experience and preferences; it does
+        not determine whether a treatment is safe or effective. Do not start, stop, avoid, or retry a treatment based
+        on this checklist alone. Discuss treatment changes with a qualified clinician.</p>
+
+      <details class="privacy">
+        <summary>Privacy &amp; your data</summary>
+        <p>Your answers are stored only in this web browser, on this device. Nothing is sent to any server. Anyone who
+          uses this browser profile can see your answers, so on a shared or public computer use <strong>Clear
+          answers</strong> when you finish. To move your report to another device, use your browser's Print &rarr;
+          Save as PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Your information</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Name or codename</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="e.g. Jane Smith — or a 3-word codename like redbikedog">
+          <p class="hint">Enter your name so your clinician knows whose report this is — or, if you prefer to stay
+            anonymous, a private 3-word codename up to 12 letters (e.g. redbikedog). Your choice.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sex at birth</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Intersex</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Age — years</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Years">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Age — months</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Months">
+        </div>
+        <div class="field">
+          <label for="date-completed">Date completed</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Fills in automatically when you enter your first treatment; you can change it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Overall summary">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Ever tried</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-never">208</span><span class="kpi-label">N: never / no memory</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: retry</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: avoid</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: currently take</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Reasons needed</span></div>
+      </div>
+      <p class="dash-foot">Ever tried = R, A, or C. Retry, Avoid, and Currently Take percentages use treatments
+        ever tried as the denominator. An R or A status counts only after at least one stopping reason is selected.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable treatment-type summary">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Results by treatment type</caption>
+          <thead>
+            <tr>
+              <th scope="col">Type</th><th scope="col">Treatment</th><th scope="col">Never</th>
+              <th scope="col">Reported</th><th scope="col">Retry</th><th scope="col">Avoid</th><th scope="col">Current</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Reasons for stopping treatments</h3>
+      <p class="dash-foot">A treatment may have more than one reason, so percentages may total more than 100%.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable stopping-reason summary">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Reasons selected for stopped treatments</caption>
+          <thead><tr><th scope="col">Reason</th><th scope="col">Number</th><th scope="col">% stopped</th></tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Treatment checklist</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Select at least one reason before you continue.</strong>
+        <span id="pending-name"></span>
+        <span>Choose any reason that applies in the highlighted row.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Finish</h2>
+      <p class="share-tip">To share your report, save it as a PDF first using a button below, then attach the PDF
+        to an email to your clinician.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Print report (black &amp; white, dashboard on top)</button>
+        <button type="button" id="btn-print-color" class="btn">Save report as color PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Clear answers</button>
+      </div>
+      <p class="hint">“Save as PDF” appears as a destination in your browser's print window. Clearing answers removes
+        all TRACTSS data from this device; it does not clear DACSS or BAACSS.</p>
     </section>
   </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. Part of ACCEPTT — Advance Communication of Chemosensory Experiences, Phenotypes,
+        Tests, and Treatments. Questions: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/app.js?v=26.09.10"></script>
 </body>
 </html>

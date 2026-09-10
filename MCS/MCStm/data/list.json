@@ -1,0 +1,992 @@
+{
+  "version": "v26.09.10",
+  "report": "TRACTSS",
+  "title": "Treatments you'd Retry, Avoid, or Currently Take due to any Sensory Sensitivities",
+  "reasons": [
+    {
+      "code": "eRx",
+      "label": "End of prescription"
+    },
+    {
+      "code": "$$$",
+      "label": "Expense"
+    },
+    {
+      "code": "MDa",
+      "label": "Medical advice (e.g., contraindicated for any reason)"
+    },
+    {
+      "code": "NLN",
+      "label": "No Longer Needed"
+    },
+    {
+      "code": "ROT",
+      "label": "Replace with Other Treatment(s)"
+    },
+    {
+      "code": "sFx",
+      "label": "Side effects"
+    }
+  ],
+  "categories": [
+    {
+      "id": "type-01",
+      "name": "Alt Med \"Detox\"",
+      "items": [
+        {
+          "id": "tx-001",
+          "name": "Blood Donation"
+        },
+        {
+          "id": "tx-002",
+          "name": "Chelation"
+        },
+        {
+          "id": "tx-003",
+          "name": "Coffee enema"
+        },
+        {
+          "id": "tx-004",
+          "name": "Colonics"
+        },
+        {
+          "id": "tx-005",
+          "name": "Gallbladder flush"
+        },
+        {
+          "id": "tx-006",
+          "name": "Herbal detox ingested by mouth"
+        },
+        {
+          "id": "tx-007",
+          "name": "Hulda Clark’s parasite program"
+        },
+        {
+          "id": "tx-008",
+          "name": "Hydrogen peroxide therapy"
+        },
+        {
+          "id": "tx-009",
+          "name": "Liver flush"
+        },
+        {
+          "id": "tx-010",
+          "name": "Alt Med Detox, other specify"
+        },
+        {
+          "id": "tx-011",
+          "name": "Personal oxygen used as needed (outside hospital)"
+        },
+        {
+          "id": "tx-012",
+          "name": "Phlebotomy via blood donation"
+        },
+        {
+          "id": "tx-013",
+          "name": "Remove mercury dental fillings"
+        },
+        {
+          "id": "tx-014",
+          "name": "Sauna, far infrared"
+        },
+        {
+          "id": "tx-015",
+          "name": "Sauna, infrared"
+        },
+        {
+          "id": "tx-016",
+          "name": "Wet Cupping (from back)"
+        }
+      ]
+    },
+    {
+      "id": "type-02",
+      "name": "Cannabis product",
+      "items": [
+        {
+          "id": "tx-017",
+          "name": "Ingested cannabis product (eat or drink)"
+        },
+        {
+          "id": "tx-018",
+          "name": "Skin cream cannabis product"
+        },
+        {
+          "id": "tx-019",
+          "name": "Skin patch cannabis product"
+        },
+        {
+          "id": "tx-020",
+          "name": "Smoked cannabis product"
+        },
+        {
+          "id": "tx-021",
+          "name": "Vaped cannabis product"
+        },
+        {
+          "id": "tx-022",
+          "name": "Cannabis product, other specify"
+        }
+      ]
+    },
+    {
+      "id": "type-03",
+      "name": "Desensitization Therapy",
+      "items": [
+        {
+          "id": "tx-023",
+          "name": "Aromatherapy"
+        },
+        {
+          "id": "tx-024",
+          "name": "Bach flower \"remedy\""
+        },
+        {
+          "id": "tx-025",
+          "name": "Dynamic Neural Retraining System (DNRS)"
+        },
+        {
+          "id": "tx-026",
+          "name": "Enzyme potentiated desensitization"
+        },
+        {
+          "id": "tx-027",
+          "name": "Eye movement desensitization and reprocessing"
+        },
+        {
+          "id": "tx-028",
+          "name": "Gupta Program Brain Retraining"
+        },
+        {
+          "id": "tx-029",
+          "name": "Homeopathy over-the-counter"
+        },
+        {
+          "id": "tx-030",
+          "name": "Homeopathy prescribed by homeopath"
+        },
+        {
+          "id": "tx-031",
+          "name": "Nambudripad’s Allergy Elimination Techniques (NAET)"
+        },
+        {
+          "id": "tx-032",
+          "name": "Neural therapy (drugs injected to treat pain)"
+        },
+        {
+          "id": "tx-033",
+          "name": "Neurolinguistic programming"
+        },
+        {
+          "id": "tx-034",
+          "name": "Desensitization Therapy, other specify"
+        },
+        {
+          "id": "tx-035",
+          "name": "Provocation-Neutralization for chemicals with preservative(s)"
+        },
+        {
+          "id": "tx-036",
+          "name": "Provocation-Neutralization for chemicals without preservatives"
+        },
+        {
+          "id": "tx-037",
+          "name": "Rotation diet to manage food sensitivities"
+        },
+        {
+          "id": "tx-038",
+          "name": "Transcutaneous Auricular Vagus Nerve Stimulation (taVNS)"
+        }
+      ]
+    },
+    {
+      "id": "type-04",
+      "name": "Device, External",
+      "items": [
+        {
+          "id": "tx-039",
+          "name": "Cold packs, rooms, or plunges"
+        },
+        {
+          "id": "tx-040",
+          "name": "Heating devices (pads or infra red lights)"
+        },
+        {
+          "id": "tx-041",
+          "name": "Lighting devices (red light only)"
+        },
+        {
+          "id": "tx-042",
+          "name": "Magnets"
+        },
+        {
+          "id": "tx-043",
+          "name": "Partial Rebreather Device (paper bag or tube)"
+        },
+        {
+          "id": "tx-044",
+          "name": "Pulsed EMF therapy"
+        },
+        {
+          "id": "tx-045",
+          "name": "Repetitive Transcranial Magnetic Stimulation (rTMS)"
+        },
+        {
+          "id": "tx-046",
+          "name": "Ultrasound"
+        }
+      ]
+    },
+    {
+      "id": "type-05",
+      "name": "Device, Implanted",
+      "items": [
+        {
+          "id": "tx-047",
+          "name": "Hypoglossal-nerve stimulator for Sleep Apnea"
+        },
+        {
+          "id": "tx-048",
+          "name": "Neurostimulator for Pain"
+        },
+        {
+          "id": "tx-049",
+          "name": "Pacemaker"
+        }
+      ]
+    },
+    {
+      "id": "type-06",
+      "name": "Device, any other",
+      "items": [
+        {
+          "id": "tx-050",
+          "name": "Devices, other specify"
+        }
+      ]
+    },
+    {
+      "id": "type-07",
+      "name": "Diet: Drink",
+      "items": [
+        {
+          "id": "tx-051",
+          "name": "Diet Drink, other specify"
+        },
+        {
+          "id": "tx-052",
+          "name": "Juicing"
+        },
+        {
+          "id": "tx-053",
+          "name": "Lactose-free milk products"
+        },
+        {
+          "id": "tx-054",
+          "name": "Water at least 3 liters per day"
+        }
+      ]
+    },
+    {
+      "id": "type-08",
+      "name": "Diet: Food",
+      "items": [
+        {
+          "id": "tx-055",
+          "name": "Atkins every day or most"
+        },
+        {
+          "id": "tx-056",
+          "name": "Diet Food, other specify"
+        },
+        {
+          "id": "tx-057",
+          "name": "Garlic"
+        },
+        {
+          "id": "tx-058",
+          "name": "Gluten-free every day or most"
+        },
+        {
+          "id": "tx-059",
+          "name": "Halal every day or most"
+        },
+        {
+          "id": "tx-060",
+          "name": "Hot and Spicy every day or most"
+        },
+        {
+          "id": "tx-061",
+          "name": "Kosher every day or most"
+        },
+        {
+          "id": "tx-062",
+          "name": "Low Histamine diet"
+        },
+        {
+          "id": "tx-063",
+          "name": "Macrobiotic every day or most"
+        },
+        {
+          "id": "tx-064",
+          "name": "Mediterranean every day or most"
+        },
+        {
+          "id": "tx-065",
+          "name": "Organic every day or most"
+        },
+        {
+          "id": "tx-066",
+          "name": "Pescaterian every day or most"
+        },
+        {
+          "id": "tx-067",
+          "name": "Vegan every day or most"
+        },
+        {
+          "id": "tx-068",
+          "name": "Vegetarian every day or most"
+        }
+      ]
+    },
+    {
+      "id": "type-09",
+      "name": "Drugs, Compounded",
+      "items": [
+        {
+          "id": "tx-069",
+          "name": "Drugs, Compounded, other specify"
+        }
+      ]
+    },
+    {
+      "id": "type-10",
+      "name": "Drugs, Not Compounded",
+      "items": [
+        {
+          "id": "tx-070",
+          "name": "Acyclovir (eg Zovirax)"
+        },
+        {
+          "id": "tx-071",
+          "name": "Antibiotic med, other specify"
+        },
+        {
+          "id": "tx-072",
+          "name": "Antidepressant med, other specify"
+        },
+        {
+          "id": "tx-073",
+          "name": "Antiseizure med, other specify"
+        },
+        {
+          "id": "tx-074",
+          "name": "Ascorbate, high dose intravenous Vit C"
+        },
+        {
+          "id": "tx-075",
+          "name": "Citalopram (SSRI)"
+        },
+        {
+          "id": "tx-076",
+          "name": "Diflucan"
+        },
+        {
+          "id": "tx-077",
+          "name": "Elavil"
+        },
+        {
+          "id": "tx-078",
+          "name": "Gabapentin aka Neurontin"
+        },
+        {
+          "id": "tx-079",
+          "name": "GLP-1 Receptor Agonists (eg Ozempic)"
+        },
+        {
+          "id": "tx-080",
+          "name": "Glutathione in nasal spray"
+        },
+        {
+          "id": "tx-081",
+          "name": "Glutathione in nebulizer"
+        },
+        {
+          "id": "tx-082",
+          "name": "Glutathione intravenous (iv)"
+        },
+        {
+          "id": "tx-083",
+          "name": "Naltrexone, low dose"
+        },
+        {
+          "id": "tx-084",
+          "name": "Nizoral"
+        },
+        {
+          "id": "tx-085",
+          "name": "Nystatin"
+        },
+        {
+          "id": "tx-086",
+          "name": "Oxygen (high pressure, aka hyperbaric)"
+        },
+        {
+          "id": "tx-087",
+          "name": "Oxygen (normal pressure, in clinic or hospital)"
+        },
+        {
+          "id": "tx-088",
+          "name": "Prozac"
+        },
+        {
+          "id": "tx-089",
+          "name": "Sodium Cromoglycate inhaled"
+        },
+        {
+          "id": "tx-090",
+          "name": "Sodium Cromoglycate via mouth"
+        },
+        {
+          "id": "tx-091",
+          "name": "Transfer factor"
+        },
+        {
+          "id": "tx-092",
+          "name": "Valium"
+        },
+        {
+          "id": "tx-093",
+          "name": "Xanax"
+        },
+        {
+          "id": "tx-094",
+          "name": "Zoloft"
+        }
+      ]
+    },
+    {
+      "id": "type-11",
+      "name": "Exercise (daily to weekly)",
+      "items": [
+        {
+          "id": "tx-095",
+          "name": "Aerobics"
+        },
+        {
+          "id": "tx-096",
+          "name": "Bicycling"
+        },
+        {
+          "id": "tx-097",
+          "name": "Dance"
+        },
+        {
+          "id": "tx-098",
+          "name": "Exercise, other specify"
+        },
+        {
+          "id": "tx-099",
+          "name": "Gym equipment workout"
+        },
+        {
+          "id": "tx-100",
+          "name": "Jogging"
+        },
+        {
+          "id": "tx-101",
+          "name": "Meditation (exercise for the mind)"
+        },
+        {
+          "id": "tx-102",
+          "name": "Pacing (with any activity)"
+        },
+        {
+          "id": "tx-103",
+          "name": "Paddleboarding"
+        },
+        {
+          "id": "tx-104",
+          "name": "Pickleball"
+        },
+        {
+          "id": "tx-105",
+          "name": "Qi gong"
+        },
+        {
+          "id": "tx-106",
+          "name": "Rollerblading"
+        },
+        {
+          "id": "tx-107",
+          "name": "Rowing"
+        },
+        {
+          "id": "tx-108",
+          "name": "Strength training"
+        },
+        {
+          "id": "tx-109",
+          "name": "Swimming"
+        },
+        {
+          "id": "tx-110",
+          "name": "Tai-Chi"
+        },
+        {
+          "id": "tx-111",
+          "name": "Walking"
+        },
+        {
+          "id": "tx-112",
+          "name": "Yoga of any kind"
+        }
+      ]
+    },
+    {
+      "id": "type-12",
+      "name": "Hands-On Therapy",
+      "items": [
+        {
+          "id": "tx-113",
+          "name": "Acupressure"
+        },
+        {
+          "id": "tx-114",
+          "name": "Acupuncture"
+        },
+        {
+          "id": "tx-115",
+          "name": "Alexander technique"
+        },
+        {
+          "id": "tx-116",
+          "name": "Applied kinesiology without chiropractic"
+        },
+        {
+          "id": "tx-117",
+          "name": "Chiropractic with applied kinesiology"
+        },
+        {
+          "id": "tx-118",
+          "name": "Chiropractic with contact reflex analysis"
+        },
+        {
+          "id": "tx-119",
+          "name": "Chiropractic, traditional"
+        },
+        {
+          "id": "tx-120",
+          "name": "Craniosacral therapy"
+        },
+        {
+          "id": "tx-121",
+          "name": "Cupping, Dry, on back"
+        },
+        {
+          "id": "tx-122",
+          "name": "Cupping, Wet, on back (illegal in California)"
+        },
+        {
+          "id": "tx-123",
+          "name": "Faith healer"
+        },
+        {
+          "id": "tx-124",
+          "name": "Hands-on, other specify"
+        },
+        {
+          "id": "tx-125",
+          "name": "Massage deep tissue"
+        },
+        {
+          "id": "tx-126",
+          "name": "Massage not deep tissue"
+        },
+        {
+          "id": "tx-127",
+          "name": "Moxibustion, anywhere"
+        },
+        {
+          "id": "tx-128",
+          "name": "Nambudripad desensitization"
+        },
+        {
+          "id": "tx-129",
+          "name": "Osteopathic adjustment"
+        },
+        {
+          "id": "tx-130",
+          "name": "Polarity balancing"
+        },
+        {
+          "id": "tx-131",
+          "name": "Reflexology"
+        },
+        {
+          "id": "tx-132",
+          "name": "Reiki (almost touching)"
+        },
+        {
+          "id": "tx-133",
+          "name": "Rolfing"
+        },
+        {
+          "id": "tx-134",
+          "name": "Total Body Modification or other muscle testing"
+        },
+        {
+          "id": "tx-135",
+          "name": "Touch for Health"
+        },
+        {
+          "id": "tx-136",
+          "name": "Trager Approach"
+        }
+      ]
+    },
+    {
+      "id": "type-13",
+      "name": "Lifestyle Change",
+      "items": [
+        {
+          "id": "tx-137",
+          "name": "Changed clothing"
+        },
+        {
+          "id": "tx-138",
+          "name": "Changed home"
+        },
+        {
+          "id": "tx-139",
+          "name": "Requested and Received accommodations at work sufficient to keep job, such as implementation of a Fragrance Free Policy"
+        },
+        {
+          "id": "tx-140",
+          "name": "Changed job OR retired"
+        },
+        {
+          "id": "tx-141",
+          "name": "Changed to fragrance-free products"
+        },
+        {
+          "id": "tx-142",
+          "name": "Changed mattress or sheets"
+        },
+        {
+          "id": "tx-143",
+          "name": "Changed vehicle"
+        },
+        {
+          "id": "tx-144",
+          "name": "Drink Less Alcohol or stopped"
+        },
+        {
+          "id": "tx-145",
+          "name": "Drink More Alcohol"
+        },
+        {
+          "id": "tx-146",
+          "name": "Exercise Less (was overdoing it)"
+        },
+        {
+          "id": "tx-147",
+          "name": "Exercise More (was underdoing it)"
+        },
+        {
+          "id": "tx-148",
+          "name": "Lifestyle Change, other specify"
+        },
+        {
+          "id": "tx-149",
+          "name": "Smoke Less or stopped"
+        },
+        {
+          "id": "tx-150",
+          "name": "Smoke More"
+        },
+        {
+          "id": "tx-151",
+          "name": "Started attending more religious services"
+        },
+        {
+          "id": "tx-152",
+          "name": "Started attending support group (online or in-person)"
+        },
+        {
+          "id": "tx-153",
+          "name": "Started Praying More"
+        },
+        {
+          "id": "tx-154",
+          "name": "Use aluminum foil to seal off-gassing"
+        },
+        {
+          "id": "tx-155",
+          "name": "Use mask wtih activated-charcoal"
+        },
+        {
+          "id": "tx-156",
+          "name": "Use powered air filter"
+        },
+        {
+          "id": "tx-157",
+          "name": "Vape less or stopped"
+        },
+        {
+          "id": "tx-158",
+          "name": "Vape more"
+        }
+      ]
+    },
+    {
+      "id": "type-14",
+      "name": "Medications sold OTC",
+      "items": [
+        {
+          "id": "tx-159",
+          "name": "Acetaminophen (Tylenol)"
+        },
+        {
+          "id": "tx-160",
+          "name": "Antacid salts, such as Alka-Seltzer Gold, to neutralize stomach acid"
+        },
+        {
+          "id": "tx-161",
+          "name": "Aspirin"
+        },
+        {
+          "id": "tx-162",
+          "name": "Ibuprofen (Advil, Motrin)"
+        },
+        {
+          "id": "tx-163",
+          "name": "Medications sold OTC, other specify"
+        },
+        {
+          "id": "tx-164",
+          "name": "Naproxen sodium (Alleve)"
+        },
+        {
+          "id": "tx-165",
+          "name": "Peptides"
+        }
+      ]
+    },
+    {
+      "id": "type-15",
+      "name": "Supp: Metal",
+      "items": [
+        {
+          "id": "tx-166",
+          "name": "Iron by intravenous"
+        },
+        {
+          "id": "tx-167",
+          "name": "Iron by mouth in any form"
+        },
+        {
+          "id": "tx-168",
+          "name": "Magnesium by intravenous"
+        },
+        {
+          "id": "tx-169",
+          "name": "Magnesium by mouth in any form"
+        },
+        {
+          "id": "tx-170",
+          "name": "Metal Supplement, other specify"
+        },
+        {
+          "id": "tx-171",
+          "name": "Zinc by mouth in any form"
+        }
+      ]
+    },
+    {
+      "id": "type-16",
+      "name": "Supp: Mineral",
+      "items": [
+        {
+          "id": "tx-172",
+          "name": "Calcium supplements"
+        },
+        {
+          "id": "tx-173",
+          "name": "Chromium supplements"
+        },
+        {
+          "id": "tx-174",
+          "name": "Tri-salts of any kind (eg Ca, K, and Mg)"
+        },
+        {
+          "id": "tx-175",
+          "name": "Mineral Supp, other (specify _________)"
+        },
+        {
+          "id": "tx-176",
+          "name": "Microhydrin or other silica-hydride supplement"
+        }
+      ]
+    },
+    {
+      "id": "type-17",
+      "name": "Supp: Nutritional",
+      "items": [
+        {
+          "id": "tx-177",
+          "name": "Acidophilus"
+        },
+        {
+          "id": "tx-178",
+          "name": "Coenzyme Q10 (hydroxyquinolone)",
+          "url": "https://www.mdpi.com/1422-0067/26/18/9044"
+        },
+        {
+          "id": "tx-179",
+          "name": "DHEA"
+        },
+        {
+          "id": "tx-180",
+          "name": "Echinacea"
+        },
+        {
+          "id": "tx-181",
+          "name": "Garlic"
+        },
+        {
+          "id": "tx-182",
+          "name": "Goldenseal"
+        },
+        {
+          "id": "tx-183",
+          "name": "Grapefruit Seed extract"
+        },
+        {
+          "id": "tx-184",
+          "name": "Milk Thistle Seed"
+        },
+        {
+          "id": "tx-185",
+          "name": "Nutrutional Supp, other specify"
+        },
+        {
+          "id": "tx-186",
+          "name": "Siberian ginseng"
+        }
+      ]
+    },
+    {
+      "id": "type-18",
+      "name": "Supp: Vitamin",
+      "items": [
+        {
+          "id": "tx-187",
+          "name": "Vitamin C aka ascorbic acid buffered"
+        },
+        {
+          "id": "tx-188",
+          "name": "Vitamin C aka ascorbic acid not buffered"
+        },
+        {
+          "id": "tx-189",
+          "name": "Vitamin E supplements"
+        },
+        {
+          "id": "tx-190",
+          "name": "Vitamin Supp, other specify"
+        }
+      ]
+    },
+    {
+      "id": "type-19",
+      "name": "Surgery",
+      "items": [
+        {
+          "id": "tx-191",
+          "name": "Adenoidectomy (remove adenoids)"
+        },
+        {
+          "id": "tx-192",
+          "name": "Breast Implants removed"
+        },
+        {
+          "id": "tx-193",
+          "name": "Cardiac Surgery of any kind"
+        },
+        {
+          "id": "tx-194",
+          "name": "Device of any kind removed"
+        },
+        {
+          "id": "tx-195",
+          "name": "Oophorectomy (remove ovaries)"
+        },
+        {
+          "id": "tx-196",
+          "name": "Phlebotomoy (to reduce iron overload)"
+        },
+        {
+          "id": "tx-197",
+          "name": "Splenectomy (remove spleen)"
+        },
+        {
+          "id": "tx-198",
+          "name": "Surgery, other (specify_______________)"
+        },
+        {
+          "id": "tx-199",
+          "name": "Tonsillectomy (remove tonsils)"
+        },
+        {
+          "id": "tx-200",
+          "name": "Weight Loss surgery of any type"
+        }
+      ]
+    },
+    {
+      "id": "type-20",
+      "name": "Talk Therapy",
+      "items": [
+        {
+          "id": "tx-201",
+          "name": "Cognitive Behavioral Therapy"
+        },
+        {
+          "id": "tx-202",
+          "name": "Hypnosis"
+        },
+        {
+          "id": "tx-203",
+          "name": "Mindfulness-Based Stress Reduction"
+        },
+        {
+          "id": "tx-204",
+          "name": "Psychotherapy to cope with MCS"
+        },
+        {
+          "id": "tx-205",
+          "name": "Psychotherapy to cure MCS"
+        },
+        {
+          "id": "tx-206",
+          "name": "Support Group program (peer to peer)"
+        },
+        {
+          "id": "tx-207",
+          "name": "Talk therapy, other specify"
+        }
+      ]
+    },
+    {
+      "id": "type-21",
+      "name": "TCM formula",
+      "items": [
+        {
+          "id": "tx-208",
+          "name": "TCM, other (specify __________)"
+        }
+      ]
+    }
+  ]
+}
