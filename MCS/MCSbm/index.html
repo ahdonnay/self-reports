@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>BAACSS — Biomarker Abnormalities Associated with Chemical Sensitivity in Some</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/styles.css?v=26.09.10">
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -12,7 +12,7 @@
       <a class="suite-link no-print" href="../">&larr; MCS Self-Reports</a>
       <h1>BAACSS</h1>
       <p class="subtitle">Biomarker Abnormalities Associated with Chemical Sensitivity in Some</p>
-      <p class="version" id="version">v26.09.06</p>
+      <p class="version" id="version">v26.09.10</p>
     </div>
   </header>
 
@@ -22,7 +22,7 @@
       <p>The BAACSS is a checklist of biomarker abnormalities associated with chemical sensitivity in some people.
         Not everyone with these abnormalities has MCS. But statistically significantly more people with MCS have
         these abnormalities than controls. The BAACSS is designed for people to record their most recent results as
-        High, Low, or in the Control range, so they and their clinicians can see how closely their results match MCS
+        High, Low, or in the Reference Range, so they and their clinicians can see how closely their results match MCS
         and which tests they have never or not recently had. (The list was compiled by an independent toxicologist,
         from whom the references are available: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
 
@@ -30,11 +30,11 @@
       <p>For each biomarker, choose one:</p>
       <ul class="legend">
         <li><span class="code code-N">N</span> <strong>Never / no result</strong> = never had this test, or do not have access to the result</li>
-        <li><span class="code code-C">C</span> <strong>Control</strong> = result in the control or normal range</li>
-        <li><span class="code code-L">L</span> <strong>Low</strong> = result below the control range</li>
-        <li><span class="code code-H">H</span> <strong>High / present</strong> = result above the control range, or present if normally absent</li>
+        <li><span class="code code-R">R</span> <strong>Reference Range</strong> = result within the laboratory reference or normal range</li>
+        <li><span class="code code-L">L</span> <strong>Low</strong> = result below the reference range</li>
+        <li><span class="code code-H">H</span> <strong>High / present</strong> = result above the reference range, or present if normally absent</li>
       </ul>
-      <p>Every biomarker starts at <strong>N</strong>. Change N to C, L, or H only when you have the lab or EHR result
+      <p>Every biomarker starts at <strong>N</strong>. Change N to R, L, or H only when you have the lab or EHR result
         in hand. You must then enter its date as <strong>YYYY</strong>, <strong>YYYY.MM</strong>, or
         <strong>YYYY.MM.DD</strong> before continuing. The dashboard updates automatically. You can stop and come
         back anytime; your answers are saved in this browser on your device.</p>
@@ -98,12 +98,12 @@
       <div class="kpis" role="group" aria-label="Overall summary">
         <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Results reported</span></div>
         <div class="kpi"><span class="kpi-num" id="kpi-not-tested">128</span><span class="kpi-label">N: not tested / no result</span></div>
-        <div class="kpi"><span class="kpi-num" id="kpi-control">0%</span><span class="kpi-label">C: control range</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-reference">0%</span><span class="kpi-label">R: reference range</span></div>
         <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A: abnormal (L or H)</span></div>
         <div class="kpi"><span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M: matches MCS study</span></div>
         <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Dates needed</span></div>
       </div>
-      <p class="dash-foot">Reported = C, L, or H with a valid result date. CNTRL, ABN, and MCS percentages use reported
+      <p class="dash-foot">Reported = R, L, or H with a valid result date. REF, ABN, and MCS percentages use reported
         results as the denominator. “MCS study” shows [L] or [H], the abnormal direction reported; [H] also covers
         “present if normally absent.”</p>
       <div class="table-scroll" tabindex="0" aria-label="Scrollable category summary">
@@ -112,7 +112,7 @@
           <thead>
             <tr>
               <th scope="col">Category</th><th scope="col">Biomarker</th><th scope="col">Never</th>
-              <th scope="col">Reported</th><th scope="col">Cntrl</th><th scope="col">Abn</th><th scope="col">MCS</th>
+              <th scope="col">Reported</th><th scope="col">Ref</th><th scope="col">Abn</th><th scope="col">MCS</th>
             </tr>
           </thead>
           <tbody id="dash-rows"></tbody>
@@ -153,6 +153,6 @@
     </div>
   </footer>
 
-  <script src="js/app.js"></script>
+  <script src="js/app.js?v=26.09.10"></script>
 </body>
 </html>

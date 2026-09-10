@@ -13,7 +13,7 @@
   --match: #f8dce4;
   --mismatch: #dcecf8;
   --c-N: #6f7d87;
-  --c-C: #426f9c;
+  --c-R: #426f9c;
   --c-L: #8a5f24;
   --c-H: #a43f58;
   --radius: 10px;
@@ -61,7 +61,7 @@ h3 { margin: 18px 0 6px; font-size: 1.05rem; }
   width: 27px; height: 27px; border-radius: 6px; color: #fff; font-size: .9rem; font-weight: 800;
 }
 .code-N { background: var(--c-N); }
-.code-C { background: var(--c-C); }
+.code-R { background: var(--c-R); }
 .code-L { background: var(--c-L); }
 .code-H { background: var(--c-H); }
 .note, .share-tip { padding: 10px 14px; background: #fcedf2; border-left: 4px solid var(--accent); border-radius: 6px; }
@@ -145,7 +145,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .opts input:focus-visible + .opt { outline: 3px solid var(--focus); outline-offset: 2px; }
 .opts input:checked + .opt { color: #fff; border-color: transparent; }
 .opts input[value="N"]:checked + .opt { background: var(--c-N); }
-.opts input[value="C"]:checked + .opt { background: var(--c-C); }
+.opts input[value="R"]:checked + .opt { background: var(--c-R); }
 .opts input[value="L"]:checked + .opt { background: var(--c-L); }
 .opts input[value="H"]:checked + .opt { background: var(--c-H); }
 .opts input:disabled + .opt { cursor: not-allowed; }
@@ -255,7 +255,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   a { color: #000 !important; text-decoration: none; }
   body.print-color .site-header { background: linear-gradient(180deg, var(--header-top), var(--header-bottom)) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body.print-color .opts input[value="N"]:checked + .opt { background: var(--c-N) !important; color: #fff !important; }
-  body.print-color .opts input[value="C"]:checked + .opt { background: var(--c-C) !important; color: #fff !important; }
+  body.print-color .opts input[value="R"]:checked + .opt { background: var(--c-R) !important; color: #fff !important; }
   body.print-color .opts input[value="L"]:checked + .opt { background: var(--c-L) !important; color: #fff !important; }
   body.print-color .opts input[value="H"]:checked + .opt { background: var(--c-H) !important; color: #fff !important; }
 }

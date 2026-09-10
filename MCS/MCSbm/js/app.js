@@ -2,8 +2,8 @@
 'use strict';
 
 const STORAGE_KEY = 'mcsbm.v1';
-const CODES = ['N', 'C', 'L', 'H'];
-const CODE_LABEL = { N: 'Never or no result', C: 'Control range', L: 'Low', H: 'High or present' };
+const CODES = ['N', 'R', 'L', 'H'];
+const CODE_LABEL = { N: 'Never or no result', R: 'Reference range', L: 'Low', H: 'High or present' };
 
 let DATA = null;
 let state = null;
@@ -11,7 +11,7 @@ let pendingId = '';
 
 function blankState() {
   return {
-    schema: 1,
+    schema: 2,
     report: 'BAACSS',
     answers: {},
     dates: {},
@@ -24,10 +24,15 @@ function load() {
     const raw = localStorage.getItem(STORAGE_KEY);
     if (!raw) return blankState();
     const parsed = JSON.parse(raw);
+    const answers = parsed.answers && typeof parsed.answers === 'object' ? { ...parsed.answers } : {};
+    Object.keys(answers).forEach(id => {
+      if (answers[id] === 'C') answers[id] = 'R';
+    });
     return {
       ...blankState(),
       ...parsed,
-      answers: parsed.answers && typeof parsed.answers === 'object' ? parsed.answers : {},
+      schema: 2,
+      answers,
       dates: parsed.dates && typeof parsed.dates === 'object' ? parsed.dates : {},
       patient: { ...blankState().patient, ...(parsed.patient || {}) }
     };
@@ -77,18 +82,18 @@ function pct(number, total) { return total ? Math.round(number / total * 100) : 
 function summarize(items) {
   const reportedItems = items.filter(item => isReported(item.id));
   const reported = reportedItems.length;
-  const control = reportedItems.filter(item => codeOf(item.id) === 'C').length;
+  const reference = reportedItems.filter(item => codeOf(item.id) === 'R').length;
   const abnormal = reportedItems.filter(item => ['L', 'H'].includes(codeOf(item.id))).length;
   const matching = reportedItems.filter(item => isMatch(item)).length;
   return {
     total: items.length,
     reported,
     notTested: items.length - reported,
-    control,
+    reference,
     abnormal,
     matching,
     reportedPct: pct(reported, items.length),
-    controlPct: pct(control, reported),
+    referencePct: pct(reference, reported),
     abnormalPct: pct(abnormal, reported),
     matchingPct: pct(matching, reported)
   };
@@ -277,7 +282,7 @@ function refreshDashboard() {
   const incomplete = allItems().filter(item => codeOf(item.id) !== 'N' && !isReported(item.id)).length;
   document.getElementById('kpi-reported').textContent = `${total.reportedPct}%`;
   document.getElementById('kpi-not-tested').textContent = total.notTested;
-  document.getElementById('kpi-control').textContent = `${total.controlPct}%`;
+  document.getElementById('kpi-reference').textContent = `${total.referencePct}%`;
   document.getElementById('kpi-abnormal').textContent = `${total.abnormalPct}%`;
   document.getElementById('kpi-match').textContent = `${total.matchingPct}%`;
   document.getElementById('kpi-dates').textContent = incomplete;
@@ -303,7 +308,7 @@ function summaryRow(name, summary, total = false) {
     `<td>${summary.total}</td>` +
     `<td>${summary.notTested}</td>` +
     `<td>${summary.reported}</td>` +
-    `<td>${summary.controlPct}%</td>` +
+    `<td>${summary.referencePct}%</td>` +
     `<td>${summary.abnormalPct}%</td>` +
     `<td>${summary.matchingPct}%</td>`;
   return row;
@@ -376,6 +381,7 @@ function escapeHtml(value) {
 
 async function init() {
   state = load();
+  save();
   try {
     const response = await fetch('data/list.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
