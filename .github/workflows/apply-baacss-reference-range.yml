@@ -1,0 +1,25 @@
+name: Apply BAACSS Reference Range update
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - baacss-reference-range.tar.gz
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install BAACSS Reference Range update
+        run: |
+          tar -xzf baacss-reference-range.tar.gz
+          git rm -f baacss-reference-range.tar.gz .github/workflows/apply-baacss-reference-range.yml .github/workflows/apply-dacss-layout-fix.yml
+          git add MCS/MCSbm/index.html MCS/MCSbm/css/styles.css MCS/MCSbm/js/app.js MCS/MCSbm/data/list.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Change BAACSS Control Range code to Reference Range"
+          git push
