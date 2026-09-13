@@ -13,7 +13,7 @@
     },
     {
       "code": "MDa",
-      "label": "Medical advice (e.g., contraindicated for any reason)"
+      "label": "Medical advice"
     },
     {
       "code": "NLN",
@@ -29,7 +29,7 @@
     },
     {
       "code": "ROT",
-      "label": "Replace with Other Treatment(s)"
+      "label": "Replace with Other Therapy"
     },
     {
       "code": "sFx",
