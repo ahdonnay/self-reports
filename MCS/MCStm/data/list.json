@@ -1,5 +1,5 @@
 {
-  "version": "v26.09.10",
+  "version": "v26.09.13",
   "report": "TRACTSS",
   "title": "Treatments you'd Retry, Avoid, or Currently Take due to any Sensory Sensitivities",
   "reasons": [
@@ -18,6 +18,14 @@
     {
       "code": "NLN",
       "label": "No Longer Needed"
+    },
+    {
+      "code": "NLA",
+      "label": "No Longer Available"
+    },
+    {
+      "code": "NLE",
+      "label": "No Longer Effective"
     },
     {
       "code": "ROT",
@@ -855,6 +863,10 @@
           "name": "Garlic"
         },
         {
+          "id": "tx-209",
+          "name": "Glutathione, Liposomal"
+        },
+        {
           "id": "tx-182",
           "name": "Goldenseal"
         },
@@ -865,6 +877,10 @@
         {
           "id": "tx-184",
           "name": "Milk Thistle Seed"
+        },
+        {
+          "id": "tx-210",
+          "name": "N-Acetyl Cysteine, capsule"
         },
         {
           "id": "tx-185",
