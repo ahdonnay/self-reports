@@ -1,0 +1,25 @@
+name: Publish TRACTSS reasons and supplements
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - tractss-expansion.tar.gz
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install TRACTSS reasons and supplements
+        run: |
+          tar -xzf tractss-expansion.tar.gz
+          git rm -f tractss-expansion.tar.gz .github/workflows/apply-tractss-expansion.yml
+          git add MCS/MCStm/index.html MCS/MCStm/css/styles.css MCS/MCStm/js/app.js MCS/MCStm/data/list.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit -m "Add TRACTSS stopping reasons and supplements"
+          git push
