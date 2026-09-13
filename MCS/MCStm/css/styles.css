@@ -157,13 +157,12 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 
 .reason-cell { display: none; min-width: 0; margin: 0; padding: 0; border: 0; }
 .show-reasons .reason-cell { display: block; }
-.reason-options { display: grid; grid-template-columns: repeat(3, minmax(125px, 1fr)); gap: 5px; }
+.reason-options { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 5px; }
 .reason-options label {
   position: relative; display: flex; align-items: center; min-width: 0; min-height: 34px; margin: 0; padding: 3px 6px;
   background: #fff; border: 1px solid var(--line); border-radius: 6px; cursor: pointer; font-size: .72rem;
 }
 .reason-options input { position: absolute; width: 100%; height: 100%; margin: 0; opacity: 0; cursor: pointer; }
-.reason-button { flex: none; min-width: 32px; margin-right: 5px; font-family: ui-monospace, monospace; font-weight: 800; }
 .reason-label { overflow: hidden; line-height: 1.15; }
 .reason-options label:has(input:checked) { color: #fff; background: var(--accent-dark); border-color: var(--accent-dark); }
 .reason-options label:has(input:focus-visible) { outline: 3px solid var(--focus); outline-offset: 2px; }
@@ -231,7 +230,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .checklist { break-before: page; page-break-before: always; }
   .wrap-h { margin: 0 0 3px; font-size: 11pt; }
   .wrap-h::after {
-    content: "Treatment; selected status; reason code(s) when stopped";
+    content: "Treatment; selected status; reason(s) when stopped";
     display: block; margin-top: 1px; font-size: 6pt; font-weight: 400;
   }
   #categories { column-count: 4; column-gap: .16in; column-rule: .5pt solid #aaa; }
@@ -259,8 +258,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .reason-options { display: flex; flex-wrap: wrap; gap: 1px 4px; }
   .reason-options label { display: none; min-height: 0; padding: 0; color: #000 !important; background: none !important; border: 0 !important; font-size: 5.8pt; }
   .reason-options label:has(input:checked) { display: inline-flex; }
-  .reason-button { min-width: 0; margin: 0; }
-  .reason-label { display: none; }
+  .reason-label { display: inline; }
   a { color: #000 !important; text-decoration: none; }
   body.print-color .site-header { background: linear-gradient(180deg, var(--header-top), var(--header-bottom)) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body.print-color .opts input[value="N"]:checked + .opt { background: var(--c-N) !important; color: #fff !important; }

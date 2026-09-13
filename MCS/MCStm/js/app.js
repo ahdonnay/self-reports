@@ -172,13 +172,10 @@ function treatmentRow(item) {
     input.value = reason.code;
     input.checked = reasonsOf(item.id).includes(reason.code);
     input.addEventListener('change', () => setReason(item.id, reason.code, input.checked));
-    const code = document.createElement('span');
-    code.className = 'reason-button';
-    code.textContent = reason.code;
     const text = document.createElement('span');
     text.className = 'reason-label';
     text.textContent = reason.label;
-    label.append(input, code, text);
+    label.append(input, text);
     reasonOptions.appendChild(label);
   });
   reasonCell.appendChild(reasonOptions);
