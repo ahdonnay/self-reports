@@ -7,7 +7,7 @@ self-report applications.
 |---|---|---|---|
 | `MCSdx/` | Disorders (DACSS) | Available | `dacss.v1` |
 | `MCSbm/` | Biomarkers | Placeholder | `mcsbm.v1` |
-| `MCStm/` | Treatments | Placeholder | `mcstm.v1` |
+| `MCStx/` | Treatments | TRACTSS checklist | `mcstm.v1` |
 | `MCSex/` | Exposures | Placeholder | `mcsex.v1` |
 
 Each application is kept in its own folder so its HTML, CSS, JavaScript, data,

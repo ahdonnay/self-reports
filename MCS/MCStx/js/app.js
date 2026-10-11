@@ -1,14 +1,38 @@
 /* TRACTSS — treatment status, stopping reasons, dashboard, persistence, and printing. */
 'use strict';
 
-const STORAGE_KEY = 'mcstm.v1';
+const CONFIG = window.TRACTSS_CONFIG || {};
+const STORAGE_KEY = CONFIG.storageKey || 'mcstm.v1';
+const DATA_PATH = CONFIG.dataPath || 'data/list.json';
 const CODES = ['N', 'R', 'A', 'C'];
+const CODE_DISPLAY = { N: 'N', R: 'R', A: 'A', C: 'C', ...(CONFIG.codeDisplay || {}) };
 const CODE_LABEL = {
   N: 'Never tried or no memory',
   R: 'Would retry',
   A: 'Would avoid',
-  C: 'Currently take or use'
+  C: 'Currently take or use',
+  ...(CONFIG.codeLabel || {})
 };
+const TEXT = {
+  categoryCount: (count, total) => `${count} of ${total} treatments entered`,
+  columns: ['Status', 'Treatment', 'Reason(s) stopped — required for R or A'],
+  statusFor: name => `Status for ${name}`,
+  openReference: 'Open reference in a new tab',
+  reasonsFor: name => `Reasons for stopping ${name}`,
+  progress: total => {
+    const pending = total.reasonsNeeded ? `; ${total.reasonsNeeded} need stopping reasons` : '';
+    return `${total.reported} of ${total.total} treatments entered; ${total.never} remain N${pending}.`;
+  },
+  allTreatments: 'All treatments',
+  chooseReason: name => `Select at least one reason for stopping ${name || 'this treatment'} before continuing.`,
+  completeReasonBeforePrint: 'Complete the highlighted stopping reason before printing or saving the report.',
+  clearConfirmation: 'Clear all TRACTSS answers, reasons, and personal details from this device? This cannot be undone.',
+  loadError: 'Could not load the treatment list. Open this app through its web address or a local web server.',
+  ...(CONFIG.text || {})
+};
+const CATEGORY_NAMES = CONFIG.categoryNames || {};
+const ITEM_NAMES = CONFIG.itemNames || {};
+const REASON_LABELS = CONFIG.reasonLabels || {};
 
 let DATA = null;
 let state = null;
@@ -49,6 +73,9 @@ function save() {
 
 function allItems() { return DATA.categories.flatMap(category => category.items); }
 function itemById(id) { return allItems().find(item => item.id === id); }
+function categoryName(category) { return CATEGORY_NAMES[category.id] || category.name; }
+function itemName(item) { return ITEM_NAMES[item.id] || item.name; }
+function reasonLabel(reason) { return REASON_LABELS[reason.code] || reason.label; }
 function codeOf(id) { return CODES.includes(state.answers[id]) ? state.answers[id] : 'N'; }
 function validReasonCodes() { return DATA.reasons.map(reason => reason.code); }
 function reasonsOf(id) {
@@ -96,13 +123,13 @@ function buildChecklist() {
 
     const heading = document.createElement('h3');
     const count = category.items.filter(item => isReported(item.id)).length;
-    heading.innerHTML = `<span>${escapeHtml(category.name)}</span>` +
-      `<span class="cat-count" id="count-${category.id}">${count} of ${category.items.length} treatments entered</span>`;
+    heading.innerHTML = `<span>${escapeHtml(categoryName(category))}</span>` +
+      `<span class="cat-count" id="count-${category.id}">${escapeHtml(TEXT.categoryCount(count, category.items.length))}</span>`;
     section.appendChild(heading);
 
     const columns = document.createElement('div');
     columns.className = 'column-head';
-    columns.innerHTML = '<span>Status</span><span>Treatment</span><span>Reason(s) stopped — required for R or A</span>';
+    columns.innerHTML = TEXT.columns.map(label => `<span>${escapeHtml(label)}</span>`).join('');
     section.appendChild(columns);
 
     category.items.forEach(item => section.appendChild(treatmentRow(item)));
@@ -118,7 +145,8 @@ function treatmentRow(item) {
   const group = document.createElement('div');
   group.className = 'opts';
   group.setAttribute('role', 'radiogroup');
-  group.setAttribute('aria-label', `Status for ${item.name}`);
+  const displayName = itemName(item);
+  group.setAttribute('aria-label', TEXT.statusFor(displayName));
   CODES.forEach(code => {
     const inputId = `${item.id}-${code}`;
     const label = document.createElement('label');
@@ -133,7 +161,7 @@ function treatmentRow(item) {
     input.addEventListener('change', () => setAnswer(item.id, code));
     const face = document.createElement('span');
     face.className = 'opt';
-    face.textContent = code;
+    face.textContent = CODE_DISPLAY[code];
     face.setAttribute('aria-hidden', 'true');
     const sr = document.createElement('span');
     sr.className = 'sr-only';
@@ -146,8 +174,8 @@ function treatmentRow(item) {
   const name = document.createElement('div');
   name.className = 'treatment-name';
   const labelHtml = item.url
-    ? `<a class="definition-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" title="Open reference in a new tab">${escapeHtml(item.name)}</a>`
-    : escapeHtml(item.name);
+    ? `<a class="definition-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(TEXT.openReference)}">${escapeHtml(displayName)}</a>`
+    : escapeHtml(displayName);
   name.innerHTML = `<p>${labelHtml}</p>`;
   row.appendChild(name);
 
@@ -156,7 +184,7 @@ function treatmentRow(item) {
   reasonCell.id = `reasons-${item.id}`;
   const reasonLegend = document.createElement('legend');
   reasonLegend.className = 'sr-only';
-  reasonLegend.textContent = `Reasons for stopping ${item.name}`;
+  reasonLegend.textContent = TEXT.reasonsFor(displayName);
   reasonCell.appendChild(reasonLegend);
 
   const reasonOptions = document.createElement('div');
@@ -165,7 +193,7 @@ function treatmentRow(item) {
     const reasonId = `${item.id}-reason-${reason.code.replace(/[^a-z0-9]/gi, 'money')}`;
     const label = document.createElement('label');
     label.htmlFor = reasonId;
-    label.title = reason.label;
+    label.title = reasonLabel(reason);
     const input = document.createElement('input');
     input.type = 'checkbox';
     input.id = reasonId;
@@ -174,7 +202,7 @@ function treatmentRow(item) {
     input.addEventListener('change', () => setReason(item.id, reason.code, input.checked));
     const text = document.createElement('span');
     text.className = 'reason-label';
-    text.textContent = reason.label;
+    text.textContent = reasonLabel(reason);
     label.append(input, text);
     reasonOptions.appendChild(label);
   });
@@ -255,7 +283,7 @@ function refreshPendingAlert() {
   alertBox.hidden = !pendingId;
   if (!pendingId) return;
   const item = itemById(pendingId);
-  document.getElementById('pending-name').textContent = item ? item.name : '';
+  document.getElementById('pending-name').textContent = item ? itemName(item) : '';
 }
 
 function refreshDashboard() {
@@ -267,18 +295,16 @@ function refreshDashboard() {
   document.getElementById('kpi-current').textContent = `${total.currentPct}%`;
   document.getElementById('kpi-reasons-needed').textContent = total.reasonsNeeded;
   document.querySelector('.kpi-attention').classList.toggle('has-pending', total.reasonsNeeded > 0);
-  const pendingText = total.reasonsNeeded ? `; ${total.reasonsNeeded} need stopping reasons` : '';
-  document.getElementById('progress').textContent =
-    `${total.reported} of ${total.total} treatments entered; ${total.never} remain N${pendingText}.`;
+  document.getElementById('progress').textContent = TEXT.progress(total);
 
   const body = document.getElementById('dash-rows');
   body.replaceChildren();
-  body.appendChild(summaryRow('All treatments', total, true));
+  body.appendChild(summaryRow(TEXT.allTreatments, total, true));
   DATA.categories.forEach(category => {
     const summary = summarize(category.items);
-    body.appendChild(summaryRow(category.name, summary));
+    body.appendChild(summaryRow(categoryName(category), summary));
     const count = document.getElementById(`count-${category.id}`);
-    if (count) count.textContent = `${summary.reported} of ${summary.total} treatments entered`;
+    if (count) count.textContent = TEXT.categoryCount(summary.reported, summary.total);
   });
 
   const stoppedItems = allItems().filter(item => isReported(item.id) && ['R', 'A'].includes(codeOf(item.id)));
@@ -287,7 +313,7 @@ function refreshDashboard() {
   DATA.reasons.forEach(reason => {
     const count = stoppedItems.filter(item => reasonsOf(item.id).includes(reason.code)).length;
     const row = document.createElement('tr');
-    row.innerHTML = `<th scope="row"><span class="reason-code">${escapeHtml(reason.code)}</span> ${escapeHtml(reason.label)}</th>` +
+    row.innerHTML = `<th scope="row"><span class="reason-code">${escapeHtml(reason.code)}</span> ${escapeHtml(reasonLabel(reason))}</th>` +
       `<td>${count}</td><td>${pct(count, stoppedItems.length)}%</td>`;
     reasonBody.appendChild(row);
   });
@@ -341,7 +367,7 @@ function todayISO() {
 function focusPendingReasons(message) {
   if (!pendingId) return false;
   const item = itemById(pendingId);
-  alert(message || `Select at least one reason for stopping ${item ? item.name : 'this treatment'} before continuing.`);
+  alert(message || TEXT.chooseReason(item ? itemName(item) : ''));
   const firstReason = document.querySelector(`#reasons-${CSS.escape(pendingId)} input`);
   if (firstReason) firstReason.focus();
   document.getElementById(`row-${pendingId}`).scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -349,13 +375,13 @@ function focusPendingReasons(message) {
 }
 
 function printReport(color) {
-  if (focusPendingReasons('Complete the highlighted stopping reason before printing or saving the report.')) return;
+  if (focusPendingReasons(TEXT.completeReasonBeforePrint)) return;
   document.body.classList.toggle('print-color', Boolean(color));
   window.print();
 }
 
 function clearAll() {
-  if (!confirm('Clear all TRACTSS answers, reasons, and personal details from this device? This cannot be undone.')) return;
+  if (!confirm(TEXT.clearConfirmation)) return;
   try { localStorage.removeItem(STORAGE_KEY); } catch (error) { /* no-op */ }
   state = blankState();
   pendingId = '';
@@ -373,12 +399,11 @@ function escapeHtml(value) {
 async function init() {
   state = load();
   try {
-    const response = await fetch('data/list.json', { cache: 'no-store' });
+    const response = await fetch(DATA_PATH, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     DATA = await response.json();
   } catch (error) {
-    document.getElementById('categories').innerHTML =
-      '<p class="card">Could not load the treatment list. Open this app through its web address or a local web server.</p>';
+    document.getElementById('categories').innerHTML = `<p class="card">${escapeHtml(TEXT.loadError)}</p>`;
     return;
   }
 
