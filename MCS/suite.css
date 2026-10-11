@@ -108,6 +108,18 @@ h1 {
 
 .notice h2 { margin-top: 0; }
 
+.suite-license {
+  width: min(100%, 900px);
+  margin: 20px auto 48px;
+  color: #425b66;
+  font-size: 0.78rem;
+  line-height: 1.4;
+}
+
+.suite-license p { margin: 4px 0; }
+.suite-license .service-line { color: #164f63; font-weight: 700; }
+.suite-license a { color: #164f63; }
+
 @media (max-width: 520px) {
   body { padding: 16px; }
   .page { margin: 24px auto; }

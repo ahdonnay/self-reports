@@ -17,6 +17,14 @@ and saved answers remain independent of the other reports.
 
 Localized folders use the suffixes `QFR`, `NAS`, `IT`, `DE`, `DA`, and `JA`.
 
+## License
+
+History of MCS is a public service of MCS Referral & Resources. Except where
+otherwise noted, original educational content and data are © 2026 Albert
+Donnay and licensed under the Creative Commons Attribution-NonCommercial 4.0
+International license (CC BY-NC 4.0). The license does not apply to the site
+software; Creative Commons recommends using software-specific licenses for code.
+
 When GitHub Pages is enabled for this repository, the MCS menu is available at:
 
 `https://ahdonnay.github.io/self-reports/MCS/`
