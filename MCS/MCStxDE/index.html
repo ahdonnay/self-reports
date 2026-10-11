@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="de-DE">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS - Behandlungen, die Sie aufgrund sensorischer Empfindlichkeiten erneut versuchen, vermeiden oder derzeit einnehmen würden</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">← MCS-Anamnese</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Behandlungen, die Sie aufgrund sensorischer Empfindlichkeiten erneut versuchen, vermeiden oder derzeit einnehmen würden</p>
+      <p class="version" id="version">v26.09.13.1</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Über diese Checkliste</h2>
+      <p>TRACTSS zeichnet Behandlungen auf, die Sie wegen chemischer oder anderer sensorischer Empfindlichkeiten ausprobiert haben. Geben Sie für jede Behandlung an, ob Sie sie erneut versuchen, vermeiden oder derzeit einnehmen oder verwenden würden. Dies gibt Ihnen und Ihren Klinikern eine kompakte Aufzeichnung Ihrer Behandlungserfahrung. Die Behandlungsliste wurde von einem unabhängigen Toxikologen zusammengestellt, von dem Referenzen verfügbar sind:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+      <p><strong>Hinweis:</strong> Die Einträge sind in der alphabetischen Reihenfolge ihrer englischen Originalnamen aufgeführt.</p>
+<h3>Wie man die TRACTSS Checkliste ausfüllt</h3>
+      <p>Wählen Sie für jede Behandlung einen Status:</p>
+      <ul class="legend">
+        <li>
+<span class="code code-N">N</span> <strong>Niemals / kein Gedächtnis</strong> = nie versucht, die Behandlung, oder nicht erinnern, seine Auswirkungen</li>
+        <li>
+<span class="code code-R">W</span> <strong>Versuch</strong> = versuchte es und wäre bereit, es zu wiederholen</li>
+        <li>
+<span class="code code-A">V</span> <strong>Vermeiden</strong> = probiert und möchte es vermeiden, es noch einmal zu versuchen</li>
+        <li>
+<span class="code code-C">A</span> <strong>Derzeit nehmen</strong> = derzeit nehmen oder verwenden Sie die Behandlung</li>
+      </ul>
+      <p>Jede Behandlung beginnt bei <strong>N</strong>. Wenn Sie <strong>R</strong> oder <strong>A</strong> wählen, müssen Sie vor dem Fortfahren einen oder mehrere Gründe für das Absetzen auswählen. Das Dashboard wird automatisch aktualisiert. Sie können jederzeit unterbrechen und später zurückkehren; Ihre Antworten werden in diesem Browser auf Ihrem Gerät gespeichert.</p>
+
+      <h3>Gründe für die Einstellung einer Behandlung</h3>
+      <ul class="reason-legend">
+        <li>
+<span class="reason-code">eRx</span> Ende der Verschreibung</li>
+        <li>
+<span class="reason-code">$$$</span> Ausgaben</li>
+        <li>
+<span class="reason-code">MDa</span> Medizinische Beratung</li>
+        <li>
+<span class="reason-code">NLN</span> Nicht mehr benötigt</li>
+        <li>
+<span class="reason-code">NLA</span> Nicht mehr verfügbar</li>
+        <li>
+<span class="reason-code">NL</span> Nicht mehr wirksam</li>
+        <li>
+<span class="reason-code">ROT</span> Ersetzen durch andere Therapien</li>
+        <li>
+<span class="reason-code">sFx</span> Nebenwirkungen</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Wichtig:</strong> TRACTSS zeichnet Ihre Erfahrungen und Vorlieben auf; es bestimmt nicht, ob eine Behandlung sicher oder wirksam ist. Starten, stoppen, vermeiden oder wiederholen Sie nicht eine Behandlung auf der Grundlage dieser Checkliste allein. Besprechen Sie Behandlungsänderungen mit einem qualifizierten Kliniker.</p>
+
+      <details class="privacy">
+        <summary>Privatsphäre &amp; Ihre Daten</summary>
+        <p>Ihre Antworten werden nur in diesem Webbrowser auf diesem Gerät gespeichert. Nichts wird an einen Server gesendet. Jeder, der dieses browserprofil verwendet, kann ihre antworten sehen, also auf einer gemeinsamen oder öffentlichen computernutzung. <strong>Klare Antworten</strong> Wenn du fertig bist. Um Ihren Bericht auf ein anderes Gerät zu verschieben, verwenden Sie den Druck → Speichern als PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Ihre Informationen</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Name oder Codename</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="z.B. Jane Smith - oder ein 3-Wort-Codename wie redbikedog">
+          <p class="hint">Geben Sie Ihren Namen ein, damit Ihr Arzt weiß, wessen Bericht dies ist - oder, wenn Sie es vorziehen, anonym zu bleiben, einen privaten 3-Wort-Codenamen mit bis zu 12 Buchstaben (z. B. redbikedog). Ihre Wahl.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Geschlecht bei der Geburt</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Weiblich</option>
+            <option>männlich</option>
+            <option>Intersexuell</option>
+            <option>Lieber nicht sagen</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Alter — Jahre</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Jahre">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Alter — Monate</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Monate">
+        </div>
+        <div class="field">
+          <label for="date-completed">Datum des Abschlusses</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Füllt automatisch ein, wenn Sie Ihre erste Behandlung eingeben; Sie können es ändern.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Gesamtübersicht">
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Immer versucht</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">N: nie / kein Gedächtnis</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: Wiederholung</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: vermeiden</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: derzeit</span>
+</div>
+        <div class="kpi kpi-attention">
+<span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Gründe erforderlich</span>
+</div>
+      </div>
+      <p class="dash-foot">Immer versucht = R, A oder C. Wiederholen, vermeiden und nehmen Sie Prozentsätze verwenden Sie Behandlungen, die jemals als Nenner versucht wurden. Ein R- oder A-Status zählt erst, nachdem mindestens ein Stoppgrund ausgewählt wurde.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Zusammenfassung des Behandlungstyps">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Ergebnisse nach Behandlungsart</caption>
+          <thead>
+            <tr>
+              <th scope="col">Typ</th>
+<th scope="col">Behandlung</th>
+<th scope="col">nie</th>
+              <th scope="col">Gemeldet</th>
+<th scope="col">Versuch</th>
+<th scope="col">Vermeiden</th>
+<th scope="col">Aktuell</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Gründe für den Abbruch der Behandlung</h3>
+      <p class="dash-foot">Eine Behandlung kann mehr als einen Grund haben, so dass Prozentsätze mehr als 100% betragen können.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Zusammenfassung des Abbremsvorgangs">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Ausgewählte Gründe für abgebrochene Behandlungen</caption>
+          <thead><tr>
+<th scope="col">Grund</th>
+<th scope="col">Nummer</th>
+<th scope="col">% gestoppt</th>
+</tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Behandlungscheckliste</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Wählen Sie mindestens einen Grund aus, bevor Sie fortfahren.</strong>
+        <span id="pending-name"></span>
+        <span>Wählen Sie einen beliebigen Grund, der in der hervorgehobenen Zeile zutrifft.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Ende</h2>
+      <p class="share-tip">Um Ihren Bericht zu teilen, speichern Sie ihn zuerst als PDF mit einer Schaltfläche unten und fügen Sie dann das PDF an eine E-Mail an Ihren Arzt an.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Druckbericht (schwarz &amp; weiß, Dashboard oben)</button>
+        <button type="button" id="btn-print-color" class="btn">Bericht als farbiges PDF speichern</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Klare Antworten</button>
+      </div>
+      <p class="hint">"Als PDF speichern" erscheint als Ziel im Druckfenster Ihres Browsers. Das Löschen von Antworten entfernt alle TRACTSS-Daten von diesem Gerät; es löscht DACSS oder BAACSS nicht.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. Teil von ACCEPTT - Vorabkommunikation von chemosensorischen Erfahrungen, Phänotypen, Tests und Behandlungen. Fragen: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=26.10.11.2"></script><script src="../MCStx/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

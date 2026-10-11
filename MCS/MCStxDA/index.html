@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="da-DK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS - Behandlinger, du ville prøve igen, undgå, eller i øjeblikket tage på grund af sensoriske følelser</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">← MCS-historik</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Behandlinger du ville prøve igen, undgå, eller i øjeblikket tage på grund af enhver sensoriske følelser</p>
+      <p class="version" id="version">v26.09.13.1</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Om denne tjekliste</h2>
+      <p>TRACTSS registrerer behandlinger, du har prøvet på grund af kemiske eller andre sensoriske sensibiliteter. For hver behandling, angive, om du vil prøve igen, ville undgå det, eller i øjeblikket tage eller bruge det. Dette giver dig og dine klinikere en kompakt registrering af din behandlingsoplevelse. Behandlingslisten er udarbejdet af en uafhængig toksikolog, hvorfra der foreligger referencer:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+      <p><strong>Bemærk:</strong> Punkterne er anført i alfabetisk rækkefølge efter deres oprindelige engelske navne.</p>
+<h3>Hvordan udfyldes TRACTSS checklisten</h3>
+      <p>For hver behandling vælges én status:</p>
+      <ul class="legend">
+        <li>
+<span class="code code-N">A</span> <strong>Aldrig / ingen hukommelse</strong> = aldrig prøvet behandlingen, eller ikke huske dens virkninger</li>
+        <li>
+<span class="code code-R">G</span> <strong>Prøv igen</strong> = prøvede det og ville være villig til at prøve det igen</li>
+        <li>
+<span class="code code-A">U</span> <strong>Undgå</strong> = prøvede det og ønsker at undgå at prøve det igen</li>
+        <li>
+<span class="code code-C">N</span> <strong>I øjeblikket tager</strong> = Tag eller brug i øjeblikket behandlingen</li>
+      </ul>
+      <p>Hver behandling starter ved <strong>N</strong>. Hvis du vælger <strong>R</strong> eller <strong>A</strong>, skal du vælge en eller flere grunde til, at du stoppede, før du fortsætter. Dashboardet opdateres automatisk. Du kan stoppe og vende tilbage når som helst; dine svar gemmes i denne browser på din enhed.</p>
+
+      <h3>Årsager til at stoppe behandlingen</h3>
+      <ul class="reason-legend">
+        <li>
+<span class="reason-code">eRx</span> Slut på recept</li>
+        <li>
+<span class="reason-code">$$$</span> Udgifter</li>
+        <li>
+<span class="reason-code">MDA</span> Medicinsk rådgivning</li>
+        <li>
+<span class="reason-code">NLN</span> Ikke længere påkrævet</li>
+        <li>
+<span class="reason-code">NLA</span> Ingen længere tilgængelig</li>
+        <li>
+<span class="reason-code">NLE</span> Ingen længere effektiv</li>
+        <li>
+<span class="reason-code">ROT</span> Erstat med anden terapi</li>
+        <li>
+<span class="reason-code">sFx</span> Bivirkninger</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Vigtigt:</strong> TRACTSS registrerer dine erfaringer og præferencer; det bestemmer ikke, om en behandling er sikker eller effektiv. Start, stop, undgå eller prøv igen en behandling baseret på denne tjekliste alene. Diskuter behandling ændringer med en kvalificeret kliniker.</p>
+
+      <details class="privacy">
+        <summary>Privacy &amp; dine data</summary>
+        <p>Dine svar gemmes kun i denne webbrowser, på denne enhed. Intet sendes til nogen server. Enhver, der bruger denne browser profil kan se dine svar, så på en delt eller offentlig computer brug <strong>Klare svar</strong> Når du er færdig. For at flytte din rapport til en anden enhed, skal du bruge din browsers Print → Gem som PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Dine oplysninger</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Navn eller kodenavn</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="f.eks. Jane Smith - eller et 3-ords kodenavn som redbikedog">
+          <p class="hint">Indtast dit navn, så din læge ved, hvis rapport dette er - eller, hvis du foretrækker at forblive anonym, en privat 3-ord kodenavn op til 12 bogstaver (fx redbikedog). Dit valg.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Køn ved fødslen</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Kvinder</option>
+            <option>Mænd</option>
+            <option>Intersex</option>
+            <option>Foretrækker ikke at sige</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Alder - år</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="År">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Alder - måneder</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Måneder">
+        </div>
+        <div class="field">
+          <label for="date-completed">Dato</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Fylder automatisk ind, når du indtaster din første behandling; du kan ændre det.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Samlet oversigt">
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Nogensinde prøvet</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">N: aldrig / ingen hukommelse</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: Forsøg igen</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: Undgå</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: I øjeblikket tages</span>
+</div>
+        <div class="kpi kpi-attention">
+<span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Begrundelse</span>
+</div>
+      </div>
+      <p class="dash-foot">Nogensinde prøvet = R, A, eller C. Prøv igen, Undgå, og i øjeblikket tage procentsatser bruge behandlinger nogensinde prøvet som nævneren. En R eller A-status tæller først efter at mindst én stopgrund er valgt.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Sammenfatning af behandlingsform">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Resultater efter behandlingstype</caption>
+          <thead>
+            <tr>
+              <th scope="col">Type</th>
+<th scope="col">Behandling</th>
+<th scope="col">Aldrig</th>
+              <th scope="col">Indberettet</th>
+<th scope="col">Prøv igen</th>
+<th scope="col">Undgå</th>
+<th scope="col">Løbende måned</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Årsager til at stoppe behandlingen</h3>
+      <p class="dash-foot">En behandling kan have mere end én årsag, så procenterne kan være mere end 100%.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable stopping- ræsonnement summary">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Begrundelse valgt for stoppet behandling</caption>
+          <thead><tr>
+<th scope="col">Årsag</th>
+<th scope="col">Nummer</th>
+<th scope="col">% stoppet</th>
+</tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Tjekliste for behandling</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Vælg mindst én grund, før du fortsætter.</strong>
+        <span id="pending-name"></span>
+        <span>Vælg en årsag, der gælder i den fremhævede række.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Afslut</h2>
+      <p class="share-tip">For at dele din rapport, gemme det som en PDF først ved hjælp af en knap nedenfor, derefter vedhæfte PDF til en e-mail til din kliniker.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Udskriv rapport (sort &amp; hvid, instrumentbræt øverst)</button>
+        <button type="button" id="btn-print-color" class="btn">Gem rapport som farve PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Klare svar</button>
+      </div>
+      <p class="hint">"Gem som PDF" vises som en destination i browserens udskriftsvindue. Clearing svar fjerner alle TRACTSS data fra denne enhed; det ikke klare DACSS eller BAACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. En del af ACCEPTT - Advance Communication of Chemosense Experiences, Phenotypes, Tests, and Treatments. Spørgsmål: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=26.10.11.2"></script><script src="../MCStx/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

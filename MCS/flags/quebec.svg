@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" role="img" aria-label="Quebec flag">
+  <rect width="30" height="20" fill="#0953a6"/>
+  <path d="M0 8h30v4H0zM13 0h4v20h-4z" fill="#fff"/>
+  <g fill="#fff" font-family="serif" font-size="5"><text x="3" y="7">⚜</text><text x="21" y="7">⚜</text><text x="3" y="18">⚜</text><text x="21" y="18">⚜</text></g>
+</svg>

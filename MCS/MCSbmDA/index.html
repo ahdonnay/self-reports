@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="da-DK">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS - Biomarker Abnormiteter forbundet med kemisk følsomhed i nogle</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">← MCS-historik</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Biomarker Abnormiteter forbundet med kemisk følsomhed i nogle</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Om denne tjekliste</h2>
+      <p>BAACSS er en tjekliste over biomarker abnormiteter forbundet med kemisk følsomhed hos nogle mennesker. Ikke alle med disse abnormiteter har MCS. Men statistisk set har flere mennesker med MCS disse abnormiteter end kontrolgrupper. BAACSS er designet til folk til at registrere deres seneste resultater som High, Low, eller i Reference Range, så de og deres klinikere kan se, hvor tæt deres resultater matcher MCS, og hvilke test de aldrig eller ikke for nylig har haft. (Listen er udarbejdet af en uafhængig toksikolog, hvorfra referencerne er tilgængelige: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+      <p><strong>Bemærk:</strong> Punkterne er anført i alfabetisk rækkefølge efter deres oprindelige engelske navne.</p>
+<h3>Hvordan udfyldes BAACSS-checklisten</h3>
+      <p>For hver biomarkør vælges en:</p>
+      <ul class="legend">
+        <li>
+<span class="code code-N">I</span> <strong>Aldrig / intet resultat</strong> = aldrig har haft denne test, eller ikke har adgang til resultatet</li>
+        <li>
+<span class="code code-R">R</span> <strong>Referenceområde</strong> = resultat inden for laboratoriereferencen eller normalområdet</li>
+        <li>
+<span class="code code-L">L</span> <strong>Lav</strong> = resultat under referenceområdet</li>
+        <li>
+<span class="code code-H">H</span> <strong>Høj / nuværende</strong> = resultat over referenceområdet, eller til stede, hvis der normalt mangler</li>
+      </ul>
+      <p>Hver biomarkør starter ved <strong>N</strong>. Skift kun N til R, L eller H, når du har laboratorie- eller EHR-resultatet ved hånden. Indtast derefter datoen som <strong>ÅÅÅÅ</strong>, <strong>ÅÅÅÅ.MM</strong> eller
+        <strong>ÅÅÅÅ.MM.DD</strong>, før du fortsætter. Dashboardet opdateres automatisk. Du kan stoppe og komme tilbage når som helst; dine svar gemmes i denne browser på din enhed.</p>
+
+      <p class="note"><strong>Nederste linje</strong> Selv om alle disse biomarkører er betydeligt mere abnorme hos mennesker med MCS end hos kontrolgruppen, er korrelationen ikke altid kausal. Den biomarkør kan være en co- faktor, der bidrager til risikoen for at få MCS, eller det kan være en konsekvens af at få MCS, en co- morbiditet, eller bare en tilfældighed. BAACSS resultater, der ikke matcher MCS er så vigtige som resultater, der gør.</p>
+      <p class="clinical-note"><strong>Vigtigt:</strong> Optag klassificeringen vist på din egen rapport og diskutere resultater med en kvalificeret kliniker. Denne tjekliste indeholder ingen diagnose eller erstatter det referenceområde og den fortolkning, som prøvningslaboratoriet har leveret.</p>
+
+      <details class="privacy">
+        <summary>Privacy &amp; dine data</summary>
+        <p>Dine svar gemmes kun i denne webbrowser, på denne enhed. Intet sendes til nogen server. Enhver, der bruger denne browser profil kan se dine svar, så på en delt eller offentlig computer brug <strong>Klare svar</strong> Når du er færdig. For at flytte din rapport til en anden enhed, skal du bruge din browsers Print → Gem som PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Dine oplysninger</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Navn eller kodenavn</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="f.eks. Jane Smith - eller et 3-ords kodenavn som redbikedog">
+          <p class="hint">Indtast dit navn, så din læge ved, hvis rapport dette er - eller, hvis du foretrækker at forblive anonym, en privat 3-ord kodenavn op til 12 bogstaver (fx redbikedog). Dit valg.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Køn ved fødslen</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Kvinder</option>
+            <option>Mænd</option>
+            <option>Intersex</option>
+            <option>Foretrækker ikke at sige</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Alder - år</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="År">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Alder - måneder</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Måneder">
+        </div>
+        <div class="field">
+          <label for="date-completed">Dato</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Fylder automatisk ind når checklisten er færdig; du kan ændre den.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Samlet oversigt">
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Rapporterede resultater</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">N: ikke testet / intet resultat</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reference">0%</span><span class="kpi-label">R: Referenceområde</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A: abnorm (L eller H)</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M: matcher MCS-undersøgelse</span>
+</div>
+        <div class="kpi kpi-attention">
+<span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Nødvendige datoer</span>
+</div>
+      </div>
+      <p class="dash-foot">Indberettet = R, L eller H med gyldig resultatdato. REF, ABN og MCS-procenter anvendes som nævnere. "MCS-undersøgelse" viser [L] eller [H] den angivne unormale retning; [H] omfatter også "tilstedeværende, hvis der normalt ikke er nogen".</p>
+      <div class="table-scroll" tabindex="0" aria-label="Sammenfatning af den rullende kategori">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Resultater efter biomarkekategori</caption>
+          <thead>
+            <tr>
+              <th scope="col">Kategori</th>
+<th scope="col">Biomarker</th>
+<th scope="col">Aldrig</th>
+              <th scope="col">Indberettet</th>
+<th scope="col">Ref</th>
+<th scope="col">Abn</th>
+<th scope="col">MCS</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Kontrolliste for biomarkør</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>Resultat dato kræves før du fortsætter.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Accepterede datoformater">
+          <span>ÅÅÅÅ</span><span>ÅÅÅÅ.MM</span><span>ÅÅÅÅ.MM.DD</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Afslut</h2>
+      <p class="share-tip">For at dele din rapport, gemme det som en PDF først ved hjælp af en knap nedenfor, derefter vedhæfte PDF til en e-mail til din kliniker.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Udskriv rapport (sort &amp; hvid, instrumentbræt øverst)</button>
+        <button type="button" id="btn-print-color" class="btn">Gem rapport som farve PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Klare svar</button>
+      </div>
+      <p class="hint">"Gem som PDF" vises som en destination i browserens udskriftsvindue. Clearing svar fjerner alle BAACSS data fra denne enhed; det ikke klare DACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. En del af ACCEPTT - Advance Communication of Chemosense Experiences, Phenotypes, Tests, and Treatments. Spørgsmål: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=26.10.11.2"></script><script src="../MCSbm/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

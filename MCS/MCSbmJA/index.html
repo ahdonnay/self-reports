@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS — 一部の化学物質の感受性と関連したバイオマーカー異常</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">← MCSの病歴</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">バイオマーカー異常 一部化学的感受性と関連</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">このチェックリストについて</h2>
+      <p>BAACSSは、一部の人々に化学感度に関連したバイオマーカー異常のチェックリストです。 これらの異常を抱えている人はMCSを持っていません。 しかし、統計的にはMCSの方が、これらの異常が制御よりも著しくなっています。 BAACSSは、高度、低、または参照範囲で最新の結果を記録するために人々のために設計されているので、彼らは彼らの臨床医は、彼らの結果がMCSとどのように密接に一致しているか、そして、最近ではなかったテストを見ることができます。 (このリストは、参照が利用可能である独立した毒性学者によってコンパイルされました。 <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+      <p><strong>注記:</strong> 項目は、英語の原名のアルファベット順に掲載されています。</p>
+<h3>BAACSSチェックリストを完了する方法</h3>
+      <p>各バイオマーカーについては、いずれかを選択します。</p>
+      <ul class="legend">
+        <li>
+<span class="code code-N">未</span> <strong>決して/結果無し</strong> = このテストがなかったり、結果へのアクセスがなかったり</li>
+        <li>
+<span class="code code-R">基</span> <strong>参照の範囲</strong> =実験室の参照か正常な範囲内の結果</li>
+        <li>
+<span class="code code-L">低</span> <strong>低い</strong> = 参照範囲の下の結果</li>
+        <li>
+<span class="code code-H">高</span> <strong>高い/現在</strong> = 参照範囲の上の結果、または通常が存在しない場合</li>
+      </ul>
+      <p>すべてのバイオマーカーが始まります <strong>N</strong>. N を R、L、または H に、ラボや EHR の結果が手元にある場合にのみ変更します。 その日付を入力してください。 <strong>お問い合わせ</strong>, <strong>ヤンゴン</strong>または
+        <strong>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYMM.MM.DD</strong> 続行する前に。 ダッシュボードは自動的に更新されます。 いつでも停止して戻ってきます。このブラウザで回答が保存されます。</p>
+
+      <p class="note"><strong>ボトムライン</strong> これらのバイオマーカーのすべては、制御よりもMCSを持つ人々でかなり異常ですが、相関は常に原因ではありません。 バイオマーカーは、MCSの取得の危険性に寄与する共同ファクターであるか、またはMCS、共存性、または単なる偶然を得るという結果であるかもしれません。 MCSにマッチしないBAACSS結果は、結果として重要である。</p>
+      <p class="clinical-note"><strong>重要:</strong> 自分のレポートに示されている分類を記録し、資格のある臨床医との結果を議論. このチェックリストは、診断を確立したり、試験所で供給された参照範囲と解釈を交換したりしません。</p>
+
+      <details class="privacy">
+        <summary>プライバシーとデータ</summary>
+        <p>回答は、このWebブラウザでのみ保存されます。 どのサーバーにも送信されません。 このブラウザプロファイルを使用する人は、あなたの答えを見ることができます。 <strong>明確な回答</strong> 終了したら。 レポートを別のデバイスに移動するには、ブラウザのプリント→PDFとして保存してください。</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">あなたの情報</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">名前またはコード名</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="例: Jane Smith — または redbikedog のような 3 ワードのコード名">
+          <p class="hint">あなたの臨床医がこれを報告していることを知っているように、あなたの名前を入力してください - または、匿名を維持したい場合は、最大12文字までのプライベート3ワードコード名(例: redbikedog)。 あなたの選択。</p>
+        </div>
+        <div class="field">
+          <label for="sex">出産時の性</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>女性 女性</option>
+            <option>男性 男性</option>
+            <option>インターセックス</option>
+            <option>言うべきではありません</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">年齢 — 年</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="年間売上高">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">年齢 — 月</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="月別アーカイブ">
+        </div>
+        <div class="field">
+          <label for="date-completed">完了日</label>
+          <input type="date" id="date-completed">
+          <p class="hint">チェックリストが完了したら、自動的に入力します。変更できます。</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">ダッシュボード</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="全体概要">
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">報告された結果</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">N:テストされない/結果無し</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reference">0%</span><span class="kpi-label">R: 参照の範囲</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A:異常(LかH)</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M:MCS研究にマッチ</span>
+</div>
+        <div class="kpi kpi-attention">
+<span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">必要な日付</span>
+</div>
+      </div>
+      <p class="dash-foot">有効な結果の日付で = R, L, H を報告しました。 REF、ABN、およびMCSの割合は、デノミネーターとして報告された結果を使用します。 「MCSスタディ」では、異常方向が報告されている[L]または[H]が示されています。 [H]は「通常は不在の場合」もカバーします。</p>
+      <div class="table-scroll" tabindex="0" aria-label="スクロール可能なカテゴリの概要">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">バイオマーカーカテゴリによる結果</caption>
+          <thead>
+            <tr>
+              <th scope="col">カテゴリー</th>
+<th scope="col">バイオマーカー</th>
+<th scope="col">決して</th>
+              <th scope="col">レポート</th>
+<th scope="col">参考文献</th>
+<th scope="col">ログイン</th>
+<th scope="col">MCS</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">バイオマーカーチェックリスト</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>続行する前に、結果の日付が必要です。</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="受け入れられた日付のフォーマット">
+          <span>お問い合わせ</span><span>ヤンゴン</span><span>YYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYYMM.MM.DD</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">フィニッシュ</h2>
+      <p class="share-tip">レポートを共有するには、下のボタンを使用してPDFを最初に保存してから、PDFをクリニックに電子メールに添付してください。</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">プリントレポート(ブラック&amp;ホワイト、ダッシュボード)</button>
+        <button type="button" id="btn-print-color" class="btn">レポートをカラーPDFとして保存</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">明確な回答</button>
+      </div>
+      <p class="hint">「PDFとして保存」は、お使いのブラウザのプリントウィンドウの宛先として表示されます。 回答をクリアすると、このデバイスからすべてのBAACSSデータを削除します。DACSSはクリアしません。</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2018 アルバート・ドナイ ACCEPTTのパート — 化学的経験、現象型、試験、および治療の高度通信。 質問: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=26.10.11.2"></script>
+  <script src="js/terms.js?v=26.10.11.2"></script>
+  <script src="js/static.js?v=26.10.11.2"></script>
+  <script src="../MCSbm/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="it-IT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS — Trattamenti che avresti curato, evitare o attualmente prendere a causa di qualsiasi sensibilità sensoriale</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">← Storia della MCS</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Trattamenti che si desidera recuperare, evitare, o attualmente prendere a causa di qualsiasi sensibilità sensoriale</p>
+      <p class="version" id="version">v26.09.13.1</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Informazioni su questa lista</h2>
+      <p>TRACTSS registra trattamenti che hai provato a causa di sensibilità chimiche o sensoriali. Per ogni trattamento, indicare se si desidera riprovare, lo eviterebbe, o attualmente prendere o usarlo. Questo dà a voi e ai vostri medici un record compatto della vostra esperienza di trattamento. L'elenco di trattamento è stato compilato da un tossicologo indipendente, da cui sono disponibili riferimenti:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+      <p><strong>Nota:</strong> Gli elementi sono presentati nell’ordine alfabetico dei nomi originali in inglese.</p>
+<h3>Come completare la lista di controllo TRACTSS</h3>
+      <p>Per ogni trattamento, scegliere uno stato:</p>
+      <ul class="legend">
+        <li>
+<span class="code code-N">M</span> <strong>Mai / nessun ricordo</strong> = mai provato il trattamento, o non ricordare i suoi effetti</li>
+        <li>
+<span class="code code-R">R</span> <strong>Retry</strong> = provato e sarebbe disposto a riprovarlo</li>
+        <li>
+<span class="code code-A">E</span> <strong>Evitare</strong> = provato e vuole evitare di provarlo di nuovo</li>
+        <li>
+<span class="code code-C">A</span> <strong>Attualmente</strong> = attualmente prendere o utilizzare il trattamento</li>
+      </ul>
+      <p>Ogni trattamento inizia <strong>N</strong>. Se si seleziona <strong>R</strong> o <strong>A</strong>, è necessario selezionare uno o più motivi per cui si è fermato prima di continuare. Il cruscotto si aggiorna automaticamente. Puoi fermarti e tornare in qualsiasi momento; le tue risposte vengono salvate in questo browser sul tuo dispositivo.</p>
+
+      <h3>Motivi per fermare un trattamento</h3>
+      <ul class="reason-legend">
+        <li>
+<span class="reason-code">ERX</span> Fine della prescrizione</li>
+        <li>
+<span class="reason-code">$$$</span> Spese</li>
+        <li>
+<span class="reason-code">MDa</span> Consulenza medica</li>
+        <li>
+<span class="reason-code">NL</span> Non c'è più bisogno</li>
+        <li>
+<span class="reason-code">NLA</span> Non più lungo disponibile</li>
+        <li>
+<span class="reason-code">N.</span> Non più lungamente efficace</li>
+        <li>
+<span class="reason-code">ROT</span> Sostituire con altre terapie</li>
+        <li>
+<span class="reason-code">#</span> Effetti collaterali</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Importante:</strong> TRACTSS registra la tua esperienza e le tue preferenze; non determina se un trattamento è sicuro o efficace. Non avviare, fermare, evitare, o riprovare un trattamento basato su questa lista di controllo da solo. Discutere i cambiamenti di trattamento con un medico qualificato.</p>
+
+      <details class="privacy">
+        <summary>Privacy e dati</summary>
+        <p>Le tue risposte sono memorizzate solo in questo browser web, su questo dispositivo. Nulla viene inviato a qualsiasi server. Chiunque utilizzi questo profilo del browser può vedere le tue risposte, quindi su un uso condiviso o pubblico del computer <strong>risposte chiare</strong> quando finisci. Per spostare il rapporto su un altro dispositivo, utilizzare il vostro browser's Print → Salva come PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Le tue informazioni</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nome o nome del codice</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="per esempio Jane Smith — o un nome in codice di 3 parole come redbikedog">
+          <p class="hint">Inserisci il tuo nome in modo che il tuo ambulatorio sappia di chi sia il rapporto o, se preferisci rimanere anonimo, un nome in codice privato di 3 parole fino a 12 lettere (ad esempio redbikedog). La tua scelta.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sesso alla nascita</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Femmina</option>
+            <option>Maschio</option>
+            <option>Intersex</option>
+            <option>Preferire non dire</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Età — anni</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Anni">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Età — mesi</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Mesi">
+        </div>
+        <div class="field">
+          <label for="date-completed">Data ultimata</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Si riempie automaticamente quando si entra nel primo trattamento; è possibile modificarlo.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Riepilogo generale">
+        <div class="kpi">
+<span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Mai provato</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">N: mai / no memoria</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: Retry</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: evitare</span>
+</div>
+        <div class="kpi">
+<span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: attualmente prendere</span>
+</div>
+        <div class="kpi kpi-attention">
+<span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Motivi necessari</span>
+</div>
+      </div>
+      <p class="dash-foot">Mai provato = R, A, o C. Retry, Evitare, e Attualmente Prendere percentuali utilizzare trattamenti mai provato come denominatore. Uno stato R o A conta solo dopo che viene selezionato almeno una ragione di arresto.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Riepilogo del tipo di trattamento rotabile">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Risultati per tipo di trattamento</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo</th>
+<th scope="col">Trattamento</th>
+<th scope="col">Mai</th>
+              <th scope="col">Relazione</th>
+<th scope="col">Retry</th>
+<th scope="col">Evitare</th>
+<th scope="col">Corrente</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Motivi per fermare i trattamenti</h3>
+      <p class="dash-foot">Un trattamento può avere più di un motivo, quindi le percentuali possono essere totali più del 100%.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Riepilogo di stop-reason">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Motivi selezionati per i trattamenti interrotti</caption>
+          <thead><tr>
+<th scope="col">Motivazione</th>
+<th scope="col">Numero</th>
+<th scope="col">% fermato</th>
+</tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Controllo del trattamento</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Selezionare almeno un motivo prima di continuare.</strong>
+        <span id="pending-name"></span>
+        <span>Scegliere qualsiasi motivo che si applica nella riga evidenziata.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Finitura</h2>
+      <p class="share-tip">Per condividere il tuo rapporto, salvarlo come PDF prima usando un pulsante qui sotto, quindi allegare il PDF a un'email al tuo ambulatorio.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Rapporto di stampa (bianco e nero, cruscotto sopra)</button>
+        <button type="button" id="btn-print-color" class="btn">Salva rapporto come colore PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">risposte chiare</button>
+      </div>
+      <p class="hint">“Salva come PDF” appare come una destinazione nella finestra di stampa del tuo browser. Cancellare le risposte rimuove tutti i dati TRACTSS da questo dispositivo; non cancella DACSS o BAACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap">
+      <p>© 2026 Albert Donnay. Parte di ACCEPTT — Comunicazione anticipata di esperienze sensoriali, fenotipi, test e trattamenti. Domande: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js?v=26.10.11.2"></script><script src="../MCStx/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

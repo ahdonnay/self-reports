@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="da-DK">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DACSS - Lidelser forbundet med kemisk følsomhed hos nogle</title>
+<link rel="stylesheet" href="../MCSdx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+
+<!-- = = = = = = SCREEN HEADER = = = = = = = = = = = = = -->
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <a class="suite-link no-print" href="../">← MCS-historik</a>
+    <h1>DACSS</h1>
+    <p class="subtitle">Lidelser forbundet med kemisk følsomhed hos nogle</p>
+    <p class="version" id="version">v26.09.06</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- = = = = = = VEJLEDNING = = = = = = = -->
+  <section class="card instructions" aria-labelledby="instr-h">
+    <h2 id="instr-h">Om denne tjekliste</h2>
+    <p>DACSS er en tjekliste over medicinske lidelser forbundet med kemisk følsomhed hos nogle mennesker. Ikke alle med disse lidelser har MCS, men de er mere tilbøjelige til at have MCS, og folk med MCS er mere tilbøjelige til at have disse lidelser. DACSS er designet til at folk til at registrere, hvilke af disse lidelser de har haft i fortiden, altid havde, eller har i øjeblikket, men ikke altid, så de og deres klinikere kan se, hvor deres sygdom kommer fra i form af hvilke lidelser er involveret. (Listen er udarbejdet af en uafhængig toksikolog, hvorfra referencerne er tilgængelige:
+      <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.) </p>
+
+    <p><strong>Bemærk:</strong> Punkterne er anført i alfabetisk rækkefølge efter deres oprindelige engelske navne.</p>
+<h3>Sådan udfyldes DACSS-checklisten</h3>
+    <p>For hver lidelse, skal du vælge en:</p>
+    <ul class="legend">
+      <li>
+<span class="code code-N">A</span> <strong>Aldrig</strong> = ALDRIG havde sygdom, eller kan ikke huske</li>
+      <li>
+<span class="code code-P">F</span> <strong>Tidligere</strong> = havde forstyrrelser i PAST, men ikke nu</li>
+      <li>
+<span class="code code-A">H</span> <strong>Altid</strong> = ALTID har uorden, siden barndommen</li>
+      <li>
+<span class="code code-C">N</span> <strong>Løbende måned</strong> - Uro, men ikke altid</li>
+    </ul>
+    <p>For hver lidelse ændret fra N til P, A eller C, også vælge sin nødvendige
+      <strong>Nuværende virkning</strong>:</p>
+    <ul class="impact-legend">
+      <li>
+<span class="impact-code">0</span> <strong>Ingen væsentlig indvirkning</strong>
+</li>
+      <li>
+<span class="impact-code">1</span> <strong>Let invaliderende</strong>
+</li>
+      <li>
+<span class="impact-code">2</span> <strong>Svært invaliderende, men stadig uafhængige</strong>
+</li>
+      <li>
+<span class="impact-code">3</span> <strong>Handicappede på betingelse af, at der er behov for hjælp</strong>
+</li>
+    </ul>
+    <p>Hver lidelse starter på <strong>Aldrig</strong>. Skift kun dem, du har oplevet. Dashboardet opdateres løbende. Du kan stoppe og vende tilbage når som helst; dine svar gemmes i denne browser på din enhed. Det tager cirka 20 minutter at udfylde tjeklisten.</p>
+
+    <p class="note"><strong>Nederste linje</strong> Selv om alle disse lidelser er korrelerede med MCS, korrelationen er ikke altid årsagssammenhæng. Lidelsen kan være co- faktor, der bidrager til risikoen for at få MCS, eller det kan være en konsekvens af at få MCS, en co- morbiditet, eller bare en tilfældighed. Den DACSS du havde i fortiden og kom sig fra er lige så vigtigt for klinikere at overveje som dem, du stadig har. </p>
+    <details class="privacy">
+      <summary>Privacy &amp; dine data</summary>
+      <p>Dine svar gemmes kun i denne webbrowser, på denne enhed. Intet sendes til nogen server. Enhver, der bruger denne browser profil vil være i stand til at se dine svar, så på en delt eller offentlig computer, skal du bruge <strong>Klare svar</strong> Når du er færdig. For at flytte din rapport til en anden enhed, skal du bruge din browsers Print → Gem som PDF.</p>
+    </details>
+  </section>
+
+  <!-- = = = = = = PATIENT INFO = = = = = = = = = = = = = = -->
+  <section class="card" aria-labelledby="who-h">
+    <h2 id="who-h">Dine oplysninger</h2>
+    <div class="fields">
+      <div class="field field-wide">
+        <label for="patient-id">Navn eller kodenavn</label>
+        <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="f.eks. Jane Smith - eller et 3-ords kodenavn som redbikedog">
+        <p class="hint">Indtast dit navn, så din læge ved, hvis rapport dette er - eller, hvis du foretrækker at forblive anonym, en privat 3-ord kodenavn op til 12 bogstaver (fx redbikedog). Dit valg.</p>
+      </div>
+      <div class="field">
+        <label for="sex">Køn ved fødslen</label>
+        <select id="sex">
+          <option value="">—</option>
+          <option>Kvinder</option>
+          <option>Mænd</option>
+          <option>Intersex</option>
+          <option>Foretrækker ikke at sige</option>
+        </select>
+      </div>
+      <div class="field field-narrow">
+        <label for="age-years">Alder - år</label>
+        <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="År">
+      </div>
+      <div class="field field-narrow">
+        <label for="age-months">Alder - måneder</label>
+        <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Måneder">
+      </div>
+      <div class="field">
+        <label for="date-completed">Dato</label>
+        <input type="date" id="date-completed">
+        <p class="hint">Fylder automatisk ind når checklisten er færdig; du kan ændre den.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- = = = = = = DASHBOARD = = = = = = = = = = = = = -->
+  <section class="card dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">Dashboard</h2>
+    <p class="dash-progress" id="progress" aria-live="polite"></p>
+
+    <div class="kpis" role="group" aria-label="Samlet oversigt">
+      <div class="kpi">
+<span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">Nogensinde oplevet</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">Aldrig</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">Altid</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">Tidligere</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">Løbende måned</span>
+</div>
+      <div class="kpi kpi-trend">
+<span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">Indlæs med alderen</span>
+</div>
+    </div>
+    <p class="dash-foot">Alle procentsatser er af den samlede <span id="total-count">92</span> forstyrrelser.
+      <span class="trend-note">"Belastning med alder" = Strøm − Fortid (positivt tyder på, at belastningen stiger med alderen, negativt tyder på fald). Det omfatter ikke "Altid".</span>
+      <span class="trend-note">"Avg Impact" er det matematiske gennemsnit af 0-3 aktuelle Impact score, der er indtastet inden for hver kategori; - betyder, at der ikke er indtastet nogen impact score.</span></p>
+
+    <table class="dash-table" aria-live="polite">
+      <caption class="sr-only">Procentdel efter kategori</caption>
+      <thead>
+        <tr>
+<th scope="col">Kategori</th>
+<th scope="col">Aldrig</th>
+<th scope="col">Tidligere</th>
+            <th scope="col">Altid</th>
+<th scope="col">Løbende måned</th>
+<th scope="col">Alle (P / A / C)</th>
+            <th scope="col">Avg- effekt</th>
+</tr>
+      </thead>
+      <tbody id="dash-rows"></tbody>
+    </table>
+  </section>
+
+  <!-- = = = = = = CHECKLIST = = = = = = = = = = = = = = -->
+  <section class="checklist" aria-labelledby="check-h">
+    <h2 id="check-h" class="wrap-h">Checkliste</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden>
+      <strong>Den aktuelle virkning er nødvendig, før du fortsætter.</strong>
+      <span id="pending-name"></span>
+      <span class="impact-scale">Vælg 0, 1, 2 eller 3.</span>
+    </div>
+    <div id="categories"></div>
+  </section>
+
+  <!-- = = = = = = AKTIONER = = = = = = = = = = = = = = -->
+  <section class="card actions no-print" aria-labelledby="act-h">
+    <h2 id="act-h">Afslut</h2>
+    <p class="share-tip">At dele din rapport: gemme det som en PDF først (knapper nedenfor), derefter vedhæfte PDF til en e-mail til din kliniker.</p>
+    <div class="buttons">
+      <button type="button" id="btn-print-bw" class="btn btn-primary">Udskriv rapport (sort &amp; hvid, instrumentbræt øverst)</button>
+      <button type="button" id="btn-print-color" class="btn">Gem rapport som farve PDF</button>
+      <button type="button" id="btn-clear" class="btn btn-danger">Klare svar</button>
+    </div>
+    <p class="hint">"Gem som PDF" vises som en destination i browserens udskriftsvindue. Clearing svar fjerner alle data fra denne enhed.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer no-print">
+  <div class="wrap">
+    <p>© 2026 Albert Donnay. En del af ACCEPTT - Advance Communication of Chemosense Experiences, Phenotypes, Tests, and Treatments. Spørgsmål: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js?v=26.10.11.2"></script><script src="../MCSdx/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>

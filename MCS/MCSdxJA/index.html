@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="ja-JP">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DACSS — 化学物質の感度と関連づける</title>
+<link rel="stylesheet" href="../MCSdx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+
+<!-- ================================================================================================================================================================================================================================================================ SCREEN HEADER ==================== -->
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <a class="suite-link no-print" href="../">← MCSの病歴</a>
+    <h1>DACSS</h1>
+    <p class="subtitle">化学物質の感受性と関連した無秩序</p>
+    <p class="version" id="version">v26.09.06</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ================================================================================================================================================================================================================================================================ インストール =================== -->
+  <section class="card instructions" aria-labelledby="instr-h">
+    <h2 id="instr-h">このチェックリストについて</h2>
+    <p>DACSSは、化学物質の感受性に関連する医療障害のチェックリストです。 これらの障害を持つ誰もがMCSを持っていますが、それらはMCSを持っている可能性が高く、MCSを持つ人々は、これらの障害を持っている可能性が高いです。 DACSSは、過去に持っていたこれらの障害のどれが記録する人々のために設計されている, 常に持っていた, または、現在、必ずしもそうではありません, 彼らは、彼らの臨床医は、どのような障害が関与しているかの観点から来ている場所を見ることができます. (このリストは、参照が利用可能である独立した毒性学者によってコンパイルされました。
+      <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.) </p>
+
+    <p><strong>注記:</strong> 項目は、英語の原名のアルファベット順に掲載されています。</p>
+<h3>DACSSチェックリストを完了する方法</h3>
+    <p>各障害のために、1つを選んで下さい:</p>
+    <ul class="legend">
+      <li>
+<span class="code code-N">未</span> <strong>決して</strong> = 無秩序、またはリコールできない</li>
+      <li>
+<span class="code code-P">過</span> <strong>新着情報</strong> = PASTに障害があったが、今ではなかった</li>
+      <li>
+<span class="code code-A">常</span> <strong>常に</strong> = ALWAYSは子供の頃から障害があります</li>
+      <li>
+<span class="code code-C">現</span> <strong>現在の位置:</strong> — CURRENTLYは無秩序を持っていますが、常にありません</li>
+    </ul>
+    <p>すべての障害がNからP、A、Cに変更されるため、必要に応じて選択します。
+      <strong>現在の影響</strong>:</p>
+    <ul class="impact-legend">
+      <li>
+<span class="impact-code">0</span> <strong>重要な影響なし</strong>
+</li>
+      <li>
+<span class="impact-code">1</span> <strong>軽度に不審な</strong>
+</li>
+      <li>
+<span class="impact-code">2</span> <strong>重度の不審な、しかしまだ独立した</strong>
+</li>
+      <li>
+<span class="impact-code">3</span> <strong>援助を必要とするポイントへの条件によって無効にされる</strong>
+</li>
+    </ul>
+    <p>すべての障害が始まります <strong>決して</strong>. 経験したものだけを変えて下さい。 ダッシュボードのアップデートはそのままです。 いつでも解答が保存されます。このブラウザはデバイスに保存されます。 チェックリストは、約20分かかります。</p>
+
+    <p class="note"><strong>ボトムライン</strong> これらの障害のすべてがMCSと関連していますが、相関は常に原因ではありません。 障害は、MCSを得る危険性に寄与する共同ファクターであるか、またはMCS、共存性、または単なる偶然を得るという結果になる可能性があります。 あなたが過去に持っていたDACSSは、あなたがまだ持っているものとして考慮するために臨床医にとって重要なことです。 </p>
+    <details class="privacy">
+      <summary>プライバシーとデータ</summary>
+      <p>回答は、このWebブラウザでのみ保存されます。 どのサーバーにも送信されません。 このブラウザプロファイルを使用する人は、あなたの答えを見ることができますので、共有または公開コンピュータで、使用 <strong>明確な回答</strong> 終了したら。 レポートを別のデバイスに移動するには、ブラウザのプリント→PDFとして保存してください。</p>
+    </details>
+  </section>
+
+  <!-- ================================================================================================================================================================================================================================================================ PATIENT INFO ===================================================================================== -->
+  <section class="card" aria-labelledby="who-h">
+    <h2 id="who-h">あなたの情報</h2>
+    <div class="fields">
+      <div class="field field-wide">
+        <label for="patient-id">名前またはコード名</label>
+        <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="例: Jane Smith — または redbikedog のような 3 ワードのコード名">
+        <p class="hint">あなたの臨床医がこれを報告していることを知っているように、あなたの名前を入力してください - または、匿名を維持したい場合は、最大12文字までのプライベート3ワードコード名(例: redbikedog)。 あなたの選択。</p>
+      </div>
+      <div class="field">
+        <label for="sex">出産時の性</label>
+        <select id="sex">
+          <option value="">—</option>
+          <option>女性 女性</option>
+          <option>男性 男性</option>
+          <option>インターセックス</option>
+          <option>言うべきではありません</option>
+        </select>
+      </div>
+      <div class="field field-narrow">
+        <label for="age-years">年齢 — 年</label>
+        <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="年間売上高">
+      </div>
+      <div class="field field-narrow">
+        <label for="age-months">年齢 — 月</label>
+        <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="月別アーカイブ">
+      </div>
+      <div class="field">
+        <label for="date-completed">完了日</label>
+        <input type="date" id="date-completed">
+        <p class="hint">チェックリストが完了したら、自動的に入力します。変更できます。</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================================================================================================================================================================================================================================================================ DASHBOARD =================== -->
+  <section class="card dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">ダッシュボード</h2>
+    <p class="dash-progress" id="progress" aria-live="polite"></p>
+
+    <div class="kpis" role="group" aria-label="全体概要">
+      <div class="kpi">
+<span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">経験豊富な経験</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">決して</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">常に</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">新着情報</span>
+</div>
+      <div class="kpi">
+<span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">現在の位置:</span>
+</div>
+      <div class="kpi kpi-trend">
+<span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">年齢とともに</span>
+</div>
+    </div>
+    <p class="dash-foot">すべてのパーセンテージは合計 <span id="total-count">92</span> 障害。
+      <span class="trend-note">「年齢とともにロード」 = 現在の − 過去(陽性は、年齢とともに上昇する負荷を示唆し、マイナスは落ちることを提案します)。 「常に」は含まれていません。</span>
+      <span class="trend-note">「Avg Impact」は、各カテゴリに入力された0〜3電流影響スコアの数学的平均です。 — 影響スコアが入力されていないことを意味します。</span></p>
+
+    <table class="dash-table" aria-live="polite">
+      <caption class="sr-only">カテゴリによるパーセント</caption>
+      <thead>
+        <tr>
+<th scope="col">カテゴリー</th>
+<th scope="col">決して</th>
+<th scope="col">新着情報</th>
+            <th scope="col">常に</th>
+<th scope="col">現在の位置:</th>
+<th scope="col">任意の(P/A/C)</th>
+            <th scope="col">平均衝撃</th>
+</tr>
+      </thead>
+      <tbody id="dash-rows"></tbody>
+    </table>
+  </section>
+
+  <!-- ================================================================================================================================================================================================================================================================ CHECKLIST ====================== -->
+  <section class="checklist" aria-labelledby="check-h">
+    <h2 id="check-h" class="wrap-h">チェックリスト</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden>
+      <strong>引き続き、現在の影響が必要です。</strong>
+      <span id="pending-name"></span>
+      <span class="impact-scale">0、1、2、または3を選択します。</span>
+    </div>
+    <div id="categories"></div>
+  </section>
+
+  <!-- ================================================================================================================================================================================================================================================================ ACTIONS ============================================================================================================================================================================================================================================================= -->
+  <section class="card actions no-print" aria-labelledby="act-h">
+    <h2 id="act-h">フィニッシュ</h2>
+    <p class="share-tip">レポートを共有するには、まずPDFとして保存してください(以下ボタン)、PDFをクリニックに電子メールに添付します。</p>
+    <div class="buttons">
+      <button type="button" id="btn-print-bw" class="btn btn-primary">プリントレポート(ブラック&amp;ホワイト、ダッシュボード)</button>
+      <button type="button" id="btn-print-color" class="btn">レポートをカラーPDFとして保存</button>
+      <button type="button" id="btn-clear" class="btn btn-danger">明確な回答</button>
+    </div>
+    <p class="hint">「PDFとして保存」は、お使いのブラウザのプリントウィンドウの宛先として表示されます。 回答をクリアすると、このデバイスからすべてのデータを削除します。</p>
+  </section>
+
+</main>
+
+<footer class="site-footer no-print">
+  <div class="wrap">
+    <p>© 2018 アルバート・ドナイ ACCEPTTのパート — 化学的経験、現象型、試験、および治療の高度通信。 質問: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+  </div>
+</footer>
+
+<script src="js/i18n.js?v=26.10.11.2"></script>
+<script src="js/terms.js?v=26.10.11.2"></script>
+<script src="js/static.js?v=26.10.11.2"></script>
+<script src="../MCSdx/js/app.js?v=26.10.11.2"></script>
+</body>
+</html>
