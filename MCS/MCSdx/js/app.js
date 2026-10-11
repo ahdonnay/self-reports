@@ -3,16 +3,40 @@
 
 'use strict';
 
-const STORAGE_KEY = 'dacss.v1';
+const CONFIG = window.DACSS_CONFIG || {};
+const STORAGE_KEY = CONFIG.storageKey || 'dacss.v1';
+const DATA_PATH = CONFIG.dataPath || 'data/list.json';
 const CODES = ['N', 'P', 'A', 'C'];
-const CODE_LABEL = { N: 'Never', P: 'Past', A: 'Always', C: 'Current' };
+const CODE_DISPLAY = { N: 'N', P: 'P', A: 'A', C: 'C', ...(CONFIG.codeDisplay || {}) };
+const CODE_LABEL = { N: 'Never', P: 'Past', A: 'Always', C: 'Current', ...(CONFIG.codeLabel || {}) };
 const IMPACT_VALUES = ['0', '1', '2', '3'];
 const IMPACT_LABEL = {
   0: 'No significant impact',
   1: 'Mildly disabling',
   2: 'Severely disabling, but still independent',
-  3: 'Disabled by the condition to the point of needing assistance'
+  3: 'Disabled by the condition to the point of needing assistance',
+  ...(CONFIG.impactLabel || {})
 };
+const TEXT = {
+  categoryCount: (marked, total) => `${marked} of ${total} marked`,
+  columns: ['Your answer', 'Disorder', 'Current Impact'],
+  centralMarker: '* central sensitization syndrome',
+  coMarker: '^ reported after CO poisoning',
+  currentImpactFor: name => `Current Impact for ${name}`,
+  trendRising: 'Load rising with age',
+  trendFalling: 'Load falling with age',
+  trendNeutral: 'Load with age',
+  progress: (marked, total, missing) =>
+    `${marked} of ${total} disorders marked as had or having (the rest are Never).` +
+    (missing ? ` ${missing} ${missing === 1 ? 'needs' : 'need'} a Current Impact score.` : ''),
+  completeImpactBeforePrint: 'Complete the highlighted Current Impact score before printing or saving the report.',
+  chooseImpact: name => `Choose a Current Impact score for ${name || 'this disorder'} before continuing.`,
+  clearConfirmation: 'Clear all your answers and personal details from this device? This cannot be undone.',
+  loadError: 'Could not load the disorder list. If you opened this file directly, please run it from a local web server (see README).',
+  ...(CONFIG.text || {})
+};
+const CATEGORY_NAMES = CONFIG.categoryNames || {};
+const ITEM_NAMES = CONFIG.itemNames || {};
 
 let DATA = null;          // list.json
 let state = null;         // { answers:{id:code}, impacts:{id:score}, patient:{...} }
@@ -61,6 +85,8 @@ function hasImpact(id) { return impactOf(id) !== ''; }
 
 /* ---------- rollup engine (ports of the sheet's COUNTIF logic) ---------- */
 function allItems() { return DATA.categories.flatMap(c => c.items); }
+function categoryName(cat) { return CATEGORY_NAMES[cat.id] || cat.name; }
+function itemName(item) { return ITEM_NAMES[item.id] || item.name; }
 
 function countByCode(items) {
   const t = { N: 0, P: 0, A: 0, C: 0 };
@@ -99,13 +125,13 @@ function buildChecklist() {
     const marked = cat.items.filter(it => codeOf(it.id) !== 'N').length;
 
     const h = document.createElement('h3');
-    h.innerHTML = `<span>${escapeHtml(cat.name)}</span>` +
-      `<span class="cat-count" id="count-${cat.id}">${marked} of ${cat.items.length} marked</span>`;
+    h.innerHTML = `<span>${escapeHtml(categoryName(cat))}</span>` +
+      `<span class="cat-count" id="count-${cat.id}">${escapeHtml(TEXT.categoryCount(marked, cat.items.length))}</span>`;
     sec.appendChild(h);
 
     const columns = document.createElement('div');
     columns.className = 'column-head';
-    columns.innerHTML = '<span>Your answer</span><span>Disorder</span><span>Current Impact</span>';
+    columns.innerHTML = TEXT.columns.map(label => `<span>${escapeHtml(label)}</span>`).join('');
     sec.appendChild(columns);
 
     cat.items.forEach(it => sec.appendChild(disorderRow(it)));
@@ -118,16 +144,17 @@ function disorderRow(it) {
   row.className = 'disorder' + (codeOf(it.id) !== 'N' ? ' is-marked' : '');
   row.id = 'row-' + it.id;
 
+  const displayName = itemName(it);
   const markers = [];
-  if (it.centralSensitization) markers.push('* central sensitization syndrome');
-  if (it.coPoisoning) markers.push('^ reported after CO poisoning');
+  if (it.centralSensitization) markers.push(TEXT.centralMarker);
+  if (it.coPoisoning) markers.push(TEXT.coMarker);
 
   const name = document.createElement('div');
   const nameHtml = it.url
     ? `<a href="${escapeHtml(it.url)}" target="_blank" rel="noopener noreferrer" ` +
       `style="color: inherit; text-decoration: underline; text-decoration-thickness: 1px; text-underline-offset: 2px;">` +
-      `${escapeHtml(it.name)}</a>`
-    : escapeHtml(it.name);
+      `${escapeHtml(displayName)}</a>`
+    : escapeHtml(displayName);
   name.innerHTML = `<p class="name">${nameHtml}</p>` +
     (markers.length ? `<p class="markers">${escapeHtml(markers.join('  ·  '))}</p>` : '');
   row.appendChild(name);
@@ -136,7 +163,7 @@ function disorderRow(it) {
   const group = document.createElement('div');
   group.className = 'opts';
   group.setAttribute('role', 'radiogroup');
-  group.setAttribute('aria-label', it.name);
+  group.setAttribute('aria-label', displayName);
   CODES.forEach(code => {
     const id = `${it.id}-${code}`;
     const label = document.createElement('label');
@@ -151,7 +178,7 @@ function disorderRow(it) {
     input.addEventListener('change', () => setAnswer(it.id, code));
     const face = document.createElement('span');
     face.className = 'opt';
-    face.textContent = code;
+    face.textContent = CODE_DISPLAY[code];
     face.setAttribute('aria-hidden', 'true');
     // visible text for screen readers
     const sr = document.createElement('span');
@@ -165,7 +192,7 @@ function disorderRow(it) {
   const impactGroup = document.createElement('div');
   impactGroup.className = 'impact-opts';
   impactGroup.setAttribute('role', 'radiogroup');
-  impactGroup.setAttribute('aria-label', `Current Impact for ${it.name}`);
+  impactGroup.setAttribute('aria-label', TEXT.currentImpactFor(displayName));
   IMPACT_VALUES.forEach(score => {
     const id = `${it.id}-impact-${score}`;
     const label = document.createElement('label');
@@ -246,7 +273,7 @@ function refreshPendingAlert() {
   alertBox.hidden = !pendingId;
   if (!pendingId) return;
   const item = allItems().find(it => it.id === pendingId);
-  document.getElementById('pending-name').textContent = item ? item.name : '';
+  document.getElementById('pending-name').textContent = item ? itemName(item) : '';
 }
 
 function refreshAll() {
@@ -289,16 +316,14 @@ function refreshDashboard() {
   const trendEl = document.getElementById('kpi-trend');
   const sign = r.trend > 0 ? '+' : '';
   trendEl.textContent = sign + r.trend + '%';
-  const label = r.trend > 0 ? 'Load rising with age'
-              : r.trend < 0 ? 'Load falling with age'
-              : 'Load with age';
+  const label = r.trend > 0 ? TEXT.trendRising
+              : r.trend < 0 ? TEXT.trendFalling
+              : TEXT.trendNeutral;
   document.getElementById('kpi-trend-label').textContent = label;
 
   const markedTotal = items.filter(it => codeOf(it.id) !== 'N').length;
   const missingImpact = items.filter(it => codeOf(it.id) !== 'N' && !hasImpact(it.id)).length;
-  document.getElementById('progress').textContent =
-    `${markedTotal} of ${r.total} disorders marked as had or having (the rest are Never).` +
-    (missingImpact ? ` ${missingImpact} ${missingImpact === 1 ? 'needs' : 'need'} a Current Impact score.` : '');
+  document.getElementById('progress').textContent = TEXT.progress(markedTotal, r.total, missingImpact);
 
   // category table + per-category counts
   const tb = document.getElementById('dash-rows');
@@ -307,13 +332,13 @@ function refreshDashboard() {
     const cr = rollup(cat.items);
     const tr = document.createElement('tr');
     tr.innerHTML =
-      `<th scope="row">${escapeHtml(cat.name)}</th>` +
+      `<th scope="row">${escapeHtml(categoryName(cat))}</th>` +
       `<td>${cr.N}%</td><td>${cr.P}%</td><td>${cr.A}%</td><td>${cr.C}%</td><td>${cr.any}%</td>` +
       `<td>${formatImpact(cr.avgImpact)}</td>`;
     tb.appendChild(tr);
     const cnt = document.getElementById('count-' + cat.id);
     if (cnt) cnt.textContent =
-      `${cat.items.filter(it => codeOf(it.id) !== 'N').length} of ${cat.items.length} marked`;
+      TEXT.categoryCount(cat.items.filter(it => codeOf(it.id) !== 'N').length, cat.items.length);
   });
 }
 
@@ -332,7 +357,7 @@ function bindPatientFields() {
 
 /* ---------- actions ---------- */
 function printReport(color) {
-  if (focusPendingImpact('Complete the highlighted Current Impact score before printing or saving the report.')) return;
+  if (focusPendingImpact(TEXT.completeImpactBeforePrint)) return;
   document.body.classList.toggle('print-color', !!color);
   window.print();
 }
@@ -344,14 +369,14 @@ function focusPendingImpact(message) {
   }
   if (!pendingId) return false;
   const item = allItems().find(it => it.id === pendingId);
-  alert(message || `Choose a Current Impact score for ${item ? item.name : 'this disorder'} before continuing.`);
+  alert(message || TEXT.chooseImpact(item ? itemName(item) : ''));
   const impact = document.querySelector(`#row-${pendingId} .impact-opts input`);
   if (impact) impact.focus();
   document.getElementById('row-' + pendingId).scrollIntoView({ behavior: 'smooth', block: 'center' });
   return true;
 }
 function clearAll() {
-  if (!confirm('Clear all your answers and personal details from this device? This cannot be undone.')) return;
+  if (!confirm(TEXT.clearConfirmation)) return;
   try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
   state = blankState();
   pendingId = '';
@@ -373,12 +398,10 @@ function escapeHtml(s) {
 async function init() {
   state = load();
   try {
-    const res = await fetch('data/list.json', { cache: 'no-store' });
+    const res = await fetch(DATA_PATH, { cache: 'no-store' });
     DATA = await res.json();
   } catch (e) {
-    document.getElementById('categories').innerHTML =
-      '<p class="card">Could not load the disorder list. If you opened this file directly, ' +
-      'please run it from a local web server (see README).</p>';
+    document.getElementById('categories').innerHTML = `<p class="card">${escapeHtml(TEXT.loadError)}</p>`;
     return;
   }
   document.getElementById('version').textContent = DATA.version || '';
