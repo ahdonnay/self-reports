@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS — Anomalies des biomarqueurs associées à la sensibilité chimique chez certaines personnes</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; Auto-évaluations de la SCM</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Anomalies des biomarqueurs associées à la sensibilité chimique chez certaines personnes</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">À propos de cette liste de vérification</h2>
+      <p>La BAACSS est une liste de vérification des anomalies de biomarqueurs associées à la sensibilité chimique
+        chez certaines personnes. Toutes les personnes présentant ces anomalies ne sont pas atteintes de sensibilité
+        chimique multiple (SCM), mais ces anomalies sont statistiquement beaucoup plus fréquentes chez les personnes
+        atteintes de SCM que chez les témoins. La BAACSS permet de consigner les résultats les plus récents comme
+        élevés, bas ou dans l’intervalle de référence, afin que la personne et ses cliniciens puissent voir dans quelle
+        mesure ses résultats correspondent aux études sur la SCM et quels tests n’ont jamais été faits ou ne l’ont pas
+        été récemment. (La liste a été compilée par un toxicologue indépendant. Les références sont disponibles auprès
+        de <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+      <h3>Comment remplir la liste BAACSS</h3>
+      <p>Pour chaque biomarqueur, choisissez une réponse :</p>
+      <ul class="legend">
+        <li><span class="code code-N">J</span> <strong>Jamais / aucun résultat</strong> = test jamais effectué ou résultat inaccessible</li>
+        <li><span class="code code-R">R</span> <strong>Intervalle de référence</strong> = résultat dans l’intervalle de référence ou normal du laboratoire</li>
+        <li><span class="code code-L">B</span> <strong>Bas</strong> = résultat inférieur à l’intervalle de référence</li>
+        <li><span class="code code-H">É</span> <strong>Élevé / présent</strong> = résultat supérieur à l’intervalle de référence, ou présent s’il est normalement absent</li>
+      </ul>
+      <p>Chaque biomarqueur commence à <strong>J</strong>. Remplacez J par R, B ou É seulement lorsque vous avez le
+        résultat du laboratoire ou du dossier médical en main. Vous devez ensuite inscrire sa date sous la forme
+        <strong>AAAA</strong>, <strong>AAAA.MM</strong> ou <strong>AAAA.MM.JJ</strong> avant de continuer. Le tableau de
+        bord se met à jour automatiquement. Vous pouvez interrompre puis reprendre plus tard; vos réponses sont
+        enregistrées dans ce navigateur sur cet appareil.</p>
+
+      <p class="note"><strong>En bref</strong> Bien que tous ces biomarqueurs soient significativement plus souvent
+        anormaux chez les personnes atteintes de SCM que chez les témoins, le lien n’est pas toujours causal. Un
+        biomarqueur peut être un cofacteur qui contribue au risque de SCM, une conséquence de la SCM, une comorbidité
+        ou une simple coïncidence. Les résultats BAACSS qui ne correspondent pas aux études sur la SCM sont aussi
+        importants que ceux qui y correspondent.</p>
+      <p class="clinical-note"><strong>Important :</strong> Inscrivez la classification indiquée sur votre propre
+        rapport et discutez des résultats avec un professionnel de la santé qualifié. Cette liste ne permet pas
+        d’établir un diagnostic et ne remplace ni l’intervalle de référence ni l’interprétation du laboratoire.</p>
+
+      <details class="privacy">
+        <summary>Confidentialité et vos données</summary>
+        <p>Vos réponses sont enregistrées uniquement dans ce navigateur, sur cet appareil. Rien n’est transmis à un
+          serveur. Toute personne utilisant ce profil de navigateur peut voir vos réponses; sur un ordinateur partagé
+          ou public, utilisez <strong>Effacer les réponses</strong> lorsque vous avez terminé. Pour transférer votre
+          rapport vers un autre appareil, utilisez Imprimer &rarr; Enregistrer au format PDF dans votre navigateur.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Vos renseignements</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nom ou nom de code</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="p. ex. Jeanne Tremblay — ou un nom de code de trois mots">
+          <p class="hint">Inscrivez votre nom pour que votre clinicien sache à qui appartient le rapport ou, si vous
+            préférez rester anonyme, un nom de code privé de trois mots comportant au plus 12 lettres.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sexe à la naissance</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option value="Female">Femme</option>
+            <option value="Male">Homme</option>
+            <option value="Intersex">Intersexe</option>
+            <option value="Prefer not to say">Préfère ne pas répondre</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Âge — années</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Années">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Âge — mois</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Mois">
+        </div>
+        <div class="field">
+          <label for="date-completed">Date de remplissage</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Se remplit automatiquement dès qu’un résultat est inscrit; vous pouvez la modifier.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Tableau de bord</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Résumé global">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0 %</span><span class="kpi-label">Résultats consignés</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">J : jamais / aucun résultat</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-reference">0 %</span><span class="kpi-label">R : intervalle de référence</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0 %</span><span class="kpi-label">A : anormal (B ou É)</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-match">0 %</span><span class="kpi-label">C : correspond à l’étude SCM</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Dates requises</span></div>
+      </div>
+      <p class="dash-foot">Un résultat consigné est R, B ou É avec une date valide. Les pourcentages RÉF, ANO et
+        SCM utilisent les résultats consignés comme dénominateur. « Étude SCM » indique [B] ou [É], soit le sens de
+        l’anomalie observée; [É] comprend aussi « présent s’il est normalement absent ».</p>
+      <div class="table-scroll" tabindex="0" aria-label="Résumé défilant par catégorie">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Résultats par catégorie de biomarqueurs</caption>
+          <thead><tr><th scope="col">Catégorie</th><th scope="col">Biomarqueurs</th><th scope="col">Jamais</th>
+            <th scope="col">Consignés</th><th scope="col">Réf.</th><th scope="col">Ano.</th><th scope="col">SCM</th></tr></thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Liste de vérification des biomarqueurs</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>La date du résultat est requise avant de continuer.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Formats de date acceptés">
+          <span>AAAA</span><span>AAAA.MM</span><span>AAAA.MM.JJ</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Terminer</h2>
+      <p class="share-tip">Pour transmettre votre rapport, enregistrez-le d’abord au format PDF à l’aide d’un bouton
+        ci-dessous, puis joignez le PDF à un courriel destiné à votre clinicien.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimer le rapport (noir et blanc, tableau de bord en premier)</button>
+        <button type="button" id="btn-print-color" class="btn">Enregistrer le rapport couleur en PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Effacer les réponses</button>
+      </div>
+      <p class="hint">« Enregistrer au format PDF » apparaît comme destination dans la fenêtre d’impression. Effacer
+        les réponses supprime toutes les données BAACSS de cet appareil, mais ne supprime pas les données DACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap">
+    <p>© 2026 Albert Donnay. Fait partie d’ACCEPTT — Advance Communication of Chemosensory Experiences, Phenotypes,
+      Tests, and Treatments. Questions : <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+  </div></footer>
+
+  <script src="js/i18n.js?v=26.10.11.1"></script>
+  <script src="../MCSbm/js/app.js?v=26.10.11.1"></script>
+</body>
+</html>

@@ -1,9 +1,33 @@
 /* BAACSS — state, required-date workflow, dashboard, persistence, and printing. */
 'use strict';
 
-const STORAGE_KEY = 'mcsbm.v1';
+const CONFIG = window.BAACSS_CONFIG || {};
+const TEXT = {
+  resultCount: (count, total) => `${count} of ${total} results reported`,
+  columns: ['Your result', 'MCS study', 'Biomarker test', 'Most recent result date'],
+  resultFor: name => `Your result for ${name}`,
+  studyDirection: direction => `Abnormal direction reported in MCS study: ${direction || 'not specified'}`,
+  openDefinition: 'Open definition in a new tab',
+  resultDateFor: name => `Most recent result date for ${name}`,
+  datePlaceholder: 'YYYY / YYYY.MM / YYYY.MM.DD',
+  dateRequired: 'Required: YYYY, YYYY.MM, or YYYY.MM.DD',
+  progress: (reported, total, notTested) => `${reported} of ${total} biomarker results reported; ${notTested} remain N.`,
+  allBiomarkers: 'All biomarkers',
+  thisBiomarker: 'this biomarker',
+  enterValidDate: name => `Enter a valid result date for ${name} before continuing.`,
+  completeDateBeforePrint: 'Complete the highlighted result date before printing or saving the report.',
+  clearConfirmation: 'Clear all BAACSS answers, dates, and personal details from this device? This cannot be undone.',
+  loadError: 'Could not load the biomarker list. Open this app through its web address or a local web server.',
+  ...(CONFIG.text || {})
+};
+const STORAGE_KEY = CONFIG.storageKey || 'mcsbm.v1';
 const CODES = ['N', 'R', 'L', 'H'];
-const CODE_LABEL = { N: 'Never or no result', R: 'Reference range', L: 'Low', H: 'High or present' };
+const CODE_LABEL = {
+  N: 'Never or no result', R: 'Reference range', L: 'Low', H: 'High or present',
+  ...(CONFIG.codeLabel || {})
+};
+const CODE_DISPLAY = { N: 'N', R: 'R', L: 'L', H: 'H', ...(CONFIG.codeDisplay || {}) };
+const STUDY_DISPLAY = { L: CODE_DISPLAY.L, H: CODE_DISPLAY.H, ...(CONFIG.studyDisplay || {}) };
 
 let DATA = null;
 let state = null;
@@ -110,12 +134,12 @@ function buildChecklist() {
     const heading = document.createElement('h3');
     const count = category.items.filter(item => isReported(item.id)).length;
     heading.innerHTML = `<span>${escapeHtml(category.name)}</span>` +
-      `<span class="cat-count" id="count-${category.id}">${count} of ${category.items.length} results reported</span>`;
+      `<span class="cat-count" id="count-${category.id}">${escapeHtml(TEXT.resultCount(count, category.items.length))}</span>`;
     section.appendChild(heading);
 
     const columns = document.createElement('div');
     columns.className = 'column-head';
-    columns.innerHTML = '<span>Your result</span><span>MCS study</span><span>Biomarker test</span><span>Most recent result date</span>';
+    columns.innerHTML = TEXT.columns.map(label => `<span>${escapeHtml(label)}</span>`).join('');
     section.appendChild(columns);
 
     category.items.forEach(item => section.appendChild(biomarkerRow(item)));
@@ -131,7 +155,7 @@ function biomarkerRow(item) {
   const group = document.createElement('div');
   group.className = 'opts';
   group.setAttribute('role', 'radiogroup');
-  group.setAttribute('aria-label', `Your result for ${item.name}`);
+  group.setAttribute('aria-label', TEXT.resultFor(item.name));
   CODES.forEach(code => {
     const inputId = `${item.id}-${code}`;
     const label = document.createElement('label');
@@ -146,7 +170,7 @@ function biomarkerRow(item) {
     input.addEventListener('change', () => setAnswer(item.id, code));
     const face = document.createElement('span');
     face.className = 'opt';
-    face.textContent = code;
+    face.textContent = CODE_DISPLAY[code];
     face.setAttribute('aria-hidden', 'true');
     const sr = document.createElement('span');
     sr.className = 'sr-only';
@@ -162,15 +186,15 @@ function biomarkerRow(item) {
   study.id = `study-${item.id}`;
   study.className = 'study-result';
   const studyDirection = item.expected === 'P' ? 'H' : item.expected;
-  study.textContent = studyDirection ? `[${studyDirection}]` : '—';
-  study.title = `Abnormal direction reported in MCS study: ${studyDirection || 'not specified'}`;
+  study.textContent = studyDirection ? `[${STUDY_DISPLAY[studyDirection] || studyDirection}]` : '—';
+  study.title = TEXT.studyDirection(studyDirection ? (STUDY_DISPLAY[studyDirection] || studyDirection) : '');
   studyCell.appendChild(study);
   row.appendChild(studyCell);
 
   const name = document.createElement('div');
   name.className = 'biomarker-name';
   const labelHtml = item.url
-    ? `<a class="definition-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" title="Open definition in a new tab">${escapeHtml(item.name)}</a>`
+    ? `<a class="definition-link" href="${escapeHtml(item.url)}" target="_blank" rel="noopener noreferrer" title="${escapeHtml(TEXT.openDefinition)}">${escapeHtml(item.name)}</a>`
     : escapeHtml(item.name);
   name.innerHTML = `<p>${labelHtml}</p>`;
   row.appendChild(name);
@@ -185,8 +209,8 @@ function biomarkerRow(item) {
   date.maxLength = 10;
   date.inputMode = 'numeric';
   date.autocomplete = 'off';
-  date.placeholder = 'YYYY / YYYY.MM / YYYY.MM.DD';
-  date.setAttribute('aria-label', `Most recent result date for ${item.name}`);
+  date.placeholder = TEXT.datePlaceholder;
+  date.setAttribute('aria-label', TEXT.resultDateFor(item.name));
   date.setAttribute('aria-describedby', `date-help-${item.id}`);
   date.addEventListener('input', event => setResultDate(item.id, event.target.value));
   date.addEventListener('blur', event => {
@@ -196,7 +220,7 @@ function biomarkerRow(item) {
   const help = document.createElement('p');
   help.className = 'date-help';
   help.id = `date-help-${item.id}`;
-  help.textContent = 'Required: YYYY, YYYY.MM, or YYYY.MM.DD';
+  help.textContent = TEXT.dateRequired;
   dateCell.append(date, help);
   row.appendChild(dateCell);
 
@@ -288,16 +312,16 @@ function refreshDashboard() {
   document.getElementById('kpi-dates').textContent = incomplete;
   document.querySelector('.kpi-attention').classList.toggle('has-pending', incomplete > 0);
   document.getElementById('progress').textContent =
-    `${total.reported} of ${total.total} biomarker results reported; ${total.notTested} remain N.`;
+    TEXT.progress(total.reported, total.total, total.notTested);
 
   const body = document.getElementById('dash-rows');
   body.replaceChildren();
-  body.appendChild(summaryRow('All biomarkers', total, true));
+  body.appendChild(summaryRow(TEXT.allBiomarkers, total, true));
   DATA.categories.forEach(category => {
     const summary = summarize(category.items);
     body.appendChild(summaryRow(category.name, summary));
     const count = document.getElementById(`count-${category.id}`);
-    if (count) count.textContent = `${summary.reported} of ${summary.total} results reported`;
+    if (count) count.textContent = TEXT.resultCount(summary.reported, summary.total);
   });
 }
 
@@ -349,7 +373,7 @@ function todayISO() {
 function focusPendingDate(message) {
   if (!pendingId) return false;
   const item = itemById(pendingId);
-  alert(message || `Enter a valid result date for ${item ? item.name : 'this biomarker'} before continuing.`);
+  alert(message || TEXT.enterValidDate(item ? item.name : TEXT.thisBiomarker));
   const date = document.getElementById(`date-${pendingId}`);
   date.focus();
   date.scrollIntoView({ behavior: 'smooth', block: 'center' });
@@ -357,13 +381,13 @@ function focusPendingDate(message) {
 }
 
 function printReport(color) {
-  if (focusPendingDate('Complete the highlighted result date before printing or saving the report.')) return;
+  if (focusPendingDate(TEXT.completeDateBeforePrint)) return;
   document.body.classList.toggle('print-color', Boolean(color));
   window.print();
 }
 
 function clearAll() {
-  if (!confirm('Clear all BAACSS answers, dates, and personal details from this device? This cannot be undone.')) return;
+  if (!confirm(TEXT.clearConfirmation)) return;
   try { localStorage.removeItem(STORAGE_KEY); } catch (error) { /* no-op */ }
   state = blankState();
   pendingId = '';
@@ -383,12 +407,20 @@ async function init() {
   state = load();
   save();
   try {
-    const response = await fetch('data/list.json', { cache: 'no-store' });
+    const response = await fetch(CONFIG.dataPath || 'data/list.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     DATA = await response.json();
+    DATA.categories.forEach(category => {
+      if (CONFIG.categoryNames && CONFIG.categoryNames[category.id]) {
+        category.name = CONFIG.categoryNames[category.id];
+      }
+      category.items.forEach(item => {
+        if (CONFIG.itemNames && CONFIG.itemNames[item.id]) item.name = CONFIG.itemNames[item.id];
+      });
+    });
   } catch (error) {
     document.getElementById('categories').innerHTML =
-      '<p class="card">Could not load the biomarker list. Open this app through its web address or a local web server.</p>';
+      `<p class="card">${escapeHtml(TEXT.loadError)}</p>`;
     return;
   }
 
