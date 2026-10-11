@@ -1,5 +1,5 @@
 {
-  "version": "v26.09.10",
+  "version": "v26.10.11",
   "report": "BAACSS",
   "title": "Biomarker Abnormalities Associated with Chemical Sensitivity in Some",
   "categories": [
@@ -14,22 +14,10 @@
           "url": "https://en.wikipedia.org/wiki/Chemiluminescence"
         },
         {
-          "id": "bm-26",
-          "expected": "H",
-          "name": "Fasting Plasma Glucose",
-          "url": "https://www.webmd.com/diabetes/fasting-bloodwork"
-        },
-        {
           "id": "bm-27",
           "expected": "H",
           "name": "Fasting Plasma Insulin",
           "url": "https://en.wikipedia.org/wiki/Insulin"
-        },
-        {
-          "id": "bm-28",
-          "expected": "H",
-          "name": "Fasting Plasma Insulin Resistance = HOMA-IR score = (0.144 * (fasting plasma insulin [in pmol/L]) * (fasting plasma glucose [in pmol/L]/22.5)",
-          "url": "https://en.wikipedia.org/wiki/Homeostatic_model_assessment"
         },
         {
           "id": "bm-29",
