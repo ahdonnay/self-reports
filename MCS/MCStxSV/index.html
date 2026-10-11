@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="sv-SE">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS — Behandlingar du skulle prova igen, undvika eller använder nu på grund av sensorisk känslighet</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+<header class="site-header" role="banner"><div class="wrap">
+  <a class="suite-link no-print" href="../">&larr; Historik över MCS</a><h1>TRACTSS</h1>
+  <p class="subtitle">Behandlingar du skulle prova igen, undvika eller använder nu på grund av sensorisk känslighet</p><p class="version" id="version">v26.09.13.1</p>
+</div></header>
+
+<main class="wrap" id="main">
+  <section class="card instructions" aria-labelledby="instr-h"><h2 id="instr-h">Om denna checklista</h2>
+    <p>TRACTSS registrerar behandlingar som du har provat på grund av kemisk eller annan sensorisk känslighet. Ange för varje behandling om du skulle prova den igen, skulle undvika den eller använder den nu. Det ger dig och dina kliniker en kompakt sammanställning av dina behandlingserfarenheter. Behandlingslistan sammanställdes av en oberoende toxikolog, som tillhandahåller referenser: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+    <p><strong>Obs:</strong> Posterna är ordnade alfabetiskt efter sina ursprungliga engelska namn.</p>
+    <h3>Så fyller du i TRACTSS-checklistan</h3><p>Välj en status för varje behandling:</p>
+    <ul class="legend">
+      <li><span class="code code-N">A</span> <strong>Aldrig/minns inte</strong> = har aldrig provat behandlingen eller minns inte dess effekter</li>
+      <li><span class="code code-R">P</span> <strong>Prova igen</strong> = har provat den och skulle kunna tänka dig att prova igen</li>
+      <li><span class="code code-A">U</span> <strong>Undvik</strong> = har provat den och vill undvika att prova igen</li>
+      <li><span class="code code-C">N</span> <strong>Använder nu</strong> = tar eller använder behandlingen nu</li>
+    </ul>
+    <p>Varje behandling börjar på <strong>A</strong>. Om du väljer <strong>P</strong> eller <strong>U</strong> måste du ange minst en anledning till att du slutade innan du fortsätter. Instrumentpanelen uppdateras automatiskt. Du kan avbryta och återkomma när som helst; svaren sparas i denna webbläsare på din enhet.</p>
+    <h3>Anledningar till att en behandling avslutades</h3>
+    <ul class="reason-legend"><li><span class="reason-code">eRx</span> Receptet tog slut</li><li><span class="reason-code">$$$</span> Kostnad</li><li><span class="reason-code">MDa</span> Medicinsk rekommendation</li><li><span class="reason-code">NLN</span> Behövdes inte längre</li><li><span class="reason-code">NLA</span> Inte längre tillgänglig</li><li><span class="reason-code">NLE</span> Inte längre effektiv</li><li><span class="reason-code">ROT</span> Ersattes med annan behandling</li><li><span class="reason-code">sFx</span> Biverkningar</li></ul>
+    <p class="clinical-note"><strong>Viktigt:</strong> TRACTSS registrerar dina erfarenheter och önskemål; checklistan avgör inte om en behandling är säker eller effektiv. Börja inte, sluta inte, undvik inte och prova inte en behandling igen enbart utifrån denna checklista. Diskutera behandlingsändringar med en kvalificerad kliniker.</p>
+    <details class="privacy"><summary>Integritet och dina uppgifter</summary><p>Dina svar lagras endast i denna webbläsare på denna enhet. Ingenting skickas till någon server. Den som använder denna webbläsarprofil kan se dina svar. Använd därför <strong>Rensa svar</strong> när du är klar på en delad eller offentlig dator. För att flytta rapporten till en annan enhet använder du webbläsarens Skriv ut &rarr; Spara som PDF.</p></details>
+  </section>
+
+  <section class="card" aria-labelledby="who-h"><h2 id="who-h">Dina uppgifter</h2><div class="fields">
+    <div class="field field-wide"><label for="patient-id">Namn eller kodnamn</label><input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="t.ex. Anna Andersson — eller ett kodnamn med tre ord"><p class="hint">Ange ditt namn så att din kliniker vet vems rapport det är — eller, om du vill vara anonym, ett privat kodnamn med tre ord och högst 12 bokstäver. Du väljer själv.</p></div>
+    <div class="field"><label for="sex">Kön vid födseln</label><select id="sex"><option value="">—</option><option>Kvinna</option><option>Man</option><option>Intersex</option><option>Vill inte uppge</option></select></div>
+    <div class="field field-narrow"><label for="age-years">Ålder — år</label><input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="År"></div>
+    <div class="field field-narrow"><label for="age-months">Ålder — månader</label><input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Månader"></div>
+    <div class="field"><label for="date-completed">Datum</label><input type="date" id="date-completed"><p class="hint">Fylls i automatiskt när du anger din första behandling; du kan ändra datumet.</p></div>
+  </div></section>
+
+  <section class="card dashboard" aria-labelledby="dash-h"><h2 id="dash-h">Instrumentpanel</h2><p class="dash-progress" id="progress" aria-live="polite"></p>
+    <div class="kpis" role="group" aria-label="Övergripande sammanfattning"><div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Någonsin provat</span></div><div class="kpi"><span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">A: aldrig/minns inte</span></div><div class="kpi"><span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">P: prova igen</span></div><div class="kpi"><span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">U: undvik</span></div><div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">N: använder nu</span></div><div class="kpi kpi-attention"><span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Anledningar behövs</span></div></div>
+    <p class="dash-foot">Någonsin provat = P, U eller N. Procenttalen för Prova igen, Undvik och Använder nu använder behandlingar som någonsin provats som nämnare. En P- eller U-status räknas först när minst en anledning till avslut har valts.</p>
+    <div class="table-scroll" tabindex="0" aria-label="Rullningsbar sammanfattning efter behandlingstyp"><table class="dash-table" aria-live="polite"><caption class="sr-only">Resultat efter behandlingstyp</caption><thead><tr><th scope="col">Typ</th><th scope="col">Behandlingar</th><th scope="col">Aldrig</th><th scope="col">Rapporterat</th><th scope="col">Prova igen</th><th scope="col">Undvik</th><th scope="col">Nuvarande</th></tr></thead><tbody id="dash-rows"></tbody></table></div>
+    <h3 class="reason-summary-h">Anledningar till att behandlingar avslutades</h3><p class="dash-foot">En behandling kan ha mer än en anledning, så procenttalen kan sammanlagt överstiga 100 %.</p>
+    <div class="table-scroll" tabindex="0" aria-label="Rullningsbar sammanfattning av anledningar till avslut"><table class="dash-table reason-table" aria-live="polite"><caption class="sr-only">Valda anledningar för avslutade behandlingar</caption><thead><tr><th scope="col">Anledning</th><th scope="col">Antal</th><th scope="col">% avslutade</th></tr></thead><tbody id="reason-rows"></tbody></table></div>
+  </section>
+
+  <section class="checklist" aria-labelledby="check-h"><h2 id="check-h" class="wrap-h">Behandlingschecklista</h2><div id="pending-alert" class="reason-gate no-print" role="alert" hidden><strong>Välj minst en anledning innan du fortsätter.</strong><span id="pending-name"></span><span>Välj alla tillämpliga anledningar i den markerade raden.</span></div><div id="categories"></div></section>
+
+  <section class="card actions no-print" aria-labelledby="act-h"><h2 id="act-h">Slutför</h2><p class="share-tip">Om du vill dela rapporten sparar du den först som PDF med någon av knapparna nedan och bifogar sedan PDF-filen i ett e-postmeddelande till din kliniker.</p>
+    <div class="buttons"><button type="button" id="btn-print-bw" class="btn btn-primary">Skriv ut rapport (svartvit, instrumentpanelen överst)</button><button type="button" id="btn-print-color" class="btn">Spara rapport som PDF i färg</button><button type="button" id="btn-clear" class="btn btn-danger">Rensa svar</button></div>
+    <p class="hint">”Spara som PDF” visas som ett mål i webbläsarens utskriftsfönster. När svaren rensas tas alla TRACTSS-uppgifter bort från denna enhet; DACSS och BAACSS påverkas inte.</p>
+  </section>
+</main>
+<footer class="site-footer no-print"><div class="wrap"></div></footer>
+<script src="js/i18n.js?v=26.10.11.4"></script><script src="../MCStx/js/app.js?v=26.10.11.2"></script>
+<script src="../license.js?v=26.10.11.4"></script>
+</body>
+</html>

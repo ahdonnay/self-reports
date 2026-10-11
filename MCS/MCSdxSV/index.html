@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="sv-SE">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DACSS — Sjukdomstillstånd förknippade med kemisk känslighet hos vissa</title>
+<link rel="stylesheet" href="../MCSdx/css/styles.css?v=26.10.11.2">
+</head>
+<body>
+<header class="site-header" role="banner"><div class="wrap">
+  <a class="suite-link no-print" href="../">&larr; Historik över MCS</a>
+  <h1>DACSS</h1>
+  <p class="subtitle">Sjukdomstillstånd förknippade med kemisk känslighet hos vissa</p>
+  <p class="version" id="version">v26.09.06</p>
+</div></header>
+
+<main class="wrap" id="main">
+  <section class="card instructions" aria-labelledby="instr-h">
+    <h2 id="instr-h">Om denna checklista</h2>
+    <p>DACSS är en checklista över medicinska sjukdomstillstånd som hos vissa personer är förknippade med kemisk känslighet. Alla med dessa tillstånd har inte MCS, men de har större sannolikhet att ha MCS, och personer med MCS har större sannolikhet att ha dessa tillstånd. DACSS är utformad för att man ska kunna ange vilka tillstånd man haft tidigare, alltid haft eller har nu men inte alltid, så att man själv och ens kliniker kan se vilka tillstånd som ingår i sjukdomshistoriken. (Listan sammanställdes av en oberoende toxikolog, som tillhandahåller referenser: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+    <p><strong>Obs:</strong> Posterna är ordnade alfabetiskt efter sina ursprungliga engelska namn.</p>
+
+    <h3>Så fyller du i DACSS-checklistan</h3>
+    <p>Välj ett alternativ för varje tillstånd:</p>
+    <ul class="legend">
+      <li><span class="code code-N">A</span> <strong>Aldrig</strong> = har aldrig haft tillståndet eller minns inte</li>
+      <li><span class="code code-P">T</span> <strong>Tidigare</strong> = hade tillståndet tidigare, men inte nu</li>
+      <li><span class="code code-A">H</span> <strong>Hela livet</strong> = har alltid haft tillståndet, sedan barndomen</li>
+      <li><span class="code code-C">N</span> <strong>Nuvarande</strong> = har tillståndet nu, men har inte alltid haft det</li>
+    </ul>
+    <p>För varje tillstånd som ändras från A till T, H eller N ska du även ange dess obligatoriska <strong>nuvarande påverkan</strong>:</p>
+    <ul class="impact-legend">
+      <li><span class="impact-code">0</span> <strong>Ingen betydande påverkan</strong></li>
+      <li><span class="impact-code">1</span> <strong>Lätt funktionsnedsättande</strong></li>
+      <li><span class="impact-code">2</span> <strong>Svårt funktionsnedsättande, men fortfarande självständig</strong></li>
+      <li><span class="impact-code">3</span> <strong>Funktionsnedsättande till den grad att hjälp behövs</strong></li>
+    </ul>
+    <p>Varje tillstånd börjar på <strong>Aldrig</strong>. Ändra endast de tillstånd du har upplevt. Instrumentpanelen uppdateras medan du arbetar. Du kan avbryta och återkomma när som helst; svaren sparas i denna webbläsare på din enhet. Checklistan tar cirka 20 minuter att fylla i.</p>
+    <p class="note"><strong>Slutsats</strong> Även om alla dessa tillstånd är korrelerade med MCS är sambandet inte alltid orsaksmässigt. Tillståndet kan vara en bidragande riskfaktor för MCS, en följd av MCS, en samsjuklighet eller bara ett sammanträffande. Tillstånd som du haft tidigare och återhämtat dig från är lika viktiga för kliniker att beakta som de du fortfarande har.</p>
+    <details class="privacy"><summary>Integritet och dina uppgifter</summary>
+      <p>Dina svar lagras endast i denna webbläsare på denna enhet. Ingenting skickas till någon server. Den som använder denna webbläsarprofil kan se dina svar. Använd därför <strong>Rensa svar</strong> när du är klar på en delad eller offentlig dator. För att flytta rapporten till en annan enhet använder du webbläsarens Skriv ut &rarr; Spara som PDF.</p>
+    </details>
+  </section>
+
+  <section class="card" aria-labelledby="who-h">
+    <h2 id="who-h">Dina uppgifter</h2>
+    <div class="fields">
+      <div class="field field-wide">
+        <label for="patient-id">Namn eller kodnamn</label>
+        <input type="text" id="patient-id" maxlength="60" autocomplete="off" placeholder="t.ex. Anna Andersson — eller ett kodnamn med tre ord">
+        <p class="hint">Ange ditt namn så att din kliniker vet vems rapport det är — eller, om du vill vara anonym, ett privat kodnamn med tre ord och högst 12 bokstäver. Du väljer själv.</p>
+      </div>
+      <div class="field"><label for="sex">Kön vid födseln</label><select id="sex"><option value="">—</option><option>Kvinna</option><option>Man</option><option>Intersex</option><option>Vill inte uppge</option></select></div>
+      <div class="field field-narrow"><label for="age-years">Ålder — år</label><input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="År"></div>
+      <div class="field field-narrow"><label for="age-months">Ålder — månader</label><input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Månader"></div>
+      <div class="field"><label for="date-completed">Datum slutfört</label><input type="date" id="date-completed"><p class="hint">Fylls i automatiskt när checklistan är klar; du kan ändra datumet.</p></div>
+    </div>
+  </section>
+
+  <section class="card dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">Instrumentpanel</h2><p class="dash-progress" id="progress" aria-live="polite"></p>
+    <div class="kpis" role="group" aria-label="Övergripande sammanfattning">
+      <div class="kpi"><span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">Någonsin upplevt</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">Aldrig</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">Hela livet</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">Tidigare</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">Nuvarande</span></div>
+      <div class="kpi kpi-trend"><span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">Belastning med åldern</span></div>
+    </div>
+    <p class="dash-foot">Alla procenttal avser de totalt <span id="total-count">92</span> tillstånden.
+      <span class="trend-note">”Belastning med åldern” = Nuvarande − Tidigare (ett positivt värde tyder på ökande belastning med åldern, ett negativt värde på minskande). ”Hela livet” ingår inte.</span>
+      <span class="trend-note">”Genomsnittlig påverkan” är det matematiska medelvärdet av angivna poäng 0–3 för nuvarande påverkan inom varje kategori; — betyder att ingen poäng har angivits.</span></p>
+    <table class="dash-table" aria-live="polite"><caption class="sr-only">Procenttal efter kategori</caption><thead><tr>
+      <th scope="col">Kategori</th><th scope="col">Aldrig</th><th scope="col">Tidigare</th><th scope="col">Hela livet</th><th scope="col">Nuvarande</th><th scope="col">Något (T/H/N)</th><th scope="col">Genomsnittlig påverkan</th>
+    </tr></thead><tbody id="dash-rows"></tbody></table>
+  </section>
+
+  <section class="checklist" aria-labelledby="check-h"><h2 id="check-h" class="wrap-h">Checklista</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden><strong>Nuvarande påverkan måste anges innan du fortsätter.</strong><span id="pending-name"></span><span class="impact-scale">Välj 0, 1, 2 eller 3.</span></div>
+    <div id="categories"></div>
+  </section>
+
+  <section class="card actions no-print" aria-labelledby="act-h"><h2 id="act-h">Slutför</h2>
+    <p class="share-tip">Om du vill dela rapporten sparar du den först som PDF med någon av knapparna nedan och bifogar sedan PDF-filen i ett e-postmeddelande till din kliniker.</p>
+    <div class="buttons"><button type="button" id="btn-print-bw" class="btn btn-primary">Skriv ut rapport (svartvit, instrumentpanelen överst)</button><button type="button" id="btn-print-color" class="btn">Spara rapport som PDF i färg</button><button type="button" id="btn-clear" class="btn btn-danger">Rensa svar</button></div>
+    <p class="hint">”Spara som PDF” visas som ett mål i webbläsarens utskriftsfönster. När svaren rensas tas alla uppgifter bort från denna enhet.</p>
+  </section>
+</main>
+
+<footer class="site-footer no-print"><div class="wrap"></div></footer>
+<script src="js/i18n.js?v=26.10.11.4"></script><script src="../MCSdx/js/app.js?v=26.10.11.2"></script>
+<script src="../license.js?v=26.10.11.4"></script>
+</body>
+</html>

@@ -26,6 +26,10 @@
       scope: 'Medmindre andet er angivet, er det oprindelige undervisningsindhold og data licenseret under',
       questions: 'Spørgsmål'
     },
+    sv: {
+      scope: 'Om inget annat anges är det ursprungliga utbildningsinnehållet och uppgifterna licensierade enligt',
+      questions: 'Frågor'
+    },
     ja: {
       scope: '特に記載がない限り、独自の教育コンテンツおよびデータは次のライセンスで提供されます：',
       questions: 'お問い合わせ'
