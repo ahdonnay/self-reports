@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 90 60" role="img" aria-label="Spanish flag">
+  <path fill="#aa151b" d="M0 0h90v60H0z"/>
+  <path fill="#f1bf00" d="M0 15h90v30H0z"/>
+  <path d="M25 23h10v11c0 4-5 6.5-5 6.5S25 38 25 34z" fill="#aa151b" stroke="#8b6f00" stroke-width="1"/>
+  <path d="M28 20h4v18h-4z" fill="#f1bf00"/>
+</svg>

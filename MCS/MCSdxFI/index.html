@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="fi-FI">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DACSS — Joillakin henkilöillä kemikaaliherkkyyteen liittyvät sairaudet</title>
+<link rel="stylesheet" href="../MCSdx/css/styles.css">
+</head>
+<body>
+
+<!-- ============ SCREEN HEADER ============ -->
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <a class="suite-link no-print" href="../">&larr; MCS:n historia</a>
+    <h1>DACSS</h1>
+    <p class="subtitle">Joillakin henkilöillä kemikaaliherkkyyteen liittyvät sairaudet</p>
+    <p class="version" id="version">v26.09.06</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ============ INSTRUCTIONS ============ -->
+  <section class="card instructions" aria-labelledby="instr-h">
+    <h2 id="instr-h">Tietoa tästä tarkistuslistasta</h2>
+    <p>DACSS on tarkistuslista sairauksista, jotka liittyvät joillakin ihmisillä kemikaaliherkkyyteen. 
+Kaikilla näistä sairauksista kärsivillä ei ole MCS:ää (monikemikaaliherkkyyttä), mutta heillä on suurempi todennäköisyys sairastua siihen,
+ja MCS-potilailla on suurempi todennäköisyys sairastaa näitä sairauksia. 
+DACSS on suunniteltu siten, että ihmiset voivat merkitä, mitä näistä sairauksista heillä
+on ollut aiemmin, on ollut aina tai on tällä hetkellä (mutta ei aina),
+jotta he ja heidän hoitonsa antavat tahot voivat hahmottaa sairauden taustalla olevat sairaudet. 
+(Listan on laatinut riippumaton toksikologi, jolta saa myös lähdeviitteet:
+      <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.) </p>
+
+        <p><strong>Huomautus:</strong> Kohdat on järjestetty englanninkielisten alkuperäisten nimien mukaiseen aakkosjärjestykseen.</p>
+
+    <h3>DACSS-tarkistuslistan täyttäminen</h3>
+    <p>Valitse jokaisen sairauden kohdalla yksi vaihtoehto:</p>
+    <ul class="legend">
+      <li><span class="code code-N">N</span> <strong>Ei koskaan</strong> = Sairautta ei ole koskaan ollut tai sitä ei muista</li>
+      <li><span class="code code-P">P</span> <strong>Aiemmin</strong> = Sairaus on ollut aiemmin, mutta ei nyt</li>
+      <li><span class="code code-A">A</span> <strong>Aina</strong> = Sairaus on ollut aina, lapsuudesta lähtien</li>
+      <li><span class="code code-C">C</span> <strong>Tällä hetkellä</strong> — Sairaus on tällä hetkellä, mutta ei aina</li>
+    </ul>
+    <p>Valitse kunkin häiriön kohdalla, jonka tilaksi muutat P:n, A:n tai C:n, myös vaadittu
+      <strong>Nykyinen vaikutus</strong>:</p>
+    <ul class="impact-legend">
+      <li><span class="impact-code">0</span> <strong>Ei merkittävää vaikutusta</strong></li>
+      <li><span class="impact-code">1</span> <strong>Lievästi toimintakykyä rajoittava</strong></li>
+      <li><span class="impact-code">2</span> <strong>Voimakkaasti toimintakykyä rajoittava, mutta silti itsenäinen</strong></li>
+      <li><span class="impact-code">3</span> <strong>Tilan aiheuttama toimintakyvyn menetys edellyttää avun tarvetta</strong></li>
+    </ul>
+    <p>Jokaisen häiriön lähtötila on <strong>Ei koskaan</strong>. Muuta vain niiden tilaa, joita olet itse kokenut. 
+Yhteenvetonäkymä päivittyy sitä mukaa kun etenet. Voit keskeyttää ja jatkaa myöhemmin; vastauksesi
+tallentuvat laitteesi selaimeen. Kyselyn täyttäminen vie noin 20 minuuttia.</p>
+
+    <p class="note"><strong>Yhteenveto</strong> Vaikka kaikki nämä häiriöt liittyvät MCS:ään,
+yhteys ei aina ole syy-seuraussuhde. Häiriö voi olla myötävaikuttava tekijä MCS:n puhkeamisessa,
+tai se voi olla seurausta MCS:stä, liitännäissairaus tai pelkkä sattuma. Lääkäreiden kannalta on yhtä tärkeää
+huomioida aiemmin sairastamasi ja niistä toipumasi häiriöt kuin nykyisetkin häiriöt. </p>
+    <details class="privacy">
+      <summary>Tietosuoja ja tietosi</summary>
+      <p>Vastauksesi tallentuvat vain tähän selaimeen ja tähän laitteeseen. Mitään tietoja ei lähetetä
+palvelimelle. Kuka tahansa tätä selainprofiilia käyttävä näkee vastauksesi, joten jos käytät jaettua tai julkista
+tietokonetta, käytä <strong>Tyhjennä vastaukset</strong> kun olet valmis. Jos haluat siirtää raportin toiselle
+laitteelle, käytä selaimesi toimintoa Tulosta &rarr; Tallenna PDF-muodossa.</p>
+    </details>
+  </section>
+
+  <!-- ============ PATIENT INFO ============ -->
+  <section class="card" aria-labelledby="who-h">
+    <h2 id="who-h">Tietosi</h2>
+    <div class="fields">
+      <div class="field field-wide">
+        <label for="patient-id">Nimi tai koodinimi</label>
+        <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+               placeholder="esim. Jane Smith – tai kolmen sanan koodinimi, kuten redbikedog">
+        <p class="hint">Kirjoita nimesi, jotta hoitava taho tietää, kenen raportista on kyse – tai jos
+haluat pysyä nimettömänä, käytä kolmesta sanasta koostuvaa koodinimeä (enintään 12 kirjainta,
+esim. redbikedog). Valinta on sinun.</p>
+      </div>
+      <div class="field">
+        <label for="sex">Syntymässä määritetty sukupuoli</label>
+        <select id="sex">
+          <option value="">—</option>
+          <option>Nainen</option>
+          <option>Mies</option>
+          <option>Intersukupuolinen</option>
+          <option>En halua kertoa</option>
+        </select>
+      </div>
+      <div class="field field-narrow">
+        <label for="age-years">Ikä – vuodet</label>
+        <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Vuotta">
+      </div>
+      <div class="field field-narrow">
+        <label for="age-months">Ikä – kuukaudet</label>
+        <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Kuukautta">
+      </div>
+      <div class="field">
+        <label for="date-completed">Täyttöpäivämäärä</label>
+        <input type="date" id="date-completed">
+        <p class="hint">Täyttyy automaattisesti, kun tarkistuslista on valmis; voit muuttaa sitä.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section class="card dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">Yhteenvetonäkymä</h2>
+    <p class="dash-progress" id="progress" aria-live="polite"></p>
+
+    <div class="kpis" role="group" aria-label="Yleiskatsaus">
+      <div class="kpi"><span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">Onko koskaan esiintynyt</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">Ei koskaan</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">Aina</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">Aiemmin</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">Tällä hetkellä</span></div>
+      <div class="kpi kpi-trend"><span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">Muutos iän myötä</span></div>
+    </div>
+    <p class="dash-foot">Prosenttiosuudet lasketaan kokonaismäärästä <span id="total-count">92</span> häiriöt.
+      <span class="trend-note">”Muutos iän myötä” = Nykyinen tila − Aiempi tila (positiivinen luku viittaa siihen, että
+kuormitus kasvaa iän myötä, negatiivinen siihen, että se vähenee). Ei sisällä vaihtoehtoa ”Aina”.</span>
+      <span class="trend-note">”Keskimääräinen vaikutus” on kunkin kategorian kohdalla annettujen nykyistä vaikutusta
+kuvaavien pisteiden (0–3) matemaattinen keskiarvo; — tarkoittaa, ettei vaikutuspisteitä ole annettu.</span></p>
+
+    <table class="dash-table" aria-live="polite">
+      <caption class="sr-only">Prosenttiosuudet kategorioittain</caption>
+      <thead>
+        <tr><th scope="col">Kategoria</th><th scope="col">Ei koskaan</th><th scope="col">Aiemmin</th>
+            <th scope="col">Aina</th><th scope="col">Tällä hetkellä</th><th scope="col">Mikä tahansa (P/A/C)</th>
+            <th scope="col">Keskimääräinen vaikutus</th></tr>
+      </thead>
+      <tbody id="dash-rows"></tbody>
+    </table>
+  </section>
+
+  <!-- ============ CHECKLIST ============ -->
+  <section class="checklist" aria-labelledby="check-h">
+    <h2 id="check-h" class="wrap-h">Tarkistuslista</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden>
+      <strong>Nykyistä vaikutusta koskeva tieto vaaditaan ennen jatkamista.</strong>
+      <span id="pending-name"></span>
+      <span class="impact-scale">Valitse 0, 1, 2 tai 3.</span>
+    </div>
+    <div id="categories"></div>
+  </section>
+
+  <!-- ============ ACTIONS ============ -->
+  <section class="card actions no-print" aria-labelledby="act-h">
+    <h2 id="act-h">Viimeistele</h2>
+    <p class="share-tip">Raportin jakaminen: tallenna se ensin PDF-muodossa (alla olevat painikkeet) ja liitä sitten
+PDF-tiedosto hoitavalle taholle lähetettävään sähköpostiviestiin.</p>
+    <div class="buttons">
+      <button type="button" id="btn-print-bw" class="btn btn-primary">Tulosta raportti (mustavalkoinen, koontinäyttö yläosassa)</button>
+      <button type="button" id="btn-print-color" class="btn">Tallenna raportti värillisenä PDF-tiedostona</button>
+      <button type="button" id="btn-clear" class="btn btn-danger">Tyhjennä vastaukset</button>
+    </div>
+    <p class="hint">”Tallenna PDF-muodossa” (Save as PDF) näkyy tulostuskohteena selaimen tulostusikkunassa. Vastausten tyhjentäminen
+poistaa kaikki tiedot tältä laitteelta.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+<script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCSdx/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+

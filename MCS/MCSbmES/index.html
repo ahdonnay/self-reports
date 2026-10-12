@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS — Anomalías de biomarcadores asociadas con la sensibilidad química en algunas personas</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; Historia de la SQM</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Anomalías de biomarcadores asociadas con la sensibilidad química en algunas personas</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Acerca de esta lista de verificación</h2>
+      <p>BAACSS es una lista de verificación de anomalías de biomarcadores asociadas con la sensibilidad química en
+        algunas personas. No todas las personas con estas anomalías tienen sensibilidad química múltiple (SQM), pero
+        estas anomalías son estadísticamente mucho más frecuentes en personas con SQM que en los controles. BAACSS
+        permite registrar los resultados más recientes como altos, bajos o dentro del intervalo de referencia, para
+        que la persona y sus profesionales de salud puedan ver qué tanto coinciden sus resultados con los estudios de
+        SQM y cuáles pruebas nunca se han hecho o no se han hecho recientemente. (La lista fue compilada por un
+        toxicólogo independiente. Las referencias están disponibles escribiendo a
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+      <p><strong>Nota:</strong> Las pruebas aparecen en el orden alfabético de sus nombres originales en inglés.</p>
+
+      <h3>Cómo completar la lista BAACSS</h3>
+      <p>Para cada biomarcador, elija una opción:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Nunca / sin resultado</strong> = nunca se hizo esta prueba o no se tiene acceso al resultado</li>
+        <li><span class="code code-R">R</span> <strong>Intervalo de referencia</strong> = resultado dentro del intervalo de referencia o normal del laboratorio</li>
+        <li><span class="code code-L">B</span> <strong>Bajo</strong> = resultado inferior al intervalo de referencia</li>
+        <li><span class="code code-H">A</span> <strong>Alto / presente</strong> = resultado superior al intervalo de referencia, o presente si normalmente está ausente</li>
+      </ul>
+      <p>Cada biomarcador comienza en <strong>N</strong>. Cambie N a R, B o A solamente cuando tenga a la mano el
+        resultado del laboratorio o historial clínico. Después deberá introducir la fecha en formato
+        <strong>AAAA</strong>, <strong>AAAA.MM</strong> o <strong>AAAA.MM.DD</strong> antes de continuar. El tablero se
+        actualiza automáticamente. Puede detenerse y regresar en cualquier momento; sus respuestas se guardan en este
+        navegador y dispositivo.</p>
+
+      <p class="note"><strong>En resumen</strong> Aunque todos estos biomarcadores son significativamente más anormales
+        en personas con SQM que en controles, la relación no siempre es causal. El biomarcador puede ser un cofactor
+        que contribuya al riesgo de SQM, una consecuencia de la SQM, una comorbilidad o simplemente una coincidencia.
+        Los resultados BAACSS que no coinciden con los estudios de SQM son tan importantes como los que sí coinciden.</p>
+      <p class="clinical-note"><strong>Importante:</strong> Registre la clasificación que aparece en su propio informe
+        y comente los resultados con un profesional de salud calificado. Esta lista no establece un diagnóstico ni
+        reemplaza el intervalo de referencia y la interpretación proporcionados por el laboratorio.</p>
+
+      <details class="privacy">
+        <summary>Privacidad y sus datos</summary>
+        <p>Sus respuestas se guardan únicamente en este navegador y dispositivo. Nada se envía a ningún servidor.
+          Cualquier persona que use este perfil del navegador puede ver sus respuestas; en un ordenador compartido
+          o pública, use <strong>Borrar respuestas</strong> cuando termine. Para trasladar el informe a otro
+          dispositivo, use Imprimir &rarr; Guardar como PDF en su navegador.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Su información</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nombre o nombre en clave</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="p. ej., Ana López — o un nombre en clave de tres palabras">
+          <p class="hint">Ingrese su nombre para que su profesional de salud sepa a quién pertenece el informe o, si
+            prefiere permanecer en el anonimato, un nombre en clave privado de tres palabras y hasta 12 letras.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sexo al nacer</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option value="Female">Femenino</option>
+            <option value="Male">Masculino</option>
+            <option value="Intersex">Intersexual</option>
+            <option value="Prefer not to say">Prefiero no responder</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Edad — años</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Años">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Edad — meses</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Meses">
+        </div>
+        <div class="field">
+          <label for="date-completed">Fecha de finalización</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Se llena automáticamente al registrar un resultado; puede cambiarla.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Tablero</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Resumen general">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0 %</span><span class="kpi-label">Resultados registrados</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">N: nunca / sin resultado</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-reference">0 %</span><span class="kpi-label">R: intervalo de referencia</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0 %</span><span class="kpi-label">An.: anormal (B o A)</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-match">0 %</span><span class="kpi-label">C: coincide con el estudio de SQM</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Fechas requeridas</span></div>
+      </div>
+      <p class="dash-foot">Registrado = R, B o A con una fecha válida. Los porcentajes REF, AN. y SQM usan los
+        resultados registrados como denominador. “Estudio de SQM” muestra [B] o [A], la dirección anormal informada;
+        [A] también incluye “presente si normalmente está ausente”.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Resumen desplazable por categoría">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Resultados por categoría de biomarcadores</caption>
+          <thead><tr><th scope="col">Categoría</th><th scope="col">Biomarcadores</th><th scope="col">Nunca</th>
+            <th scope="col">Registrados</th><th scope="col">Ref.</th><th scope="col">An.</th><th scope="col">SQM</th></tr></thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Lista de verificación de biomarcadores</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>Debe introducir la fecha del resultado antes de continuar.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Formatos de fecha aceptados">
+          <span>AAAA</span><span>AAAA.MM</span><span>AAAA.MM.DD</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Finalizar</h2>
+      <p class="share-tip">Para compartir su informe, primero guárdelo como PDF con uno de los botones siguientes y
+        luego adjunte el PDF a un correo electrónico para su profesional de salud.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimir informe (blanco y negro, tablero primero)</button>
+        <button type="button" id="btn-print-color" class="btn">Guardar informe a color como PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Borrar respuestas</button>
+      </div>
+      <p class="hint">“Guardar como PDF” aparece como destino en la ventana de impresión. Borrar las respuestas
+        elimina todos los datos BAACSS de este dispositivo; no elimina los datos DACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap">
+    <p>© 2026 Albert Donnay. Parte de ACCEPTT — Advance Communication of Chemosensory Experiences, Phenotypes,
+      Tests, and Treatments. Preguntas: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+  </div></footer>
+
+  <script src="js/i18n.js?v=26.10.11.1"></script>
+  <script src="../MCSbm/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>

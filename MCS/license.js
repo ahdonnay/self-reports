@@ -14,6 +14,10 @@
       scope: 'Salvo que se indique lo contrario, el contenido educativo original y los datos se ofrecen bajo la licencia',
       questions: 'Preguntas'
     },
+    pt: {
+      scope: 'Salvo indicação em contrário, os conteúdos educativos originais e os dados estão licenciados ao abrigo de',
+      questions: 'Questões'
+    },
     it: {
       scope: 'Salvo diversa indicazione, i contenuti educativi originali e i dati sono disponibili con licenza',
       questions: 'Domande'
@@ -29,6 +33,14 @@
     sv: {
       scope: 'Om inget annat anges är det ursprungliga utbildningsinnehållet och uppgifterna licensierade enligt',
       questions: 'Frågor'
+    },
+    fi: {
+      scope: 'Ellei toisin mainita, alkuperäinen koulutussisältö ja tiedot on lisensoitu lisenssillä',
+      questions: 'Kysymykset'
+    },
+    he: {
+      scope: 'אלא אם צוין אחרת, התוכן החינוכי המקורי והנתונים ניתנים ברישיון',
+      questions: 'שאלות'
     },
     ja: {
       scope: '特に記載がない限り、独自の教育コンテンツおよびデータは次のライセンスで提供されます：',

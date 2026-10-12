@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS — Anomalias de Biomarcadores Associadas à Sensibilidade Química em Algumas Pessoas</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; Histórico de SQM</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Anomalias de Biomarcadores Associadas à Sensibilidade Química em Algumas Pessoas</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Sobre esta lista de verificação</h2>
+      <p>A BAACSS é uma lista de verificação de anormalidades em biomarcadores associadas à sensibilidade química em algumas pessoas. 
+Nem todas as pessoas com essas anormalidades apresentam MCS (Sensibilidade Química Múltipla). No entanto, estatisticamente,
+uma proporção significativamente maior de pessoas com MCS apresenta essas anormalidades em comparação com o grupo de controle. 
+A BAACSS foi criada para que as pessoas registrem seus resultados mais recentes como
+Alto, Baixo ou dentro da Faixa de Referência, permitindo que elas e seus médicos verifiquem o grau de correspondência
+dos resultados com o quadro de MCS e identifiquem quais exames nunca foram realizados ou não foram feitos recentemente. (A lista foi compilada por um toxicologista independente,
+que disponibiliza as referências: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+          <p><strong>Nota:</strong> Os itens estão ordenados alfabeticamente pelos nomes originais em inglês.</p>
+
+    <h3>Como preencher a lista de verificação BAACSS</h3>
+      <p>Para cada biomarcador, escolha uma opção:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Nunca / sem resultado</strong> = nunca realizou este exame ou não tem acesso ao resultado</li>
+        <li><span class="code code-R">R</span> <strong>Faixa de Referência</strong> = resultado dentro da faixa de referência laboratorial ou faixa de normalidade</li>
+        <li><span class="code code-L">L</span> <strong>Baixo</strong> = resultado abaixo da faixa de referência</li>
+        <li><span class="code code-H">H</span> <strong>Alto / presente</strong> = resultado acima da faixa de referência, ou presente quando normalmente ausente</li>
+      </ul>
+      <p>Todo biomarcador começa como <strong>N</strong>. Altere N para R, L ou H apenas quando tiver o resultado do laboratório ou do prontuário eletrônico (EHR)
+em mãos. Em seguida, você deve inserir a data no formato <strong>AAAA</strong>, <strong>AAAA.MM</strong>, ou
+        <strong>AAAA.MM.DD</strong> antes de continuar. O painel é atualizado automaticamente. Você pode parar e retomar
+a qualquer momento; suas respostas são salvas neste navegador, no seu dispositivo.</p>
+
+      <p class="note"><strong>Resumo</strong> Embora todos esses biomarcadores apresentem alterações significativamente maiores
+em pessoas com MCS do que no grupo de controle, a correlação nem sempre é de causa e efeito. O biomarcador pode ser um cofator que
+contribui para o risco de desenvolver MCS, ou pode ser uma consequência da MCS, uma comorbidade ou apenas uma
+coincidência. Resultados do BAACSS que não correspondem à MCS são tão importantes quanto aqueles que correspondem.</p>
+      <p class="clinical-note"><strong>Importante:</strong> Anote a classificação apresentada no seu relatório e
+discuta os resultados com um profissional de saúde qualificado. Esta lista de verificação não estabelece um diagnóstico nem substitui os
+valores de referência e a interpretação fornecidos pelo laboratório de análises.</p>
+
+      <details class="privacy">
+        <summary>Privacidade e seus dados</summary>
+        <p>Suas respostas são armazenadas apenas neste navegador, neste dispositivo. Nada é enviado para qualquer servidor. Qualquer pessoa que
+utilize este perfil de navegador pode ver suas respostas; portanto, em um computador compartilhado ou público, use a opção <strong>Limpar
+respostas</strong> ao terminar. Para transferir seu relatório para outro dispositivo, use a função do seu navegador: Imprimir &rarr; 
+Salvar como PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Suas informações</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nome ou codinome</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="ex.: Jane Smith — ou um codinome de 3 palavras, como redbikedog">
+          <p class="hint">Insira seu nome para que o profissional de saúde saiba de quem é este relatório — ou, se preferir permanecer
+anônimo, um codinome privado de 3 palavras com até 12 letras (ex.: redbikedog). A escolha é sua.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sexo ao nascer</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Intersexo</option>
+            <option>Prefiro não dizer</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Idade — anos</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Anos">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Idade — meses</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Meses">
+        </div>
+        <div class="field">
+          <label for="date-completed">Data de conclusão</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Preenchido automaticamente quando a lista de verificação estiver completa; você pode alterar essa data.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Painel</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Resumo geral">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Resultados informados</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">N: não testado / sem resultado</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-reference">0%</span><span class="kpi-label">R: faixa de referência</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A: anormal (L ou H)</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M: coincide com o estudo MCS</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Datas necessárias</span></div>
+      </div>
+      <p class="dash-foot">Informado = R, L ou H com uma data de resultado válida. As porcentagens de REF, ABN e MCS utilizam os resultados
+informados como denominador. “Estudo MCS” indica [L] ou [H], a direção da anormalidade informada; [H] também abrange
+“presente quando normalmente ausente”.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Resumo da categoria com rolagem">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Resultados por categoria de biomarcador</caption>
+          <thead>
+            <tr>
+              <th scope="col">Categoria</th><th scope="col">Biomarcador</th><th scope="col">Nunca</th>
+              <th scope="col">Informado</th><th scope="col">Ref</th><th scope="col">Abn</th><th scope="col">MCS</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Lista de verificação de biomarcadores</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>Data do resultado necessária antes de prosseguir.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Formatos de data aceitos">
+          <span>AAAA</span><span>AAAA.MM</span><span>AAAA.MM.DD</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Concluir</h2>
+      <p class="share-tip">Para compartilhar seu relatório, salve-o primeiro como PDF usando um botão abaixo e, em seguida, anexe o PDF
+a um e-mail para o seu profissional de saúde.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimir relatório (preto e branco, painel na parte superior)</button>
+        <button type="button" id="btn-print-color" class="btn">Salvar relatório como PDF colorido</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Limpar respostas</button>
+      </div>
+      <p class="hint">“Salvar como PDF” aparece como destino na janela de impressão do seu navegador. Limpar as respostas remove
+todos os dados do BAACSS deste dispositivo; isso não limpa o DACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+  <script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCSbm/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+

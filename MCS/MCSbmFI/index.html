@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="fi-FI">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BAACSS — Joillakin henkilöillä kemikaaliherkkyyteen liittyvät biomarkkeripoikkeavuudet</title>
+  <link rel="stylesheet" href="../MCSbm/css/styles.css?v=26.10.11">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; MCS:n historia</a>
+      <h1>BAACSS</h1>
+      <p class="subtitle">Joillakin henkilöillä kemikaaliherkkyyteen liittyvät biomarkkeripoikkeavuudet</p>
+      <p class="version" id="version">v26.10.11</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Tietoa tästä tarkistuslistasta</h2>
+      <p>BAACSS on tarkistuslista biomarkkeripoikkeavuuksista, jotka liittyvät joidenkin ihmisten kemikaaliherkkyyteen. 
+Kaikilla näitä poikkeavuuksia omaavilla ei ole MCS:ää (monikemikaaliherkkyyttä). Tilastollisesti merkittävästi useammalla
+MCS-potilaalla on kuitenkin näitä poikkeavuuksia kuin verrokeilla. BAACSS on suunniteltu siten, että ihmiset voivat
+merkitä uusimmat tuloksensa luokkiin ”korkea”, ”matala” tai ”viitealueella”. Näin he ja heidän hoitonsa antavat
+ammattilaiset näkevät, kuinka hyvin tulokset vastaavat MCS:ään liittyvää profiilia, sekä sen, mitä testejä
+ei ole koskaan tehty tai joista ei ole tuoretta tulosta. (Listan on laatinut riippumaton toksikologi,
+jolta saa myös viitetiedot: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.)</p>
+
+          <p><strong>Huomautus:</strong> Kohdat on järjestetty englanninkielisten alkuperäisten nimien mukaiseen aakkosjärjestykseen.</p>
+
+    <h3>BAACSS-tarkistuslistan täyttäminen</h3>
+      <p>Valitse jokaiselle biomarkkerille yksi vaihtoehto:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Ei koskaan / ei tulosta</strong> = testiä ei ole koskaan tehty tai tulos ei ole saatavilla</li>
+        <li><span class="code code-R">R</span> <strong>Viitealue</strong> = tulos on laboratorion viitealueella tai normaalialueella</li>
+        <li><span class="code code-L">L</span> <strong>Matala</strong> = tulos on viitealueen alapuolella</li>
+        <li><span class="code code-H">H</span> <strong>Korkea / havaittavissa</strong> = tulos on viitealueen yläpuolella tai aine on havaittavissa, vaikka se normaalisti puuttuisi</li>
+      </ul>
+      <p>Jokaisen biomarkkerin kohdalla lähtötilanne on <strong>N</strong>. Vaihda merkintä N (ei tietoa) merkinnäksi R, L tai H vasta, kun sinulla on laboratoriotulos tai
+potilastietojärjestelmän (EHR) tulos käsilläsi. Merkitse tällöin myös tuloksen päivämäärä muodossa <strong>VVVV</strong>, <strong>VVVV.KK</strong>tai
+        <strong>VVVV.KK.PP</strong> ennen jatkamista. Koontinäkymä päivittyy automaattisesti. Voit keskeyttää ja palata
+asian pariin milloin tahansa; vastauksesi tallennetaan laitteesi selaimeen.</p>
+
+      <p class="note"><strong>Yhteenveto</strong> Vaikka kaikki nämä biomarkkerit poikkeavat merkittävästi enemmän
+normaalitasosta MCS-potilailla kuin verrokeilla, yhteys ei aina ole syy-seuraussuhde. Biomarkkeri voi olla myötävaikuttava tekijä
+MCS:n kehittymisessä, tai se voi olla seuraus MCS:stä, liitännäissairaus tai vain
+sattuma. BAACSS-tulokset, jotka eivät viittaa MCS:ään, ovat yhtä tärkeitä kuin tulokset, jotka viittaavat siihen.</p>
+      <p class="clinical-note"><strong>Tärkeää:</strong> Kirjaa ylös raportissasi näkyvä luokitus ja
+keskustele tuloksista pätevän terveydenhuollon ammattilaisen kanssa. Tämä tarkistuslista ei muodosta diagnoosia eikä korvaa
+testauslaboratorion ilmoittamia viitearvoja ja tulkintaa.</p>
+
+      <details class="privacy">
+        <summary>Tietosuoja ja tietosi</summary>
+        <p>Vastauksesi tallennetaan vain tähän selaimeen ja tähän laitteeseen. Mitään tietoja ei lähetetä palvelimelle. Kuka tahansa, joka
+käyttää tätä selainprofiilia, näkee vastauksesi; käytä siis jaetulla tai julkisella tietokoneella <strong>Tyhjennä
+vastaukset</strong> lopuksi. Jos haluat siirtää raportin toiseen laitteeseen, käytä selaimen toimintoa Tulosta &rarr; 
+Tallenna PDF-muodossa.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Tietosi</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nimi tai koodinimi</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="esim. Jane Smith – tai kolmen sanan koodinimi, kuten redbikedog">
+          <p class="hint">Kirjoita nimesi, jotta hoitava taho tietää, kenen raportista on kyse – tai jos haluat pysyä
+nimettömänä, käytä yksityistä, enintään 12-merkkistä kolmen sanan koodinimeä (esim. redbikedog). Valinta on sinun.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Syntymässä määritetty sukupuoli</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Nainen</option>
+            <option>Mies</option>
+            <option>Intersukupuolinen</option>
+            <option>En halua kertoa</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Ikä – vuodet</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Vuotta">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Ikä – kuukaudet</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Kuukautta">
+        </div>
+        <div class="field">
+          <label for="date-completed">Täyttöpäivämäärä</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Täyttyy automaattisesti, kun tarkistuslista on valmis; voit muuttaa sitä.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Yhteenvetonäkymä</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Yleiskatsaus">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Raportoidut tulokset</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-not-tested">126</span><span class="kpi-label">N: ei testattu / ei tulosta</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-reference">0%</span><span class="kpi-label">R: viitealue</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-abnormal">0%</span><span class="kpi-label">A: poikkeava (L tai H)</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-match">0%</span><span class="kpi-label">M: vastaa MCS-tutkimusta</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-dates">0</span><span class="kpi-label">Päivämäärät vaaditaan</span></div>
+      </div>
+      <p class="dash-foot">Raportoitu = R, L tai H ja voimassa oleva tuloksen päivämäärä. REF-, ABN- ja MCS-prosenteissa
+jakajana käytetään raportoituja tuloksia. ”MCS-tutkimus”-kohdassa näkyy [L] tai [H] eli raportoitu poikkeavuuden suunta; [H] kattaa myös
+tapaukset, joissa aine on läsnä, vaikka sen pitäisi normaalisti puuttua.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Vieritettävä yhteenveto ryhmistä">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Tulokset biomarkkeriryhmittäin</caption>
+          <thead>
+            <tr>
+              <th scope="col">Kategoria</th><th scope="col">Biomarkkeri</th><th scope="col">Ei koskaan</th>
+              <th scope="col">Raportoitu</th><th scope="col">Viite</th><th scope="col">Poikkeava</th><th scope="col">MCS</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Biomarkkerien tarkistuslista</h2>
+      <div id="pending-alert" class="date-gate no-print" role="alert" hidden>
+        <strong>Tuloksen päivämäärä vaaditaan ennen jatkamista.</strong>
+        <span id="pending-name"></span>
+        <span class="date-formats" aria-label="Hyväksytyt päivämäärämuodot">
+          <span>VVVV</span><span>VVVV.KK</span><span>VVVV.KK.PP</span>
+        </span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Viimeistele</h2>
+      <p class="share-tip">Jos haluat jakaa raporttisi, tallenna se ensin PDF-muotoon alla olevalla painikkeella ja liitä sitten PDF
+hoitavalle taholle lähetettävään sähköpostiviestiin.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Tulosta raportti (mustavalkoinen, koontinäyttö yläosassa)</button>
+        <button type="button" id="btn-print-color" class="btn">Tallenna raportti värillisenä PDF-tiedostona</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Tyhjennä vastaukset</button>
+      </div>
+      <p class="hint">”Tallenna PDF-muodossa” (tai vastaava) näkyy tulostusvalinnassa selaimen tulostusikkunassa. Vastausten tyhjentäminen poistaa
+kaikki BAACSS-tiedot tästä laitteesta; se ei poista DACSS-tietoja.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+  <script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCSbm/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+

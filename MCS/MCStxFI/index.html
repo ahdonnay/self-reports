@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="fi-FI">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS — Herkkyysoireisiin liittyvät hoidot, joita kokeilla uudelleen, välttää tai jatkaa</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.09.13.1">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; MCS:n historia</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Herkkyysoireisiin liittyvät hoidot, joita kokeilla uudelleen, välttää tai jatkaa</p>
+      <p class="version" id="version">v26.09.13.1</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Tietoa tästä tarkistuslistasta</h2>
+      <p>TRACTSS-lomakkeeseen kirjataan hoidot, joita olet kokeillut kemikaali- tai muiden aistiherkkyyksien vuoksi. 
+Ilmoita kunkin hoidon kohdalla, kokeilisitko sitä uudelleen, välttäisitkö sitä vai käytätkö sitä parhaillaan. 
+Tämä antaa sinulle ja hoitohenkilökunnalle tiiviin yhteenvedon hoitokokemuksistasi. Hoitoluettelon on
+laatinut riippumaton toksikologi, jolta on saatavilla viitetietoja:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+          <p><strong>Huomautus:</strong> Kohdat on järjestetty englanninkielisten alkuperäisten nimien mukaiseen aakkosjärjestykseen.</p>
+
+    <h3>TRACTSS-lomakkeen täyttäminen</h3>
+      <p>Valitse kullekin hoidolle yksi tila:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Ei koskaan / ei muistikuvaa</strong> = hoitoa ei ole koskaan kokeiltu tai sen vaikutuksia ei muisteta</li>
+        <li><span class="code code-R">R</span> <strong>Kokeilisin uudelleen</strong> = kokeiltu aiemmin ja olisin valmis kokeilemaan uudelleen</li>
+        <li><span class="code code-A">A</span> <strong>Välttäisin</strong> = kokeiltu aiemmin, mutta haluan välttää sen kokeilemista uudelleen</li>
+        <li><span class="code code-C">C</span> <strong>Käytän parhaillaan</strong> = hoitoa käytetään parhaillaan</li>
+      </ul>
+      <p>Jokainen hoito alkaa kohdasta <strong>N</strong>. Jos valitset <strong>R</strong> tai <strong>A</strong>, sinun on
+valittava yksi tai useampi syy hoidon lopettamiseen ennen jatkamista. Koontinäkymä päivittyy automaattisesti. Voit
+keskeyttää ja palata myöhemmin; vastauksesi tallennetaan laitteesi selaimeen.</p>
+
+      <h3>Syyt hoidon lopettamiseen</h3>
+      <ul class="reason-legend">
+        <li><span class="reason-code">eRx</span> Resepti päättyi</li>
+        <li><span class="reason-code">$$$</span> Kustannukset</li>
+        <li><span class="reason-code">MDa</span> Lääkärin suositus</li>
+        <li><span class="reason-code">NLN</span> Ei enää tarpeen</li>
+        <li><span class="reason-code">NLA</span> Ei enää saatavilla</li>
+        <li><span class="reason-code">NLE</span> Ei enää tehoa</li>
+        <li><span class="reason-code">ROT</span> Korvataan toisella hoidolla</li>
+        <li><span class="reason-code">sFx</span> Sivuvaikutukset</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Tärkeää:</strong> TRACTSS tallentaa kokemuksesi ja mieltymyksesi; se
+ei määritä, onko hoito turvallinen tai tehokas. Älä aloita, lopeta, vältä tai kokeile uudelleen hoitoa pelkästään
+tämän tarkistuslistan perusteella. Keskustele hoidon muutoksista pätevän terveydenhuollon ammattilaisen kanssa.</p>
+
+      <details class="privacy">
+        <summary>Tietosuoja ja tietosi</summary>
+        <p>Vastauksesi tallennetaan vain tähän selaimeen ja tähän laitteeseen. Mitään tietoja ei lähetetä palvelimelle. Kuka tahansa, joka
+käyttää tätä selainprofiilia, näkee vastauksesi; käytä siis jaetulla tai julkisella tietokoneella <strong>Tyhjennä
+vastaukset</strong> lopuksi. Jos haluat siirtää raportin toiseen laitteeseen, käytä selaimen toimintoa Tulosta &rarr; 
+Tallenna PDF-muodossa.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Tietosi</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nimi tai koodinimi</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="esim. Jane Smith – tai kolmen sanan koodinimi, kuten redbikedog">
+          <p class="hint">Kirjoita nimesi, jotta hoitava taho tietää, kenen raportista on kyse – tai jos haluat pysyä
+nimettömänä, käytä yksityistä, enintään 12-merkkistä kolmen sanan koodinimeä (esim. redbikedog). Valinta on sinun.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Syntymässä määritetty sukupuoli</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Nainen</option>
+            <option>Mies</option>
+            <option>Intersukupuolinen</option>
+            <option>En halua kertoa</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Ikä – vuodet</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Vuotta">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Ikä – kuukaudet</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Kuukautta">
+        </div>
+        <div class="field">
+          <label for="date-completed">Täyttöpäivämäärä</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Täyttyy automaattisesti, kun lisäät ensimmäisen hoidon; voit muuttaa sitä.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Yhteenvetonäkymä</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Yleiskatsaus">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Kokeiltu aiemmin</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">N: ei koskaan / ei muistikuvaa</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: kokeiltu uudelleen</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: vältetty</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: käytössä tällä hetkellä</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Syyt vaaditaan</span></div>
+      </div>
+      <p class="dash-foot">Kokeiltu aiemmin = R, A tai C. Uudelleenkokeilun, välttämisen ja nykyisen käytön prosenttiosuuksien
+jakajana käytetään aiemmin kokeiltujen hoitojen määrää. R- tai A-tila lasketaan mukaan vasta, kun vähintään yksi lopettamissyy on valittu.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Vieritettävä yhteenveto hoitotyypeistä">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Tulokset hoitotyypin mukaan</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tyyppi</th><th scope="col">Hoito</th><th scope="col">Ei koskaan</th>
+              <th scope="col">Raportoitu</th><th scope="col">Kokeilisin uudelleen</th><th scope="col">Välttäisin</th><th scope="col">Tällä hetkellä</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Syyt hoidon lopettamiseen</h3>
+      <p class="dash-foot">Yhdellä hoidolla voi olla useita lopetussyitä, joten prosenttiosuuksien summa voi ylittää 100 %.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Vieritettävä yhteenveto lopetussyistä">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Valitut syyt hoidon lopettamiseen</caption>
+          <thead><tr><th scope="col">Syy</th><th scope="col">Määrä</th><th scope="col">% (lopetetut)</th></tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Hoidon tarkistuslista</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Valitse vähintään yksi syy ennen jatkamista.</strong>
+        <span id="pending-name"></span>
+        <span>Valitse korostetulla rivillä soveltuva syy.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Viimeistele</h2>
+      <p class="share-tip">Jos haluat jakaa raporttisi, tallenna se ensin PDF-muotoon alla olevalla painikkeella ja liitä sitten PDF
+hoitavalle taholle lähetettävään sähköpostiviestiin.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Tulosta raportti (mustavalkoinen, koontinäyttö yläosassa)</button>
+        <button type="button" id="btn-print-color" class="btn">Tallenna raportti värillisenä PDF-tiedostona</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Tyhjennä vastaukset</button>
+      </div>
+      <p class="hint">”Tallenna PDF-muodossa” (tai vastaava) näkyy tulostusvalinnassa selaimen tulostusikkunassa. Vastausten tyhjentäminen poistaa
+kaikki TRACTSS-tiedot laitteesta; se ei poista DACSS- tai BAACSS-tietoja.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+  <script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCStx/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+

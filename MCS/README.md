@@ -3,8 +3,9 @@
 This folder is the landing area for the Multiple Chemical Sensitivity (MCS)
 self-report applications. The disorders, biomarkers, and treatments reports are
 available in English, Québec French, North American Spanish, Italian, German,
-Danish, Swedish, and Japanese. The exposure report remains under construction
-in English and is hidden from the landing page until it is ready.
+Danish, Swedish, Japanese, Portugal Portuguese, Finnish, Spain Spanish, and
+Hebrew. The exposure report remains under construction in English and is
+hidden from the landing page until it is ready.
 
 | Folder | Report | Status | Reserved browser-storage key |
 |---|---|---|---|
@@ -16,7 +17,8 @@ in English and is hidden from the landing page until it is ready.
 Each application is kept in its own folder so its HTML, CSS, JavaScript, data,
 and saved answers remain independent of the other reports.
 
-Localized folders use the suffixes `QFR`, `NAS`, `IT`, `DE`, `DA`, `SV`, and `JA`.
+Localized folders use the suffixes `QFR`, `NAS`, `IT`, `DE`, `DA`, `SV`, `JA`,
+`PT`, `FI`, `ES`, and `HE`.
 
 ## License
 

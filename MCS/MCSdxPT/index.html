@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DACSS — Perturbações Associadas à Sensibilidade Química em Algumas Pessoas</title>
+<link rel="stylesheet" href="../MCSdx/css/styles.css">
+</head>
+<body>
+
+<!-- ============ SCREEN HEADER ============ -->
+<header class="site-header" role="banner">
+  <div class="wrap">
+    <a class="suite-link no-print" href="../">&larr; Histórico de SQM</a>
+    <h1>DACSS</h1>
+    <p class="subtitle">Perturbações Associadas à Sensibilidade Química em Algumas Pessoas</p>
+    <p class="version" id="version">v26.09.06</p>
+  </div>
+</header>
+
+<main class="wrap" id="main">
+
+  <!-- ============ INSTRUCTIONS ============ -->
+  <section class="card instructions" aria-labelledby="instr-h">
+    <h2 id="instr-h">Sobre esta lista de verificação</h2>
+    <p>A DACSS é uma lista de verificação de distúrbios médicos associados à Sensibilidade Química em algumas pessoas. 
+Nem todas as pessoas com esses distúrbios têm SQM, mas elas têm maior probabilidade de ter SQM,
+e pessoas com SQM têm maior probabilidade de apresentar esses distúrbios. 
+A DACSS foi criada para que as pessoas registrem quais desses distúrbios elas
+tiveram no passado, sempre tiveram ou têm atualmente (mas não sempre), para que elas e seus médicos
+possam identificar a origem da doença em termos dos distúrbios envolvidos. 
+(A lista foi compilada por um toxicologista independente, de quem as referências podem ser obtidas:
+      <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.) </p>
+
+        <p><strong>Nota:</strong> Os itens estão ordenados alfabeticamente pelos nomes originais em inglês.</p>
+
+    <h3>Como preencher a lista de verificação DACSS</h3>
+    <p>Para cada distúrbio, escolha uma opção:</p>
+    <ul class="legend">
+      <li><span class="code code-N">N</span> <strong>Nunca</strong> = NUNCA teve o distúrbio, ou não se recorda</li>
+      <li><span class="code code-P">P</span> <strong>Passado</strong> = teve o distúrbio no PASSADO, mas não agora</li>
+      <li><span class="code code-A">A</span> <strong>Sempre</strong> = SEMPRE teve o distúrbio, desde a infância</li>
+      <li><span class="code code-C">C</span> <strong>Atual</strong> — tem o distúrbio ATUALMENTE, mas não sempre</li>
+    </ul>
+    <p>Para cada transtorno alterado de N para P, A ou C, selecione também o nível de impacto correspondente
+      <strong>Impacto atual</strong>:</p>
+    <ul class="impact-legend">
+      <li><span class="impact-code">0</span> <strong>Nenhum impacto significativo</strong></li>
+      <li><span class="impact-code">1</span> <strong>Levemente incapacitante</strong></li>
+      <li><span class="impact-code">2</span> <strong>Gravemente incapacitante, mas ainda com autonomia</strong></li>
+      <li><span class="impact-code">3</span> <strong>Incapacitado pela condição a ponto de precisar de assistência</strong></li>
+    </ul>
+    <p>Todo transtorno começa como <strong>Nunca</strong>. Altere apenas aqueles que você vivenciou. 
+O painel é atualizado à medida que você avança. Você pode parar e retomar a qualquer momento; suas respostas são
+salvas neste navegador, no seu dispositivo. A lista de verificação leva cerca de 20 minutos para ser concluída.</p>
+
+    <p class="note"><strong>Resumo</strong> Embora todos esses transtornos estejam correlacionados à MCS,
+a correlação nem sempre é de causa e efeito. O transtorno pode ser um cofator que contribui para o risco de desenvolver MCS,
+ou pode ser uma consequência da MCS, uma comorbidade ou apenas uma coincidência. Os transtornos (DACSS) que você teve no passado
+e dos quais se recuperou são tão importantes para a avaliação clínica quanto aqueles que você ainda apresenta. </p>
+    <details class="privacy">
+      <summary>Privacidade e seus dados</summary>
+      <p>Suas respostas são armazenadas apenas neste navegador, neste dispositivo. Nada é enviado para nenhum
+servidor. Qualquer pessoa que utilize este perfil de navegador poderá ver suas respostas; portanto, em um computador
+compartilhado ou público, use <strong>Limpar respostas</strong> ao terminar. Para transferir seu relatório para outro
+dispositivo, use a opção do seu navegador: Imprimir &rarr; Salvar como PDF.</p>
+    </details>
+  </section>
+
+  <!-- ============ PATIENT INFO ============ -->
+  <section class="card" aria-labelledby="who-h">
+    <h2 id="who-h">Suas informações</h2>
+    <div class="fields">
+      <div class="field field-wide">
+        <label for="patient-id">Nome ou codinome</label>
+        <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+               placeholder="ex.: Jane Smith — ou um codinome de 3 palavras, como redbikedog">
+        <p class="hint">Insira seu nome para que o profissional de saúde saiba de quem é o relatório — ou, se
+preferir manter o anonimato, um codinome privado de 3 palavras e até 12 letras (ex.: redbikedog). 
+A escolha é sua.</p>
+      </div>
+      <div class="field">
+        <label for="sex">Sexo ao nascer</label>
+        <select id="sex">
+          <option value="">—</option>
+          <option>Feminino</option>
+          <option>Masculino</option>
+          <option>Intersexo</option>
+          <option>Prefiro não dizer</option>
+        </select>
+      </div>
+      <div class="field field-narrow">
+        <label for="age-years">Idade — anos</label>
+        <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Anos">
+      </div>
+      <div class="field field-narrow">
+        <label for="age-months">Idade — meses</label>
+        <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Meses">
+      </div>
+      <div class="field">
+        <label for="date-completed">Data de conclusão</label>
+        <input type="date" id="date-completed">
+        <p class="hint">Preenchido automaticamente quando a lista de verificação estiver completa; você pode alterar essa data.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ DASHBOARD ============ -->
+  <section class="card dashboard" aria-labelledby="dash-h">
+    <h2 id="dash-h">Painel</h2>
+    <p class="dash-progress" id="progress" aria-live="polite"></p>
+
+    <div class="kpis" role="group" aria-label="Resumo geral">
+      <div class="kpi"><span class="kpi-num" id="kpi-experienced">0%</span><span class="kpi-label">Já vivenciou</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-never">100%</span><span class="kpi-label">Nunca</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-always">0%</span><span class="kpi-label">Sempre</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-past">0%</span><span class="kpi-label">Passado</span></div>
+      <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">Atual</span></div>
+      <div class="kpi kpi-trend"><span class="kpi-num" id="kpi-trend">0%</span><span class="kpi-label" id="kpi-trend-label">Carga com a idade</span></div>
+    </div>
+    <p class="dash-foot">Todas as porcentagens referem-se ao total <span id="total-count">92</span> de transtornos.
+      <span class="trend-note">“Carga com a idade” = Atual − Passado (valor positivo sugere aumento da carga com a idade;
+valor negativo sugere diminuição). Não inclui a opção “Sempre”.</span>
+      <span class="trend-note">“Impacto Médio” é a média matemática das pontuações de Impacto Atual (de 0 a 3)
+inseridas em cada categoria; — significa que nenhuma pontuação de impacto foi inserida.</span></p>
+
+    <table class="dash-table" aria-live="polite">
+      <caption class="sr-only">Porcentagens por categoria</caption>
+      <thead>
+        <tr><th scope="col">Categoria</th><th scope="col">Nunca</th><th scope="col">Passado</th>
+            <th scope="col">Sempre</th><th scope="col">Atual</th><th scope="col">Qualquer (P/A/C)</th>
+            <th scope="col">Impacto Médio</th></tr>
+      </thead>
+      <tbody id="dash-rows"></tbody>
+    </table>
+  </section>
+
+  <!-- ============ CHECKLIST ============ -->
+  <section class="checklist" aria-labelledby="check-h">
+    <h2 id="check-h" class="wrap-h">Lista de verificação</h2>
+    <div id="pending-alert" class="impact-gate no-print" role="alert" hidden>
+      <strong>O Impacto Atual é obrigatório para prosseguir.</strong>
+      <span id="pending-name"></span>
+      <span class="impact-scale">Escolha 0, 1, 2 ou 3.</span>
+    </div>
+    <div id="categories"></div>
+  </section>
+
+  <!-- ============ ACTIONS ============ -->
+  <section class="card actions no-print" aria-labelledby="act-h">
+    <h2 id="act-h">Concluir</h2>
+    <p class="share-tip">Para compartilhar seu relatório: primeiro salve-o como PDF (botões abaixo) e, em seguida, anexe o
+PDF a um e-mail para o seu profissional de saúde.</p>
+    <div class="buttons">
+      <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimir relatório (preto e branco, painel na parte superior)</button>
+      <button type="button" id="btn-print-color" class="btn">Salvar relatório como PDF colorido</button>
+      <button type="button" id="btn-clear" class="btn btn-danger">Limpar respostas</button>
+    </div>
+    <p class="hint">A opção "Salvar como PDF" aparece como destino na janela de impressão do seu navegador. Limpar as respostas
+remove todos os dados deste dispositivo.</p>
+  </section>
+
+</main>
+
+<footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+<script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCSdx/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+

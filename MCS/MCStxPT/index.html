@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="pt-PT">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TRACTSS — Tratamentos a Repetir, Evitar ou Continuar a Utilizar para Sensibilidades Sensoriais</title>
+  <link rel="stylesheet" href="../MCStx/css/styles.css?v=26.09.13.1">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; Histórico de SQM</a>
+      <h1>TRACTSS</h1>
+      <p class="subtitle">Tratamentos a Repetir, Evitar ou Continuar a Utilizar para Sensibilidades Sensoriais</p>
+      <p class="version" id="version">v26.09.13.1</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">Sobre esta lista de verificação</h2>
+      <p>O TRACTSS registra tratamentos que você experimentou devido a sensibilidades químicas ou outras sensibilidades sensoriais. Para cada
+tratamento, indique se você o tentaria novamente, se o evitaria ou se o utiliza atualmente. Isso fornece a você
+e aos seus profissionais de saúde um registro conciso da sua experiência com tratamentos. A lista de tratamentos foi compilada por um
+toxicologista independente, cujas referências estão disponíveis:
+        <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a>.</p>
+
+          <p><strong>Nota:</strong> Os itens estão ordenados alfabeticamente pelos nomes originais em inglês.</p>
+
+    <h3>Como preencher a lista de verificação TRACTSS</h3>
+      <p>Para cada tratamento, escolha uma situação:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Nunca / sem lembrança</strong> = nunca experimentou o tratamento ou não se lembra dos seus efeitos</li>
+        <li><span class="code code-R">R</span> <strong>Tentar novamente</strong> = experimentou e estaria disposto a tentar novamente</li>
+        <li><span class="code code-A">A</span> <strong>Evitar</strong> = experimentou e quer evitar tentar novamente</li>
+        <li><span class="code code-C">C</span> <strong>Utiliza atualmente</strong> = utiliza o tratamento atualmente</li>
+      </ul>
+      <p>Todo tratamento começa em <strong>N</strong>. Se você selecionar <strong>R</strong> ou <strong>A</strong>, você deve
+selecionar um ou mais motivos pelos quais interrompeu o tratamento antes de continuar. O painel é atualizado automaticamente. Você pode
+parar e retomar a qualquer momento; suas respostas são salvas neste navegador, no seu dispositivo.</p>
+
+      <h3>Motivos para interromper um tratamento</h3>
+      <ul class="reason-legend">
+        <li><span class="reason-code">eRx</span> Fim da prescrição</li>
+        <li><span class="reason-code">$$$</span> Custo</li>
+        <li><span class="reason-code">MDa</span> Recomendação médica</li>
+        <li><span class="reason-code">NLN</span> Não é mais necessário</li>
+        <li><span class="reason-code">NLA</span> Não está mais disponível</li>
+        <li><span class="reason-code">NLE</span> Não é mais eficaz</li>
+        <li><span class="reason-code">ROT</span> Substituir por outra terapia</li>
+        <li><span class="reason-code">sFx</span> Efeitos colaterais</li>
+      </ul>
+
+      <p class="clinical-note"><strong>Importante:</strong> O TRACTSS registra sua experiência e preferências; ele
+não determina se um tratamento é seguro ou eficaz. Não inicie, interrompa, evite ou retome um tratamento com base
+apenas nesta lista de verificação. Discuta alterações no tratamento com um profissional de saúde qualificado.</p>
+
+      <details class="privacy">
+        <summary>Privacidade e seus dados</summary>
+        <p>Suas respostas são armazenadas apenas neste navegador, neste dispositivo. Nada é enviado para qualquer servidor. Qualquer pessoa que
+utilize este perfil de navegador pode ver suas respostas; portanto, em um computador compartilhado ou público, use a opção <strong>Limpar
+respostas</strong> ao terminar. Para transferir seu relatório para outro dispositivo, use a função do seu navegador: Imprimir &rarr; 
+Salvar como PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Suas informações</h2>
+      <div class="fields">
+        <div class="field field-wide">
+          <label for="patient-id">Nome ou codinome</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="ex.: Jane Smith — ou um codinome de 3 palavras, como redbikedog">
+          <p class="hint">Insira seu nome para que o profissional de saúde saiba de quem é este relatório — ou, se preferir permanecer
+anônimo, um codinome privado de 3 palavras com até 12 letras (ex.: redbikedog). A escolha é sua.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sexo ao nascer</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Feminino</option>
+            <option>Masculino</option>
+            <option>Intersexo</option>
+            <option>Prefiro não dizer</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Idade — anos</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Anos">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Idade — meses</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Meses">
+        </div>
+        <div class="field">
+          <label for="date-completed">Data de conclusão</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Preenchido automaticamente ao inserir seu primeiro tratamento; você pode alterar essa informação.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Painel</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Resumo geral">
+        <div class="kpi"><span class="kpi-num" id="kpi-reported">0%</span><span class="kpi-label">Já experimentou</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-never">210</span><span class="kpi-label">N: nunca / sem lembrança</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-retry">0%</span><span class="kpi-label">R: retomar</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-avoid">0%</span><span class="kpi-label">A: evitar</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-current">0%</span><span class="kpi-label">C: em uso atualmente</span></div>
+        <div class="kpi kpi-attention"><span class="kpi-num" id="kpi-reasons-needed">0</span><span class="kpi-label">Motivos necessários</span></div>
+      </div>
+      <p class="dash-foot">"Já experimentou" = R, A ou C. As porcentagens de Retomar, Evitar e Em uso atualmente utilizam os tratamentos
+já experimentados como denominador. Um status R ou A só é contabilizado após a seleção de pelo menos um motivo para a interrupção.</p>
+
+      <div class="table-scroll" tabindex="0" aria-label="Resumo do tipo de tratamento (com barra de rolagem)">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Resultados por tipo de tratamento</caption>
+          <thead>
+            <tr>
+              <th scope="col">Tipo</th><th scope="col">Tratamento</th><th scope="col">Nunca</th>
+              <th scope="col">Informado</th><th scope="col">Tentar novamente</th><th scope="col">Evitar</th><th scope="col">Atual</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+
+      <h3 class="reason-summary-h">Motivos para a interrupção de tratamentos</h3>
+      <p class="dash-foot">Um tratamento pode ter mais de um motivo; portanto, as porcentagens podem somar mais de 100%.</p>
+      <div class="table-scroll" tabindex="0" aria-label="Resumo dos motivos de interrupção (com barra de rolagem)">
+        <table class="dash-table reason-table" aria-live="polite">
+          <caption class="sr-only">Motivos selecionados para tratamentos interrompidos</caption>
+          <thead><tr><th scope="col">Motivo</th><th scope="col">Número</th><th scope="col">% de interrupções</th></tr></thead>
+          <tbody id="reason-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Lista de verificação do tratamento</h2>
+      <div id="pending-alert" class="reason-gate no-print" role="alert" hidden>
+        <strong>Selecione pelo menos um motivo antes de continuar.</strong>
+        <span id="pending-name"></span>
+        <span>Escolha qualquer motivo aplicável na linha destacada.</span>
+      </div>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Concluir</h2>
+      <p class="share-tip">Para compartilhar seu relatório, salve-o primeiro como PDF usando um botão abaixo e, em seguida, anexe o PDF
+a um e-mail para o seu profissional de saúde.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimir relatório (preto e branco, painel na parte superior)</button>
+        <button type="button" id="btn-print-color" class="btn">Salvar relatório como PDF colorido</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Limpar respostas</button>
+      </div>
+      <p class="hint">A opção "Salvar como PDF" aparece como destino na janela de impressão do seu navegador. Limpar as respostas remove
+todos os dados do TRACTSS deste dispositivo; isso não apaga os dados do DACSS ou do BAACSS.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+  <script src="js/i18n.js?v=26.10.12.1"></script>
+<script src="../MCStx/js/app.js?v=26.10.11.1"></script>
+  <script src="../license.js?v=26.10.11.3"></script>
+</body>
+</html>
+
