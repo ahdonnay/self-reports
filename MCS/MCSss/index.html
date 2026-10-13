@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>CATSS — Changes in Awareness and Tolerance of Sensory Stimuli</title>
+  <link rel="stylesheet" href="css/styles.css?v=2026.10.13.a">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; History of MCS</a>
+      <h1>CATSS</h1>
+      <p class="subtitle">Changes in Awareness and Tolerance of Sensory Stimuli</p>
+      <p class="version" id="version">v.2026.10.13.a</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">About this checklist</h2>
+      <p>CATSS records changes in two different responses to sensory stimuli since a prior date or event that you
+        specify. <strong>Awareness</strong> means the level of a stimulus you notice. <strong>Tolerance</strong> means
+        the maximum level of that stimulus you can tolerate. A change in one does not necessarily mean the same
+        change in the other.</p>
+
+      <h3>How to complete CATSS</h3>
+      <p>For both Awareness and Tolerance, choose one response for each stimulus:</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>No change noticed</strong></li>
+        <li><span class="code code-U">U</span> <strong>Up</strong></li>
+        <li><span class="code code-D">D</span> <strong>Down</strong></li>
+        <li><span class="code code-M">M</span> <strong>Mixed</strong> = first abnormally up, then down</li>
+        <li><span class="code code-W">W</span> <strong>Reversed</strong> = first abnormally down, then up</li>
+      </ul>
+      <p>Every response starts at <strong>N</strong>. If you are unsure whether your awareness or tolerance changed,
+        leave it at N. “Up” and “down” describe the direction of change, not whether the change was good or bad.
+        The dashboard updates automatically, and your answers are saved in this browser on this device.</p>
+
+      <p class="note"><strong>Important distinction:</strong> Greater awareness can occur with greater, unchanged,
+        or lower tolerance. Record each column independently.</p>
+      <p class="clinical-note"><strong>Clinical note:</strong> CATSS is a structured self-report, not a diagnostic
+        test. Discuss important or sudden sensory changes with a qualified clinician.</p>
+
+      <details class="privacy">
+        <summary>Privacy &amp; your data</summary>
+        <p>Your answers are stored only in this web browser, on this device. Nothing is sent to any server. Anyone who
+          uses this browser profile can see your answers, so on a shared or public computer use <strong>Clear
+          answers</strong> when you finish. To move your report to another device, use your browser's Print &rarr;
+          Save as PDF.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Your information and comparison point</h2>
+      <div class="fields">
+        <div class="field field-wide comparison-field">
+          <label for="comparison-point">Comparison date or event</label>
+          <input type="text" id="comparison-point" maxlength="120" autocomplete="off"
+                 placeholder="e.g. Before illness, before last clinician visit, or 2024.06">
+          <p class="hint">All Awareness and Tolerance responses compare your current experience with this same prior date or event.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="patient-id">Name or codename</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="e.g. Jane Smith — or a 3-word codename like redbikedog">
+          <p class="hint">Enter your name for a clinician-facing report, or use a private codename if you prefer.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sex at birth</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option>Female</option>
+            <option>Male</option>
+            <option>Intersex</option>
+            <option>Prefer not to say</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Age — years</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Years">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Age — months</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Months">
+        </div>
+        <div class="field">
+          <label for="date-completed">Date completed</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Fills automatically after the first change is recorded; you can change it.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Dashboard</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Overall summary">
+        <div class="kpi"><span class="kpi-num" id="kpi-total">100</span><span class="kpi-label">Stimuli listed</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-any">0</span><span class="kpi-label">Any change</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-awareness">0</span><span class="kpi-label">Awareness changed</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-tolerance">0</span><span class="kpi-label">Tolerance changed</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-both">0</span><span class="kpi-label">Both changed</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-custom">0</span><span class="kpi-label">Added stimuli</span></div>
+      </div>
+      <p class="dash-foot">Counts include each listed stimulus plus any additional stimulus you name. N means no
+        change noticed. U, D, M, and W are summarized separately for Awareness (A) and Tolerance (T).</p>
+      <div class="table-scroll" tabindex="0" aria-label="Scrollable category summary">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Changes by sensory category</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Category</th><th scope="col" rowspan="2">Stimuli</th>
+              <th scope="colgroup" colspan="5">Awareness</th><th scope="colgroup" colspan="5">Tolerance</th>
+            </tr>
+            <tr>
+              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
+              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Sensory stimuli checklist</h2>
+      <p class="check-help wrap-h">Choose Awareness on the left and Tolerance on the right. Optional blank rows can be named and added to the dashboard.</p>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Finish</h2>
+      <p class="share-tip">To share your report, save it as a PDF first using a button below, then attach the PDF
+        to an email or discussion message.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Print report (black &amp; white, dashboard on top)</button>
+        <button type="button" id="btn-print-color" class="btn">Save report as color PDF</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Clear answers</button>
+      </div>
+      <p class="hint">“Save as PDF” appears as a destination in your browser's print window. Clearing answers removes
+        all CATSS data from this device; it does not clear the other History of MCS reports.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print">
+    <div class="wrap"></div>
+  </footer>
+
+  <script src="js/app.js?v=2026.10.13.a"></script>
+  <script src="../license.js?v=2026.10.13.a"></script>
+</body>
+</html>

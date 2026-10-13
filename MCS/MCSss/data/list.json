@@ -1,0 +1,642 @@
+{
+  "version": "v.2026.10.13.a",
+  "report": "CATSS",
+  "title": "Changes in Awareness and Tolerance of Sensory Stimuli",
+  "codes": {
+    "N": "No change noticed",
+    "U": "Up",
+    "D": "Down",
+    "M": "Mixed: first abnormally up, then down",
+    "W": "Reversed: first abnormally down, then up"
+  },
+  "categories": [
+    {
+      "id": "catss-1",
+      "name": "External Physical Stimuli Detected or Imagined by Primary Senses",
+      "items": [
+        {
+          "id": "catss-1-1",
+          "number": "1.1",
+          "name": "tastes you normally like",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-2",
+          "number": "1.2",
+          "name": "tastes you normally dislike",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-3",
+          "number": "1.3",
+          "name": "distorted tastes (not as expected)",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-4",
+          "number": "1.4",
+          "name": "bitter flavors",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-5",
+          "number": "1.5",
+          "name": "sweet flavors",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-6",
+          "number": "1.6",
+          "name": "sour flavors",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-7",
+          "number": "1.7",
+          "name": "umami (savory) flavors",
+          "group": "Flavors"
+        },
+        {
+          "id": "catss-1-8",
+          "number": "1.8",
+          "name": "bright sunlight",
+          "group": "Lights"
+        },
+        {
+          "id": "catss-1-9",
+          "number": "1.9",
+          "name": "dim light",
+          "group": "Lights"
+        },
+        {
+          "id": "catss-1-10",
+          "number": "1.10",
+          "name": "slow flashing light, such as traffic signal",
+          "group": "Lights"
+        },
+        {
+          "id": "catss-1-11",
+          "number": "1.11",
+          "name": "fast flashing light, such as ambulances",
+          "group": "Lights"
+        },
+        {
+          "id": "catss-1-12",
+          "number": "1.12",
+          "name": "smell of odors you normally like",
+          "group": "Odors"
+        },
+        {
+          "id": "catss-1-13",
+          "number": "1.13",
+          "name": "smell of odors you normally dislike",
+          "group": "Odors"
+        },
+        {
+          "id": "catss-1-14",
+          "number": "1.14",
+          "name": "smell of distorted odors (not as expected)",
+          "group": "Odors"
+        },
+        {
+          "id": "catss-1-15",
+          "number": "1.15",
+          "name": "low frequency sounds like idling engines",
+          "group": "Sounds"
+        },
+        {
+          "id": "catss-1-16",
+          "number": "1.16",
+          "name": "high frequency sounds like children playing",
+          "group": "Sounds"
+        },
+        {
+          "id": "catss-1-17",
+          "number": "1.17",
+          "name": "distorted sounds (not as expected)",
+          "group": "Sounds"
+        },
+        {
+          "id": "catss-1-18",
+          "number": "1.18",
+          "name": "types of touch you normally like",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-19",
+          "number": "1.19",
+          "name": "types of touch you normally dislike",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-20",
+          "number": "1.20",
+          "name": "Stereognostic Sense (aka Haptic Perception) ability to recognize objects by their shape just by touching them with eyes closed",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-21",
+          "number": "1.21",
+          "name": "water or sweat on your skin (hygroception)",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-22",
+          "number": "1.22",
+          "name": "static electricity on your skin (galvanic sense)",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-23",
+          "number": "1.23",
+          "name": "air current on your skin (anemoception)",
+          "group": "Touch"
+        },
+        {
+          "id": "catss-1-24",
+          "number": "1.24",
+          "name": "feeling something moving on skin surface when nothing is present",
+          "group": "Hallucinations (no stimuli)"
+        },
+        {
+          "id": "catss-1-25",
+          "number": "1.25",
+          "name": "hearing sounds or voices that are not present",
+          "group": "Hallucinations (no stimuli)"
+        },
+        {
+          "id": "catss-1-26",
+          "number": "1.26",
+          "name": "seeing things that are not present",
+          "group": "Hallucinations (no stimuli)"
+        },
+        {
+          "id": "catss-1-27",
+          "number": "1.27",
+          "name": "smelling odors that are not present",
+          "group": "Hallucinations (no stimuli)"
+        },
+        {
+          "id": "catss-1-28",
+          "number": "1.28",
+          "name": "tasting flavors that are not present when mouth is empty",
+          "group": "Hallucinations (no stimuli)"
+        }
+      ]
+    },
+    {
+      "id": "catss-2",
+      "name": "External Physical Stimuli Detected by Secondary Senses",
+      "items": [
+        {
+          "id": "catss-2-1",
+          "number": "2.1",
+          "name": "low pressure (thunderstorm)",
+          "group": "Barometric Pressure (barosense)"
+        },
+        {
+          "id": "catss-2-2",
+          "number": "2.2",
+          "name": "high pressure (clear weather)",
+          "group": "Barometric Pressure (barosense)"
+        },
+        {
+          "id": "catss-2-3",
+          "number": "2.3",
+          "name": "chemicals absorbed via skin such as soap or lotion",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-4",
+          "number": "2.4",
+          "name": "chemicals inhaled by nose such as fragrances",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-5",
+          "number": "2.5",
+          "name": "chemicals ingested by mouth such as drugs or supplements",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-6",
+          "number": "2.6",
+          "name": "foods and drinks that trigger sensation of heat (eg hot peppers sensed by TRPV1)",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-7",
+          "number": "2.7",
+          "name": "foods and drinks that trigger sensation of cold (eg mint sensed by TRPM8)",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-8",
+          "number": "2.8",
+          "name": "foods and drinks that trigger sensation of tingling (eg carbonated drinks)",
+          "group": "Chemicals (chemesthesis)"
+        },
+        {
+          "id": "catss-2-9",
+          "number": "2.9",
+          "name": "cell phones and cell towers (5G)",
+          "group": "Electromagnetic Radiation"
+        },
+        {
+          "id": "catss-2-10",
+          "number": "2.10",
+          "name": "other sources of EMF such as home appliances (not 5G)",
+          "group": "Electromagnetic Radiation"
+        },
+        {
+          "id": "catss-2-11",
+          "number": "2.11",
+          "name": "cold weather",
+          "group": "External Temperature (thermoception)"
+        },
+        {
+          "id": "catss-2-12",
+          "number": "2.12",
+          "name": "hot weather",
+          "group": "External Temperature (thermoception)"
+        },
+        {
+          "id": "catss-2-13",
+          "number": "2.13",
+          "name": "low humidity, very dry air, such as under 30% RH",
+          "group": "Humidity"
+        },
+        {
+          "id": "catss-2-14",
+          "number": "2.14",
+          "name": "high humidity, very moist air, such as over 80% RH",
+          "group": "Humidity"
+        },
+        {
+          "id": "catss-2-15",
+          "number": "2.15",
+          "name": "black mold when visible on walls",
+          "group": "Mold"
+        },
+        {
+          "id": "catss-2-16",
+          "number": "2.16",
+          "name": "other colors of mold when visible on walls",
+          "group": "Mold"
+        },
+        {
+          "id": "catss-2-17",
+          "number": "2.17",
+          "name": "mold when present but not visible on walls, such as in books or on food",
+          "group": "Mold"
+        },
+        {
+          "id": "catss-2-18",
+          "number": "2.18",
+          "name": "holding a vibrating power tool (such as an electric toothbrush or vacuum)",
+          "group": "Vibration"
+        },
+        {
+          "id": "catss-2-19",
+          "number": "2.19",
+          "name": "standing on a vibrating floor (such as in elevator or escalator)",
+          "group": "Vibration"
+        },
+        {
+          "id": "catss-2-20",
+          "number": "2.20",
+          "name": "",
+          "group": "Additional Sensory Stimuli",
+          "custom": true
+        },
+        {
+          "id": "catss-2-21",
+          "number": "2.21",
+          "name": "",
+          "group": "Additional Sensory Stimuli",
+          "custom": true
+        },
+        {
+          "id": "catss-2-22",
+          "number": "2.22",
+          "name": "",
+          "group": "Additional Sensory Stimuli",
+          "custom": true
+        }
+      ]
+    },
+    {
+      "id": "catss-3",
+      "name": "Internal Physical Stimuli Detected by Internal Senses",
+      "items": [
+        {
+          "id": "catss-3-1",
+          "number": "3.1",
+          "name": "Acceleration and Deceleration when actually moving"
+        },
+        {
+          "id": "catss-3-2",
+          "number": "3.2",
+          "name": "Balance"
+        },
+        {
+          "id": "catss-3-3",
+          "number": "3.3",
+          "name": "Bladder Fullness (sensed by interoception)"
+        },
+        {
+          "id": "catss-3-4",
+          "number": "3.4",
+          "name": "Body Temperature (Core Thermoception)"
+        },
+        {
+          "id": "catss-3-5",
+          "number": "3.5",
+          "name": "Dizziness"
+        },
+        {
+          "id": "catss-3-6",
+          "number": "3.6",
+          "name": "Energy Level (hi or low)"
+        },
+        {
+          "id": "catss-3-7",
+          "number": "3.7",
+          "name": "False sensation of free-falling or floating"
+        },
+        {
+          "id": "catss-3-8",
+          "number": "3.8",
+          "name": "False sensation of spinning"
+        },
+        {
+          "id": "catss-3-9",
+          "number": "3.9",
+          "name": "Gastrointestinal Motility (such as stomach churning)"
+        },
+        {
+          "id": "catss-3-10",
+          "number": "3.10",
+          "name": "Heart Rate (felt anywhere, aka Pulse Palpitation Sensation)"
+        },
+        {
+          "id": "catss-3-11",
+          "number": "3.11",
+          "name": "Hunger for Air (sense of being short of breath)"
+        },
+        {
+          "id": "catss-3-12",
+          "number": "3.12",
+          "name": "Hunger for Food"
+        },
+        {
+          "id": "catss-3-13",
+          "number": "3.13",
+          "name": "Itchiness for no apparent reason (pruriception)"
+        },
+        {
+          "id": "catss-3-14",
+          "number": "3.14",
+          "name": "Orgasm"
+        },
+        {
+          "id": "catss-3-15",
+          "number": "3.15",
+          "name": "Pain (as tested with MF poke test or pinch test of nociception)"
+        },
+        {
+          "id": "catss-3-16",
+          "number": "3.16",
+          "name": "Proprioception (awareness of where your limbs and body parts are at any moment, tested by ability to touch tip of nose with eyes closed)"
+        },
+        {
+          "id": "catss-3-17",
+          "number": "3.17",
+          "name": "Speed when actually moving"
+        },
+        {
+          "id": "catss-3-18",
+          "number": "3.18",
+          "name": "Thirst (osmoreception)"
+        },
+        {
+          "id": "catss-3-19",
+          "number": "3.19",
+          "name": "Time Passing (chronoception, sense of time duration)"
+        },
+        {
+          "id": "catss-3-20",
+          "number": "3.20",
+          "name": "",
+          "custom": true
+        },
+        {
+          "id": "catss-3-21",
+          "number": "3.21",
+          "name": "",
+          "custom": true
+        }
+      ]
+    },
+    {
+      "id": "catss-4",
+      "name": "Cognitive Stimuli Detected by Cognitive Senses",
+      "items": [
+        {
+          "id": "catss-4-1",
+          "number": "4.1",
+          "name": "Sense of curiosity (sharpened if more interested in learning, dulled if less)"
+        },
+        {
+          "id": "catss-4-2",
+          "number": "4.2",
+          "name": "Sense of direction (frequency of getting lost in familiar areas)"
+        },
+        {
+          "id": "catss-4-3",
+          "number": "4.3",
+          "name": "Sense of facial recognition"
+        },
+        {
+          "id": "catss-4-4",
+          "number": "4.4",
+          "name": "Sense of having extra-sensory perception (ESP) as in premonition of future events and/or thoughts of others"
+        },
+        {
+          "id": "catss-4-5",
+          "number": "4.5",
+          "name": "Sense of immediate purpose (dulled if person forgets their purpose en route to a location or after arriving; sharpened if anxiously hyperaware of their actions and rarely forget where they are going or why)"
+        },
+        {
+          "id": "catss-4-6",
+          "number": "4.6",
+          "name": "Sense of long term memory (names of friends from elementary school)"
+        },
+        {
+          "id": "catss-4-7",
+          "number": "4.7",
+          "name": "Sense of numbers (ability to subtract from 100 by 7s in your head)"
+        },
+        {
+          "id": "catss-4-8",
+          "number": "4.8",
+          "name": "Sense of reading (ability to read typewritten and handwritten words)"
+        },
+        {
+          "id": "catss-4-9",
+          "number": "4.9",
+          "name": "Sense of short term memory (where you left your keys)"
+        },
+        {
+          "id": "catss-4-10",
+          "number": "4.10",
+          "name": "Sense of writing (ability to write words legibly on a line)"
+        },
+        {
+          "id": "catss-4-11",
+          "number": "4.11",
+          "name": "Sense of word retrieval (tip of tongue)"
+        },
+        {
+          "id": "catss-4-12",
+          "number": "4.12",
+          "name": "",
+          "custom": true
+        }
+      ]
+    },
+    {
+      "id": "catss-5",
+      "name": "Emotional Stimuli Detected by Emotional Senses",
+      "items": [
+        {
+          "id": "catss-5-1",
+          "number": "5.1",
+          "name": "Sense of anger and frustration at others"
+        },
+        {
+          "id": "catss-5-2",
+          "number": "5.2",
+          "name": "Sense of anger and frustration at yourself"
+        },
+        {
+          "id": "catss-5-3",
+          "number": "5.3",
+          "name": "Sense of communication with supernatural beings or spirits of deceased people"
+        },
+        {
+          "id": "catss-5-4",
+          "number": "5.4",
+          "name": "Sense of delight or joy"
+        },
+        {
+          "id": "catss-5-5",
+          "number": "5.5",
+          "name": "Sense of depression, despair, disappointment, doom, or dread"
+        },
+        {
+          "id": "catss-5-6",
+          "number": "5.6",
+          "name": "Sense of emotional lability (sudden mood swings)"
+        },
+        {
+          "id": "catss-5-7",
+          "number": "5.7",
+          "name": "Sense of empathy towards other people"
+        },
+        {
+          "id": "catss-5-8",
+          "number": "5.8",
+          "name": "Sense of gratitude"
+        },
+        {
+          "id": "catss-5-9",
+          "number": "5.9",
+          "name": "Sense of hope and optimism"
+        },
+        {
+          "id": "catss-5-10",
+          "number": "5.10",
+          "name": "Sense of irrational anxiety"
+        },
+        {
+          "id": "catss-5-11",
+          "number": "5.11",
+          "name": "Sense of irrational fear"
+        },
+        {
+          "id": "catss-5-12",
+          "number": "5.12",
+          "name": "Sense of right and wrong (ethical awareness)"
+        },
+        {
+          "id": "catss-5-13",
+          "number": "5.13",
+          "name": "Sense of self-esteem when around other people"
+        },
+        {
+          "id": "catss-5-14",
+          "number": "5.14",
+          "name": "Sense of sensory overload"
+        },
+        {
+          "id": "catss-5-15",
+          "number": "5.15",
+          "name": "",
+          "custom": true
+        }
+      ]
+    },
+    {
+      "id": "catss-6",
+      "name": "Social Stimuli Detected by Social Senses",
+      "items": [
+        {
+          "id": "catss-6-1",
+          "number": "6.1",
+          "name": "Sense of close connection to AI LLM chat services (sharpened if any, dulled if no connection)"
+        },
+        {
+          "id": "catss-6-2",
+          "number": "6.2",
+          "name": "Sense of close connection to partner if any and family"
+        },
+        {
+          "id": "catss-6-3",
+          "number": "6.3",
+          "name": "Sense of close connection to people no longer alive"
+        },
+        {
+          "id": "catss-6-4",
+          "number": "6.4",
+          "name": "Sense of close connection to pet(s) such as dogs, cats or horses"
+        },
+        {
+          "id": "catss-6-5",
+          "number": "6.5",
+          "name": "Sense of close connection to wild animals such as birds"
+        },
+        {
+          "id": "catss-6-6",
+          "number": "6.6",
+          "name": "Sense of connection to your closest community (eg church, social club, school, or team)"
+        },
+        {
+          "id": "catss-6-7",
+          "number": "6.7",
+          "name": "Sense of social inhibition (increased = more aware, more inhibited)"
+        },
+        {
+          "id": "catss-6-8",
+          "number": "6.8",
+          "name": "Sense of Environmental Crowd Density (awareness and tolerance of being in physically crowded spaces)"
+        },
+        {
+          "id": "catss-6-9",
+          "number": "6.9",
+          "name": "Sense of Personal Space Boundaries (proxemics; sensitivity to how close other individuals physically stand or sit relative to your personal boundary)"
+        }
+      ]
+    }
+  ]
+}
