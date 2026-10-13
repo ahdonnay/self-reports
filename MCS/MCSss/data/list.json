@@ -1,5 +1,5 @@
 {
-  "version": "v.2026.10.13.c",
+  "version": "v.2026.10.13.d",
   "report": "CATSS",
   "title": "Changes in Awareness and Tolerance of Sensory Stimuli",
   "codes": {
@@ -263,13 +263,13 @@
         {
           "id": "catss-2-13",
           "number": "2.13",
-          "name": "low humidity, very dry air, such as under 30% RH",
+          "name": "low humidity, very dry air, such as under 30% relative humidity",
           "group": "Humidity"
         },
         {
           "id": "catss-2-14",
           "number": "2.14",
-          "name": "high humidity, very moist air, such as over 80% RH",
+          "name": "high humidity, very moist air, such as over 80% relative humidity",
           "group": "Humidity"
         },
         {

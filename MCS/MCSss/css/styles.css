@@ -129,7 +129,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .stimulus { min-height: 58px; padding: 7px 16px; border-bottom: 1px solid #e8ebed; }
 .stimulus:last-child { border-bottom: 0; }
 .stimulus.has-change { background: #f8f9f9; }
-.stimulus-name { min-width: 0; font-weight: 800; }
+.stimulus-name { min-width: 0; font-weight: 400; }
 .stimulus-name p { margin: 0; }
 .item-number { display: inline-block; min-width: 2.7rem; color: var(--ink-soft); font-size: .78rem; font-weight: 600; }
 
