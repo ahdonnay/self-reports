@@ -38,6 +38,15 @@ body {
   margin-bottom: 0;
 }
 
+.landing-intro span {
+  display: block;
+}
+
+.landing-intro a {
+  color: #164f63;
+  overflow-wrap: anywhere;
+}
+
 .discussion-link {
   display: inline-block;
   padding: 9px 13px;
@@ -171,6 +180,28 @@ h1 {
 .notice ul { margin-bottom: 0; padding-left: 1.25rem; }
 .notice li { margin: 0.45rem 0; line-height: 1.45; }
 
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  align-items: start;
+  margin-top: 28px;
+}
+
+.rules-card {
+  margin-top: 0;
+  padding: 18px;
+}
+
+.rules-card h2 {
+  font-size: 1.08rem;
+  line-height: 1.25;
+}
+
+.rules-card li {
+  font-size: 0.86rem;
+}
+
 .suite-license {
   width: min(100%, 900px);
   margin: 20px auto 48px;
@@ -191,4 +222,9 @@ h1 {
   .discussion-link.multilingual { min-width: 190px; font-size: 0.88rem; }
   .landing-header .discussion-link.multilingual { align-self: flex-end; }
   .discussion-link.multilingual span[lang] { font-size: 0.8rem; }
+  .rules-grid { grid-template-columns: 1fr; }
+}
+
+@media (min-width: 521px) and (max-width: 760px) {
+  .rules-grid { grid-template-columns: 1fr; }
 }
