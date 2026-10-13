@@ -1,7 +1,7 @@
 'use strict';
 
 (() => {
-  const currentVersion = 'v.2026.10.13.a';
+  const defaultVersion = 'v.2026.10.13.a';
   const translations = {
     en: {
       scope: 'Except where otherwise noted, original educational content and data are licensed under',
@@ -61,19 +61,12 @@
       <a href="https://ahdonnay.github.io/self-reports/MCS/">https://ahdonnay.github.io/self-reports/MCS/</a>.</p>`;
 
   const existingVersion = document.querySelector('.version');
-  if (existingVersion) {
-    existingVersion.textContent = currentVersion;
-    new MutationObserver(() => {
-      if (existingVersion.textContent !== currentVersion) {
-        existingVersion.textContent = currentVersion;
-      }
-    }).observe(existingVersion, { childList: true, characterData: true, subtree: true });
-  } else {
+  if (!existingVersion) {
     const page = document.querySelector('main.page');
     if (page) {
       const version = document.createElement('p');
       version.className = 'suite-version';
-      version.textContent = currentVersion;
+      version.textContent = defaultVersion;
       page.prepend(version);
     }
   }

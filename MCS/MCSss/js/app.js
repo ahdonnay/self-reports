@@ -1,4 +1,4 @@
-/* CATSS — dual sensory-change responses, dashboard, persistence, custom stimuli, and printing. */
+/* CATSS — dual sensory-change responses, dashboard, persistence, and printing. */
 'use strict';
 
 const STORAGE_KEY = 'mcsss.v1';
@@ -21,7 +21,6 @@ function blankState() {
     report: 'CATSS',
     awareness: {},
     tolerance: {},
-    customNames: {},
     patient: {
       comparisonPoint: '',
       id: '',
@@ -44,7 +43,6 @@ function load() {
       schema: 1,
       awareness: parsed.awareness && typeof parsed.awareness === 'object' ? parsed.awareness : {},
       tolerance: parsed.tolerance && typeof parsed.tolerance === 'object' ? parsed.tolerance : {},
-      customNames: parsed.customNames && typeof parsed.customNames === 'object' ? parsed.customNames : {},
       patient: { ...blankState().patient, ...(parsed.patient || {}) }
     };
   } catch (error) {
@@ -58,12 +56,8 @@ function save() {
 }
 
 function allItems() { return DATA.categories.flatMap(category => category.items); }
-function itemName(item) {
-  if (!item.custom) return item.name;
-  return String(state.customNames[item.id] || '').trim();
-}
-function isActive(item) { return !item.custom || Boolean(itemName(item)); }
-function activeItems(items = allItems()) { return items.filter(isActive); }
+function itemName(item) { return item.name; }
+function activeItems(items = allItems()) { return items; }
 function codeOf(dimension, id) {
   const value = state[dimension] && state[dimension][id];
   return CODES.includes(value) ? value : 'N';
@@ -135,27 +129,7 @@ function stimulusRow(item) {
 
   const name = document.createElement('div');
   name.className = 'stimulus-name';
-  const number = `<span class="item-number">${escapeHtml(item.number)}</span>`;
-  if (item.custom) {
-    const input = document.createElement('input');
-    input.type = 'text';
-    input.className = 'custom-name';
-    input.id = `custom-${item.id}`;
-    input.maxLength = 160;
-    input.autocomplete = 'off';
-    input.placeholder = 'Add another sensory stimulus';
-    input.value = itemName(item);
-    input.setAttribute('aria-label', `Name for additional sensory stimulus ${item.number}`);
-    input.addEventListener('input', event => setCustomName(item, event.target.value));
-    const printName = document.createElement('span');
-    printName.className = 'custom-print-name';
-    printName.id = `custom-print-${item.id}`;
-    printName.textContent = itemName(item);
-    name.innerHTML = number;
-    name.append(input, printName);
-  } else {
-    name.innerHTML = `<p>${number}${escapeHtml(item.name)}</p>`;
-  }
+  name.innerHTML = `<p>${escapeHtml(item.name.toLowerCase())}</p>`;
   row.appendChild(name);
 
   row.appendChild(optionGroup(item, 'tolerance', 'Tolerance'));
@@ -167,7 +141,7 @@ function optionGroup(item, dimension, labelText) {
   const group = document.createElement('div');
   group.className = `opts opts-${dimension}`;
   group.setAttribute('role', 'radiogroup');
-  group.setAttribute('aria-label', `${labelText} change for ${itemName(item) || `additional sensory stimulus ${item.number}`}`);
+  group.setAttribute('aria-label', `${labelText} change for ${itemName(item)}`);
 
   const mobileLabel = document.createElement('span');
   mobileLabel.className = 'mobile-label';
@@ -200,7 +174,6 @@ function optionGroup(item, dimension, labelText) {
 }
 
 function setAnswer(dimension, item, code) {
-  if (item.custom && !itemName(item)) return;
   if (code === 'N') delete state[dimension][item.id];
   else state[dimension][item.id] = code;
   maybeAutofillCompletionDate();
@@ -209,34 +182,16 @@ function setAnswer(dimension, item, code) {
   refreshDashboard();
 }
 
-function setCustomName(item, value) {
-  const trimmed = value.trim();
-  if (trimmed) state.customNames[item.id] = value;
-  else {
-    delete state.customNames[item.id];
-    delete state.awareness[item.id];
-    delete state.tolerance[item.id];
-  }
-  save();
-  const printName = document.getElementById(`custom-print-${item.id}`);
-  if (printName) printName.textContent = trimmed;
-  updateRow(item);
-  refreshDashboard();
-}
-
 function updateRow(item) {
   const row = document.getElementById(`row-${item.id}`);
   if (!row) return;
-  const active = isActive(item);
-  const changed = active && (hasChange('awareness', item) || hasChange('tolerance', item));
-  row.classList.toggle('is-unused-custom', item.custom && !active);
+  const changed = hasChange('awareness', item) || hasChange('tolerance', item);
   row.classList.toggle('has-change', changed);
 
   DIMENSIONS.forEach(dimension => {
     const group = row.querySelector(`.opts-${dimension}`);
-    group.setAttribute('aria-label', `${dimension === 'awareness' ? 'Awareness' : 'Tolerance'} change for ${itemName(item) || `additional sensory stimulus ${item.number}`}`);
+    group.setAttribute('aria-label', `${dimension === 'awareness' ? 'Awareness' : 'Tolerance'} change for ${itemName(item)}`);
     group.querySelectorAll('input').forEach(input => {
-      input.disabled = item.custom && !active;
       input.checked = input.value === codeOf(dimension, item.id);
     });
   });
@@ -244,13 +199,12 @@ function updateRow(item) {
 
 function refreshDashboard() {
   const total = summarize(allItems());
-  const customCount = allItems().filter(item => item.custom && isActive(item)).length;
   document.getElementById('kpi-total').textContent = total.total;
   document.getElementById('kpi-any').textContent = total.any;
   document.getElementById('kpi-awareness').textContent = total.awarenessChanged;
   document.getElementById('kpi-tolerance').textContent = total.toleranceChanged;
   document.getElementById('kpi-both').textContent = total.both;
-  document.getElementById('kpi-custom').textContent = customCount;
+  document.getElementById('kpi-unchanged').textContent = total.total - total.any;
 
   const comparison = state.patient.comparisonPoint.trim();
   const changeText = total.any === 0
@@ -348,6 +302,9 @@ async function init() {
     const response = await fetch('data/list.json', { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     DATA = await response.json();
+    DATA.categories.forEach(category => {
+      category.items = category.items.filter(item => !item.custom);
+    });
   } catch (error) {
     document.getElementById('categories').innerHTML =
       '<p class="card">Could not load the sensory stimulus list. Open this app through its web address or a local web server.</p>';
