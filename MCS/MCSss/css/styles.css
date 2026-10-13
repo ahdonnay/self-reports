@@ -96,7 +96,19 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .dash-table th, .dash-table td { padding: 7px 8px; text-align: center; border-bottom: 1px solid var(--line); }
 .dash-table th:first-child { text-align: left; }
 .dash-table thead th { color: var(--ink-soft); font-size: .74rem; letter-spacing: .03em; text-transform: uppercase; }
-.dash-table thead tr:first-child th[colspan] { border-bottom: 2px solid #aeb5ba; }
+.dash-table .dimension-head {
+  position: relative;
+  border-bottom: 0;
+}
+.dash-table .dimension-head::after {
+  position: absolute;
+  right: 12px;
+  bottom: 0;
+  left: 12px;
+  height: 2px;
+  background: #aeb5ba;
+  content: "";
+}
 .dash-table .total-row { font-weight: 800; background: #f4f6f7; }
 
 .check-help { margin-top: 0; color: var(--ink-soft); font-size: .88rem; }
@@ -119,6 +131,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .stimulus.has-change { background: #f8f9f9; }
 .stimulus-name { min-width: 0; font-weight: 800; }
 .stimulus-name p { margin: 0; }
+.item-number { display: inline-block; min-width: 2.7rem; color: var(--ink-soft); font-size: .78rem; font-weight: 600; }
 
 .opts { display: flex; justify-content: center; gap: 5px; }
 .opts label { position: relative; margin: 0; }
@@ -219,6 +232,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .opts label:has(input:checked) { display: block; }
   .opts .opt { min-width: 0; min-height: 0; padding: 0; color: #000 !important; background: none !important; border: 0 !important; border-radius: 0; font-size: 6.5pt; line-height: 1.08; font-weight: 900; }
   .mobile-label { display: none; }
+  .item-number { min-width: 1.8rem; color: #000; font-size: 5.8pt; font-weight: 600; }
   body.print-color .site-header { background: linear-gradient(180deg, var(--header-top), var(--header-bottom)) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body.print-color .opts input[value="N"]:checked + .opt { background: var(--c-N) !important; color: #fff !important; }
   body.print-color .opts input[value="U"]:checked + .opt { background: var(--c-U) !important; color: #fff !important; }

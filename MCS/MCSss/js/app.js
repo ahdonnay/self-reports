@@ -129,7 +129,7 @@ function stimulusRow(item) {
 
   const name = document.createElement('div');
   name.className = 'stimulus-name';
-  name.innerHTML = `<p>${escapeHtml(item.name.toLowerCase())}</p>`;
+  name.innerHTML = `<p><span class="item-number">${escapeHtml(item.number)}</span>${escapeHtml(item.name.toLowerCase())}</p>`;
   row.appendChild(name);
 
   row.appendChild(optionGroup(item, 'tolerance', 'Tolerance'));
