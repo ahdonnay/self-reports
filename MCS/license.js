@@ -1,6 +1,7 @@
 'use strict';
 
 (() => {
+  const currentVersion = 'v.2026.10.13.a';
   const translations = {
     en: {
       scope: 'Except where otherwise noted, original educational content and data are licensed under',
@@ -54,7 +55,28 @@
     <p class="service-line">A Public Service of MCS Referral &amp; Resources</p>
     <p class="license-note">© 2026 Albert Donnay. ${text.scope}
       <a href="https://creativecommons.org/licenses/by-nc/4.0/" target="_blank" rel="license noopener noreferrer">CC BY-NC 4.0</a>.
-      ${text.questions}: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>`;
+      ${text.questions}: <a href="mailto:Albert@DonnayDetox.com">Albert@DonnayDetox.com</a></p>
+    <p class="official-version">The latest version compiled by Albert Donnay for MCS Referral &amp; Resources
+      (<a href="https://www.mcsrr.org/">www.mcsrr.org</a>) is available online at
+      <a href="https://ahdonnay.github.io/self-reports/MCS/">https://ahdonnay.github.io/self-reports/MCS/</a>.</p>`;
+
+  const existingVersion = document.querySelector('.version');
+  if (existingVersion) {
+    existingVersion.textContent = currentVersion;
+    new MutationObserver(() => {
+      if (existingVersion.textContent !== currentVersion) {
+        existingVersion.textContent = currentVersion;
+      }
+    }).observe(existingVersion, { childList: true, characterData: true, subtree: true });
+  } else {
+    const page = document.querySelector('main.page');
+    if (page) {
+      const version = document.createElement('p');
+      version.className = 'suite-version';
+      version.textContent = currentVersion;
+      page.prepend(version);
+    }
+  }
 
   const existing = document.querySelector('.site-footer .wrap');
   if (existing) {

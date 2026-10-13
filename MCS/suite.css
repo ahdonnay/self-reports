@@ -18,6 +18,14 @@ body {
   margin: 48px auto;
 }
 
+.suite-version {
+  margin: 0 0 10px;
+  color: #52646b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
 .page-nav {
   display: flex;
   align-items: center;
@@ -213,6 +221,7 @@ h1 {
 .suite-license p { margin: 4px 0; }
 .suite-license .service-line { color: #164f63; font-weight: 700; }
 .suite-license a { color: #164f63; }
+.suite-license .official-version { margin-top: 8px; }
 
 @media (max-width: 520px) {
   body { padding: 16px; }
