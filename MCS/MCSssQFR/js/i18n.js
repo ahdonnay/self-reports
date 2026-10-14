@@ -3,7 +3,7 @@
 window.CATSS_CONFIG = {
   locale: 'fr-CA',
   storageKey: 'mcsss.qfr.v1',
-  dataPath: '../MCSss/data/list.json?v=2026.10.13.g',
+  dataPath: '../MCSss/data/list.json?v=2026.10.13.h',
   codeLabel: {
     N: 'Aucun changement',
     Up: 'Augmentation',
