@@ -1,7 +1,7 @@
 'use strict';
 
 window.CATSS_CONFIG = {
-  locale:'it-IT', storageKey:'mcsss.it.v1', dataPath:'../MCSss/data/list.json?v=2026.10.13.h',
+  locale:'it-IT', storageKey:'mcsss.it.v1', dataPath:'../MCSss/data/list.json?v=2026.10.13.i',
   codeLabel:{N:'Nessun cambiamento',Up:'Aumento',Dn:'Diminuzione',UD:'Prima anormalmente aumentata, poi anormalmente diminuita almeno una volta nel periodo',DU:'Prima anormalmente diminuita, poi anormalmente aumentata almeno una volta nel periodo'},
   text:{
     columns:['Cambiamento nella percezione','Stimolo sensoriale','Cambiamento nella tolleranza'],awareness:'Percezione',tolerance:'Tolleranza',changeFor:(d,n)=>`Cambiamento nella ${d.toLowerCase()} per ${n}`,

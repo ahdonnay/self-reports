@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 30 20" role="img" aria-label="South Korea flag">
+  <rect width="30" height="20" fill="#fff"/>
+  <g transform="translate(15 10) rotate(-33.69)">
+    <path d="M0-4a4 4 0 1 1 0 8 2 2 0 1 0 0-4 2 2 0 1 1 0-4" fill="#cd2e3a"/>
+    <path d="M0 4a4 4 0 1 1 0-8 2 2 0 1 0 0 4 2 2 0 1 1 0 4" fill="#0047a0"/>
+  </g>
+  <g fill="#111">
+    <path d="M4.2 3.2h6v.7h-6zm0 1.35h6v.7h-6zm0 1.35h6v.7h-6z" transform="rotate(-34 7.2 4.9)"/>
+    <path d="M19.8 13.4h2.5v.7h-2.5zm3.5 0h2.5v.7h-2.5zm-3.5 1.35h2.5v.7h-2.5zm3.5 0h2.5v.7h-2.5zm-3.5 1.35h2.5v.7h-2.5zm3.5 0h2.5v.7h-2.5z" transform="rotate(-34 22.8 15.1)"/>
+    <path d="M20 3.2h2.5v.7H20zm3.5 0H26v.7h-2.5zm-3.5 1.35h6v.7h-6zM20 5.9h2.5v.7H20zm3.5 0H26v.7h-2.5z" transform="rotate(34 23 4.9)"/>
+    <path d="M4 13.4h6v.7H4zm0 1.35h2.5v.7H4zm3.5 0H10v.7H7.5zm-3.5 1.35h6v.7H4z" transform="rotate(34 7 15.1)"/>
+  </g>
+</svg>

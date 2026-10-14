@@ -10,7 +10,7 @@ window.renderCATSSPage = function renderCATSSPage() {
         <a class="suite-link no-print" href="../">&larr; ${p.suiteLink}</a>
         <h1>CATSS</h1>
         <p class="subtitle">${p.subtitle}</p>
-        <p class="version" id="version">v.2026.10.13.h</p>
+        <p class="version" id="version">v.2026.10.13.i</p>
       </div>
     </header>
     <main class="wrap" id="main">

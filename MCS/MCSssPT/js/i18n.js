@@ -1,7 +1,7 @@
 'use strict';
 
 window.CATSS_CONFIG = {
-  locale: 'pt-PT', storageKey: 'mcsss.pt.v1', dataPath: '../MCSss/data/list.json?v=2026.10.13.h',
+  locale: 'pt-PT', storageKey: 'mcsss.pt.v1', dataPath: '../MCSss/data/list.json?v=2026.10.13.i',
   codeLabel: {
     N: 'Sem alteração', Up: 'Aumento', Dn: 'Diminuição',
     UD: 'Primeiro anormalmente aumentada e depois anormalmente diminuída pelo menos uma vez durante o período',
