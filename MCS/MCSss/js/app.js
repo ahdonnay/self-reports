@@ -1,15 +1,33 @@
 /* CATSS — dual sensory-change responses, dashboard, persistence, and printing. */
 'use strict';
 
-const STORAGE_KEY = 'mcsss.v1';
+const CONFIG = window.CATSS_CONFIG || {};
+const STORAGE_KEY = CONFIG.storageKey || 'mcsss.v1';
+const DATA_PATH = CONFIG.dataPath || 'data/list.json';
 const CODES = ['N', 'U', 'D', 'M', 'W'];
 const DIMENSIONS = ['awareness', 'tolerance'];
-const CODE_LABEL = {
+const CODE_LABEL = CONFIG.codeLabel || {
   N: 'No change noticed',
   U: 'Up',
   D: 'Down',
   M: 'Mixed: first abnormally up, then down',
   W: 'Reversed: first abnormally down, then up'
+};
+const TEXT = {
+  columns: ['Change in Awareness', 'Sensory stimulus', 'Change in Tolerance'],
+  awareness: 'Awareness',
+  tolerance: 'Tolerance',
+  changeFor: (dimension, name) => `${dimension} change for ${name}`,
+  noChanges: total => `No changes selected among ${total} sensory stimuli.`,
+  someChanges: (any, total) => `${any} of ${total} stimuli have a change in Awareness, Tolerance, or both.`,
+  comparisonPoint: value => `Comparison point: ${value || 'not yet specified'}.`,
+  allStimuli: 'All sensory stimuli',
+  categoryCount: summary => `${summary.total} stimuli · A changed ${summary.awarenessChanged} · T changed ${summary.toleranceChanged}`,
+  enterComparison: 'Enter the prior comparison date or event before printing or saving the report.',
+  clearConfirmation: 'Clear all CATSS answers and personal details from this device? This cannot be undone.',
+  loadError: 'Could not load the sensory stimulus list. Open this app through its web address or a local web server.',
+  printLegend: 'A = Awareness · T = Tolerance · N no change · U up · D down · M first up then down · W first down then up',
+  ...(CONFIG.text || {})
 };
 
 let DATA = null;
@@ -102,7 +120,7 @@ function buildChecklist() {
 
     const columns = document.createElement('div');
     columns.className = 'column-head';
-    columns.innerHTML = '<span>Change in Awareness</span><span>Sensory stimulus</span><span>Change in Tolerance</span>';
+    columns.innerHTML = TEXT.columns.map(label => `<span>${escapeHtml(label)}</span>`).join('');
     section.appendChild(columns);
 
     let previousGroup = '';
@@ -125,14 +143,14 @@ function stimulusRow(item) {
   row.className = 'stimulus';
   row.id = `row-${item.id}`;
 
-  row.appendChild(optionGroup(item, 'awareness', 'Awareness'));
+  row.appendChild(optionGroup(item, 'awareness', TEXT.awareness));
 
   const name = document.createElement('div');
   name.className = 'stimulus-name';
   name.innerHTML = `<p><span class="item-number">${escapeHtml(item.number)}</span>${escapeHtml(item.name.toLowerCase())}</p>`;
   row.appendChild(name);
 
-  row.appendChild(optionGroup(item, 'tolerance', 'Tolerance'));
+  row.appendChild(optionGroup(item, 'tolerance', TEXT.tolerance));
   updateRow(item);
   return row;
 }
@@ -141,7 +159,7 @@ function optionGroup(item, dimension, labelText) {
   const group = document.createElement('div');
   group.className = `opts opts-${dimension}`;
   group.setAttribute('role', 'radiogroup');
-  group.setAttribute('aria-label', `${labelText} change for ${itemName(item)}`);
+  group.setAttribute('aria-label', TEXT.changeFor(labelText, itemName(item)));
 
   const mobileLabel = document.createElement('span');
   mobileLabel.className = 'mobile-label';
@@ -190,7 +208,8 @@ function updateRow(item) {
 
   DIMENSIONS.forEach(dimension => {
     const group = row.querySelector(`.opts-${dimension}`);
-    group.setAttribute('aria-label', `${dimension === 'awareness' ? 'Awareness' : 'Tolerance'} change for ${itemName(item)}`);
+    const dimensionLabel = dimension === 'awareness' ? TEXT.awareness : TEXT.tolerance;
+    group.setAttribute('aria-label', TEXT.changeFor(dimensionLabel, itemName(item)));
     group.querySelectorAll('input').forEach(input => {
       input.checked = input.value === codeOf(dimension, item.id);
     });
@@ -207,20 +226,18 @@ function refreshDashboard() {
   document.getElementById('kpi-unchanged').textContent = total.total - total.any;
 
   const comparison = state.patient.comparisonPoint.trim();
-  const changeText = total.any === 0
-    ? `No changes selected among ${total.total} sensory stimuli.`
-    : `${total.any} of ${total.total} stimuli have a change in Awareness, Tolerance, or both.`;
-  document.getElementById('progress').textContent = `${changeText} Comparison point: ${comparison || 'not yet specified'}.`;
+  const changeText = total.any === 0 ? TEXT.noChanges(total.total) : TEXT.someChanges(total.any, total.total);
+  document.getElementById('progress').textContent = `${changeText} ${TEXT.comparisonPoint(comparison)}`;
 
   const body = document.getElementById('dash-rows');
   body.replaceChildren();
-  body.appendChild(summaryRow('All sensory stimuli', total, true));
+  body.appendChild(summaryRow(TEXT.allStimuli, total, true));
   DATA.categories.forEach(category => {
     const summary = summarize(category.items);
     body.appendChild(summaryRow(category.name, summary));
     const count = document.getElementById(`count-${category.id}`);
     if (count) {
-      count.textContent = `${summary.total} stimuli · A changed ${summary.awarenessChanged} · T changed ${summary.toleranceChanged}`;
+      count.textContent = TEXT.categoryCount(summary);
     }
   });
 }
@@ -270,7 +287,7 @@ function todayISO() {
 function printReport(color) {
   const comparison = document.getElementById('comparison-point');
   if (!comparison.value.trim()) {
-    alert('Enter the prior comparison date or event before printing or saving the report.');
+    alert(TEXT.enterComparison);
     comparison.focus();
     comparison.scrollIntoView({ behavior: 'smooth', block: 'center' });
     return;
@@ -280,7 +297,7 @@ function printReport(color) {
 }
 
 function clearAll() {
-  if (!confirm('Clear all CATSS answers, added stimuli, and personal details from this device? This cannot be undone.')) return;
+  if (!confirm(TEXT.clearConfirmation)) return;
   try { localStorage.removeItem(STORAGE_KEY); } catch (error) { /* no-op */ }
   state = blankState();
   ['comparison-point', 'patient-id', 'sex', 'age-years', 'age-months', 'date-completed'].forEach(id => {
@@ -299,19 +316,25 @@ async function init() {
   state = load();
   save();
   try {
-    const response = await fetch('data/list.json', { cache: 'no-store' });
+    const response = await fetch(DATA_PATH, { cache: 'no-store' });
     if (!response.ok) throw new Error(`HTTP ${response.status}`);
     DATA = await response.json();
     DATA.categories.forEach(category => {
+      category.name = (CONFIG.categoryNames && CONFIG.categoryNames[category.id]) || category.name;
+      category.items.forEach(item => {
+        item.name = (CONFIG.itemNames && CONFIG.itemNames[item.id]) ?? item.name;
+        item.group = (CONFIG.groupNames && CONFIG.groupNames[item.group]) || item.group;
+      });
       category.items = category.items.filter(item => !item.custom);
     });
   } catch (error) {
     document.getElementById('categories').innerHTML =
-      '<p class="card">Could not load the sensory stimulus list. Open this app through its web address or a local web server.</p>';
+      `<p class="card">${escapeHtml(TEXT.loadError)}</p>`;
     return;
   }
 
   document.getElementById('version').textContent = DATA.version || '';
+  document.getElementById('check-h').dataset.printLegend = TEXT.printLegend;
   buildChecklist();
   bindPatientFields();
   refreshDashboard();

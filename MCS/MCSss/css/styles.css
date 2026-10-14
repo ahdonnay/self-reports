@@ -224,7 +224,7 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .dash-table th, .dash-table td { padding: 2px 3px; border-color: #999; }
   .checklist { break-before: page; page-break-before: always; }
   .wrap-h { margin: 0 0 3px; font-size: 11pt; }
-  .wrap-h::after { content: "A = Awareness · T = Tolerance · N no change · U up · D down · M first up then down · W first down then up"; display: block; margin-top: 1px; font-size: 6pt; font-weight: 400; }
+  .wrap-h::after { content: attr(data-print-legend); display: block; margin-top: 1px; font-size: 6pt; font-weight: 400; }
   #categories { column-count: 3; column-gap: .18in; column-rule: .5pt solid #aaa; }
   .cat { margin: 0 0 5px; border: 0; overflow: visible; break-inside: auto; }
   .cat > h3 { display: block; margin: 0 0 1px; padding: 2px 3px; background: #ddd !important; border: 1px solid #777; font-size: 7pt; line-height: 1.1; break-after: avoid; }

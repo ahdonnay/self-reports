@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="fr-CA">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>CATSS — Changements de la perception et de la tolérance aux stimuli sensoriels</title>
+  <link rel="stylesheet" href="../MCSss/css/styles.css?v=2026.10.13.f">
+</head>
+<body>
+  <header class="site-header" role="banner">
+    <div class="wrap">
+      <a class="suite-link no-print" href="../">&larr; Historique de la SCM</a>
+      <h1>CATSS</h1>
+      <p class="subtitle">Changements de la perception et de la tolérance aux stimuli sensoriels</p>
+      <p class="version" id="version">v.2026.10.13.f</p>
+    </div>
+  </header>
+
+  <main class="wrap" id="main">
+    <section class="card instructions" aria-labelledby="instr-h">
+      <h2 id="instr-h">À propos de cette liste de vérification</h2>
+      <p>CATSS consigne les changements de deux réactions distinctes aux stimuli sensoriels depuis une date ou un
+        évènement antérieur que vous précisez. La <strong>perception</strong> correspond au niveau d’un stimulus que
+        vous remarquez. La <strong>tolérance</strong> correspond au niveau maximal de ce stimulus que vous pouvez
+        tolérer. Un changement de l’une n’entraîne pas nécessairement le même changement de l’autre.</p>
+
+      <h3>Comment remplir la liste CATSS</h3>
+      <p>Pour la perception et la tolérance, choisissez une réponse pour chaque stimulus :</p>
+      <ul class="legend">
+        <li><span class="code code-N">N</span> <strong>Aucun changement remarqué</strong></li>
+        <li><span class="code code-U">U</span> <strong>Augmentation</strong></li>
+        <li><span class="code code-D">D</span> <strong>Diminution</strong></li>
+        <li><span class="code code-M">M</span> <strong>Mixte</strong> = d’abord anormalement élevée, puis diminuée</li>
+        <li><span class="code code-W">W</span> <strong>Inversée</strong> = d’abord anormalement diminuée, puis élevée</li>
+      </ul>
+      <p>Chaque réponse commence à <strong>N</strong>. Si vous ne savez pas si votre perception ou votre tolérance a
+        changé, laissez N. « Augmentation » et « diminution » indiquent le sens du changement, et non s’il était bon
+        ou mauvais. Le tableau de bord se met à jour automatiquement et vos réponses sont enregistrées dans ce
+        navigateur sur cet appareil.</p>
+
+      <p class="note"><strong>Distinction importante :</strong> Une perception accrue peut s’accompagner d’une
+        tolérance accrue, inchangée ou diminuée. Consignez les deux colonnes indépendamment.</p>
+      <p class="clinical-note"><strong>Note clinique :</strong> CATSS est une autoévaluation structurée, et non un
+        test diagnostique. Discutez de tout changement sensoriel important ou soudain avec un clinicien qualifié.</p>
+
+      <details class="privacy">
+        <summary>Confidentialité et vos données</summary>
+        <p>Vos réponses sont enregistrées uniquement dans ce navigateur, sur cet appareil. Rien n’est transmis à un
+          serveur. Toute personne utilisant ce profil de navigateur peut voir vos réponses; sur un ordinateur partagé
+          ou public, utilisez <strong>Effacer les réponses</strong> lorsque vous avez terminé. Pour transférer votre
+          rapport vers un autre appareil, utilisez Imprimer &rarr; Enregistrer au format PDF dans votre navigateur.</p>
+      </details>
+    </section>
+
+    <section class="card" aria-labelledby="who-h">
+      <h2 id="who-h">Vos renseignements et point de comparaison</h2>
+      <div class="fields">
+        <div class="field field-wide comparison-field">
+          <label for="comparison-point">Date ou évènement de comparaison</label>
+          <input type="text" id="comparison-point" maxlength="120" autocomplete="off"
+                 placeholder="p. ex. avant la maladie, avant la dernière visite clinique ou 2024.06">
+          <p class="hint">Toutes les réponses sur la perception et la tolérance comparent votre expérience actuelle à cette même date ou à ce même évènement antérieur.</p>
+        </div>
+        <div class="field field-wide">
+          <label for="patient-id">Nom ou nom de code</label>
+          <input type="text" id="patient-id" maxlength="60" autocomplete="off"
+                 placeholder="p. ex. Jeanne Tremblay — ou un nom de code de trois mots">
+          <p class="hint">Inscrivez votre nom pour un rapport destiné à un clinicien, ou utilisez un nom de code privé si vous préférez.</p>
+        </div>
+        <div class="field">
+          <label for="sex">Sexe à la naissance</label>
+          <select id="sex">
+            <option value="">—</option>
+            <option value="Female">Femme</option>
+            <option value="Male">Homme</option>
+            <option value="Intersex">Intersexe</option>
+            <option value="Prefer not to say">Préfère ne pas répondre</option>
+          </select>
+        </div>
+        <div class="field field-narrow">
+          <label for="age-years">Âge — années</label>
+          <input type="number" id="age-years" min="0" max="120" inputmode="numeric" placeholder="Années">
+        </div>
+        <div class="field field-narrow">
+          <label for="age-months">Âge — mois</label>
+          <input type="number" id="age-months" min="0" max="11" inputmode="numeric" placeholder="Mois">
+        </div>
+        <div class="field">
+          <label for="date-completed">Date de remplissage</label>
+          <input type="date" id="date-completed">
+          <p class="hint">Se remplit automatiquement après le premier changement consigné; vous pouvez la modifier.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="card dashboard" aria-labelledby="dash-h">
+      <h2 id="dash-h">Tableau de bord</h2>
+      <p class="dash-progress" id="progress" aria-live="polite"></p>
+      <div class="kpis" role="group" aria-label="Résumé global">
+        <div class="kpi"><span class="kpi-num" id="kpi-total">100</span><span class="kpi-label">Stimuli répertoriés</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-any">0</span><span class="kpi-label">Tout changement</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-awareness">0</span><span class="kpi-label">Perception modifiée</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-tolerance">0</span><span class="kpi-label">Tolérance modifiée</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-both">0</span><span class="kpi-label">Les deux modifiées</span></div>
+        <div class="kpi"><span class="kpi-num" id="kpi-unchanged">100</span><span class="kpi-label">Aucun changement des deux</span></div>
+      </div>
+      <p class="dash-foot">Les comptes comprennent chaque stimulus répertorié. N signifie aucun changement remarqué.
+        U, D, M et W sont résumés séparément pour la perception (P) et la tolérance (T).</p>
+      <div class="table-scroll" tabindex="0" aria-label="Résumé défilant par catégorie">
+        <table class="dash-table" aria-live="polite">
+          <caption class="sr-only">Changements par catégorie sensorielle</caption>
+          <thead>
+            <tr>
+              <th scope="col" rowspan="2">Catégorie</th><th scope="col" rowspan="2">Stimuli</th>
+              <th class="dimension-head" scope="colgroup" colspan="5">Perception</th>
+              <th class="dimension-head" scope="colgroup" colspan="5">Tolérance</th>
+            </tr>
+            <tr>
+              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
+              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
+            </tr>
+          </thead>
+          <tbody id="dash-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="checklist" aria-labelledby="check-h">
+      <h2 id="check-h" class="wrap-h">Liste des stimuli sensoriels</h2>
+      <p class="check-help wrap-h">Choisissez la perception à gauche et la tolérance à droite.</p>
+      <div id="categories"></div>
+    </section>
+
+    <section class="card actions no-print" aria-labelledby="act-h">
+      <h2 id="act-h">Terminer</h2>
+      <p class="share-tip">Pour partager votre rapport, enregistrez-le d’abord en PDF au moyen d’un bouton ci-dessous,
+        puis joignez le PDF à un courriel ou à un message de discussion.</p>
+      <div class="buttons">
+        <button type="button" id="btn-print-bw" class="btn btn-primary">Imprimer le rapport (noir et blanc, tableau de bord en premier)</button>
+        <button type="button" id="btn-print-color" class="btn">Enregistrer le rapport en PDF couleur</button>
+        <button type="button" id="btn-clear" class="btn btn-danger">Effacer les réponses</button>
+      </div>
+      <p class="hint">« Enregistrer au format PDF » apparaît comme destination dans la fenêtre d’impression du
+        navigateur. L’effacement supprime toutes les données CATSS de cet appareil, sans effacer les autres rapports
+        de l’Historique de la SCM.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer no-print"><div class="wrap"></div></footer>
+
+  <script src="js/i18n.js?v=2026.10.13.f"></script>
+  <script src="../MCSss/js/app.js?v=2026.10.13.f"></script>
+  <script src="../license.js?v=2026.10.13.f"></script>
+</body>
+</html>
