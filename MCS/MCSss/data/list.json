@@ -1,13 +1,13 @@
 {
-  "version": "v.2026.10.13.f",
+  "version": "v.2026.10.13.g",
   "report": "CATSS",
   "title": "Changes in Awareness and Tolerance of Sensory Stimuli",
   "codes": {
-    "N": "No change noticed",
-    "U": "Up",
-    "D": "Down",
-    "M": "Mixed: first abnormally up, then down",
-    "W": "Reversed: first abnormally down, then up"
+    "N": "No change",
+    "Up": "Up",
+    "Dn": "Down",
+    "UD": "First abnormally up, then abnormally down at least once during the time period",
+    "DU": "First abnormally down, then abnormally up at least once during the time period"
   },
   "categories": [
     {

@@ -7,7 +7,7 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>CATSS — Changes in Awareness and Tolerance of Sensory Stimuli</title>
-  <link rel="stylesheet" href="css/styles.css?v=2026.10.13.f">
+  <link rel="stylesheet" href="css/styles.css?v=2026.10.13.g">
 </head>
 <body>
   <header class="site-header" role="banner">
@@ -15,7 +15,7 @@
       <a class="suite-link no-print" href="../">&larr; History of MCS</a>
       <h1>CATSS</h1>
       <p class="subtitle">Changes in Awareness and Tolerance of Sensory Stimuli</p>
-      <p class="version" id="version">v.2026.10.13.f</p>
+      <p class="version" id="version">v.2026.10.13.g</p>
     </div>
   </header>
 
@@ -30,11 +30,11 @@
       <h3>How to complete CATSS</h3>
       <p>For both Awareness and Tolerance, choose one response for each stimulus:</p>
       <ul class="legend">
-        <li><span class="code code-N">N</span> <strong>No change noticed</strong></li>
-        <li><span class="code code-U">U</span> <strong>Up</strong></li>
-        <li><span class="code code-D">D</span> <strong>Down</strong></li>
-        <li><span class="code code-M">M</span> <strong>Mixed</strong> = first abnormally up, then down</li>
-        <li><span class="code code-W">W</span> <strong>Reversed</strong> = first abnormally down, then up</li>
+        <li><span class="code code-N">N</span> <strong>No change</strong></li>
+        <li><span class="code code-Up">Up</span> <strong>Up</strong></li>
+        <li><span class="code code-Dn">Dn</span> <strong>Down</strong></li>
+        <li><span class="code code-UD">UD</span> <strong>Up then Down</strong> = first abnormally up, then abnormally down at least once during the time period</li>
+        <li><span class="code code-DU">DU</span> <strong>Down then Up</strong> = first abnormally down, then abnormally up at least once during the time period</li>
       </ul>
       <p>Every response starts at <strong>N</strong>. If you are unsure whether your awareness or tolerance changed,
         leave it at N. “Up” and “down” describe the direction of change, not whether the change was good or bad.
@@ -106,7 +106,7 @@
         <div class="kpi"><span class="kpi-num" id="kpi-both">0</span><span class="kpi-label">Both changed</span></div>
         <div class="kpi"><span class="kpi-num" id="kpi-unchanged">100</span><span class="kpi-label">No change in either</span></div>
       </div>
-      <p class="dash-foot">Counts include each listed stimulus. N means no change noticed. U, D, M, and W are
+      <p class="dash-foot">Counts include each listed stimulus. N means no change. Up, Dn, UD, and DU are
         summarized separately for Awareness (A) and Tolerance (T).</p>
       <div class="table-scroll" tabindex="0" aria-label="Scrollable category summary">
         <table class="dash-table" aria-live="polite">
@@ -118,8 +118,8 @@
               <th class="dimension-head" scope="colgroup" colspan="5">Tolerance</th>
             </tr>
             <tr>
-              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
-              <th scope="col">N</th><th scope="col">U</th><th scope="col">D</th><th scope="col">M</th><th scope="col">W</th>
+              <th scope="col">N</th><th scope="col">Up</th><th scope="col">Dn</th><th scope="col">UD</th><th scope="col">DU</th>
+              <th scope="col">N</th><th scope="col">Up</th><th scope="col">Dn</th><th scope="col">UD</th><th scope="col">DU</th>
             </tr>
           </thead>
           <tbody id="dash-rows"></tbody>
@@ -151,7 +151,7 @@
     <div class="wrap"></div>
   </footer>
 
-  <script src="js/app.js?v=2026.10.13.f"></script>
-  <script src="../license.js?v=2026.10.13.f"></script>
+  <script src="js/app.js?v=2026.10.13.g"></script>
+  <script src="../license.js?v=2026.10.13.g"></script>
 </body>
 </html>

@@ -3,13 +3,13 @@
 window.CATSS_CONFIG = {
   locale: 'es-419',
   storageKey: 'mcsss.nas.v1',
-  dataPath: '../MCSss/data/list.json?v=2026.10.13.f',
+  dataPath: '../MCSss/data/list.json?v=2026.10.13.g',
   codeLabel: {
-    N: 'Ningún cambio notado',
-    U: 'Aumento',
-    D: 'Disminución',
-    M: 'Mixto: primero aumentó de manera anormal y luego disminuyó',
-    W: 'Invertido: primero disminuyó de manera anormal y luego aumentó'
+    N: 'Sin cambio',
+    Up: 'Aumento',
+    Dn: 'Disminución',
+    UD: 'Primero aumentó de manera anormal y después disminuyó de manera anormal al menos una vez durante el periodo',
+    DU: 'Primero disminuyó de manera anormal y después aumentó de manera anormal al menos una vez durante el periodo'
   },
   text: {
     columns: ['Cambio en la percepción', 'Estímulo sensorial', 'Cambio en la tolerancia'],
@@ -24,7 +24,7 @@ window.CATSS_CONFIG = {
     enterComparison: 'Ingrese la fecha o el evento anterior de comparación antes de imprimir o guardar el informe.',
     clearConfirmation: '¿Borrar todas las respuestas de CATSS y los datos personales de este dispositivo? Esta acción no se puede deshacer.',
     loadError: 'No se pudo cargar la lista de estímulos sensoriales. Abra esta aplicación mediante su dirección web o un servidor local.',
-    printLegend: 'P = Percepción · T = Tolerancia · N sin cambio · U aumento · D disminución · M primero aumentó y luego disminuyó · W primero disminuyó y luego aumentó'
+    printLegend: 'P = Percepción · T = Tolerancia · N sin cambio · Up aumento · Dn disminución · UD primero aumentó de manera anormal y después disminuyó · DU primero disminuyó de manera anormal y después aumentó'
   },
   categoryNames: {
     'catss-1': 'Estímulos físicos externos detectados o imaginados por los sentidos primarios',

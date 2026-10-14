@@ -11,10 +11,10 @@
   --focus: #165f9d;
   --danger: #9c2935;
   --c-N: #707b82;
-  --c-U: #32768a;
-  --c-D: #a2662c;
-  --c-M: #75548e;
-  --c-W: #9b4051;
+  --c-Up: #32768a;
+  --c-Dn: #a2662c;
+  --c-UD: #75548e;
+  --c-DU: #9b4051;
   --radius: 10px;
 }
 
@@ -60,10 +60,10 @@ h3 { margin: 18px 0 6px; font-size: 1.05rem; }
   width: 27px; height: 27px; border-radius: 6px; color: #fff; font-size: .9rem; font-weight: 800;
 }
 .code-N { background: var(--c-N); }
-.code-U { background: var(--c-U); }
-.code-D { background: var(--c-D); }
-.code-M { background: var(--c-M); }
-.code-W { background: var(--c-W); }
+.code-Up { background: var(--c-Up); }
+.code-Dn { background: var(--c-Dn); }
+.code-UD { background: var(--c-UD); }
+.code-DU { background: var(--c-DU); }
 .note, .share-tip { padding: 10px 14px; background: #eceff1; border-left: 4px solid var(--accent); border-radius: 6px; }
 .clinical-note { padding: 10px 14px; background: #fff8e5; border-left: 4px solid #a47818; border-radius: 6px; }
 .privacy { margin-top: 14px; }
@@ -147,10 +147,10 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .opts input:focus-visible + .opt { outline: 3px solid var(--focus); outline-offset: 2px; }
 .opts input:checked + .opt { color: #fff; border-color: transparent; }
 .opts input[value="N"]:checked + .opt { background: var(--c-N); }
-.opts input[value="U"]:checked + .opt { background: var(--c-U); }
-.opts input[value="D"]:checked + .opt { background: var(--c-D); }
-.opts input[value="M"]:checked + .opt { background: var(--c-M); }
-.opts input[value="W"]:checked + .opt { background: var(--c-W); }
+.opts input[value="Up"]:checked + .opt { background: var(--c-Up); }
+.opts input[value="Dn"]:checked + .opt { background: var(--c-Dn); }
+.opts input[value="UD"]:checked + .opt { background: var(--c-UD); }
+.opts input[value="DU"]:checked + .opt { background: var(--c-DU); }
 .opts input:disabled + .opt { cursor: not-allowed; opacity: .45; }
 .mobile-label { display: none; }
 
@@ -243,8 +243,8 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .item-number { min-width: 1.8rem; color: #000; font-size: 5.8pt; font-weight: 600; }
   body.print-color .site-header { background: linear-gradient(180deg, var(--header-top), var(--header-bottom)) !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
   body.print-color .opts input[value="N"]:checked + .opt { background: var(--c-N) !important; color: #fff !important; }
-  body.print-color .opts input[value="U"]:checked + .opt { background: var(--c-U) !important; color: #fff !important; }
-  body.print-color .opts input[value="D"]:checked + .opt { background: var(--c-D) !important; color: #fff !important; }
-  body.print-color .opts input[value="M"]:checked + .opt { background: var(--c-M) !important; color: #fff !important; }
-  body.print-color .opts input[value="W"]:checked + .opt { background: var(--c-W) !important; color: #fff !important; }
+  body.print-color .opts input[value="Up"]:checked + .opt { background: var(--c-Up) !important; color: #fff !important; }
+  body.print-color .opts input[value="Dn"]:checked + .opt { background: var(--c-Dn) !important; color: #fff !important; }
+  body.print-color .opts input[value="UD"]:checked + .opt { background: var(--c-UD) !important; color: #fff !important; }
+  body.print-color .opts input[value="DU"]:checked + .opt { background: var(--c-DU) !important; color: #fff !important; }
 }

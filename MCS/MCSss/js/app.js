@@ -4,14 +4,15 @@
 const CONFIG = window.CATSS_CONFIG || {};
 const STORAGE_KEY = CONFIG.storageKey || 'mcsss.v1';
 const DATA_PATH = CONFIG.dataPath || 'data/list.json';
-const CODES = ['N', 'U', 'D', 'M', 'W'];
+const CODES = ['N', 'Up', 'Dn', 'UD', 'DU'];
+const LEGACY_CODES = { U: 'Up', D: 'Dn', M: 'UD', W: 'DU' };
 const DIMENSIONS = ['awareness', 'tolerance'];
 const CODE_LABEL = CONFIG.codeLabel || {
-  N: 'No change noticed',
-  U: 'Up',
-  D: 'Down',
-  M: 'Mixed: first abnormally up, then down',
-  W: 'Reversed: first abnormally down, then up'
+  N: 'No change',
+  Up: 'Up',
+  Dn: 'Down',
+  UD: 'First abnormally up, then abnormally down at least once during the time period',
+  DU: 'First abnormally down, then abnormally up at least once during the time period'
 };
 const TEXT = {
   columns: ['Change in Awareness', 'Sensory stimulus', 'Change in Tolerance'],
@@ -26,7 +27,7 @@ const TEXT = {
   enterComparison: 'Enter the prior comparison date or event before printing or saving the report.',
   clearConfirmation: 'Clear all CATSS answers and personal details from this device? This cannot be undone.',
   loadError: 'Could not load the sensory stimulus list. Open this app through its web address or a local web server.',
-  printLegend: 'A = Awareness · T = Tolerance · N no change · U up · D down · M first up then down · W first down then up',
+  printLegend: 'A = Awareness · T = Tolerance · N no change · Up up · Dn down · UD first abnormally up then down · DU first abnormally down then up',
   ...(CONFIG.text || {})
 };
 
@@ -50,6 +51,14 @@ function blankState() {
   };
 }
 
+function normalizeAnswers(answers) {
+  if (!answers || typeof answers !== 'object') return {};
+  return Object.fromEntries(Object.entries(answers).flatMap(([id, value]) => {
+    const normalized = LEGACY_CODES[value] || value;
+    return CODES.includes(normalized) && normalized !== 'N' ? [[id, normalized]] : [];
+  }));
+}
+
 function load() {
   try {
     const raw = localStorage.getItem(STORAGE_KEY);
@@ -59,8 +68,8 @@ function load() {
       ...blankState(),
       ...parsed,
       schema: 1,
-      awareness: parsed.awareness && typeof parsed.awareness === 'object' ? parsed.awareness : {},
-      tolerance: parsed.tolerance && typeof parsed.tolerance === 'object' ? parsed.tolerance : {},
+      awareness: normalizeAnswers(parsed.awareness),
+      tolerance: normalizeAnswers(parsed.tolerance),
       patient: { ...blankState().patient, ...(parsed.patient || {}) }
     };
   } catch (error) {
@@ -78,7 +87,8 @@ function itemName(item) { return item.name; }
 function activeItems(items = allItems()) { return items; }
 function codeOf(dimension, id) {
   const value = state[dimension] && state[dimension][id];
-  return CODES.includes(value) ? value : 'N';
+  const normalized = LEGACY_CODES[value] || value;
+  return CODES.includes(normalized) ? normalized : 'N';
 }
 function hasChange(dimension, item) { return codeOf(dimension, item.id) !== 'N'; }
 

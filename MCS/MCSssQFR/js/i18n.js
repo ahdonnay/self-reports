@@ -3,13 +3,13 @@
 window.CATSS_CONFIG = {
   locale: 'fr-CA',
   storageKey: 'mcsss.qfr.v1',
-  dataPath: '../MCSss/data/list.json?v=2026.10.13.f',
+  dataPath: '../MCSss/data/list.json?v=2026.10.13.g',
   codeLabel: {
-    N: 'Aucun changement remarqué',
-    U: 'Augmentation',
-    D: 'Diminution',
-    M: 'Mixte : d’abord anormalement élevée, puis diminuée',
-    W: 'Inversée : d’abord anormalement diminuée, puis élevée'
+    N: 'Aucun changement',
+    Up: 'Augmentation',
+    Dn: 'Diminution',
+    UD: 'D’abord anormalement élevée, puis anormalement diminuée au moins une fois pendant la période',
+    DU: 'D’abord anormalement diminuée, puis anormalement élevée au moins une fois pendant la période'
   },
   text: {
     columns: ['Changement de perception', 'Stimulus sensoriel', 'Changement de tolérance'],
@@ -24,7 +24,7 @@ window.CATSS_CONFIG = {
     enterComparison: 'Inscrivez la date ou l’évènement antérieur de comparaison avant d’imprimer ou d’enregistrer le rapport.',
     clearConfirmation: 'Effacer toutes les réponses CATSS et les renseignements personnels de cet appareil? Cette action est irréversible.',
     loadError: 'Impossible de charger la liste des stimuli sensoriels. Ouvrez l’application à partir de son adresse Web ou d’un serveur local.',
-    printLegend: 'P = Perception · T = Tolérance · N aucun changement · U augmentation · D diminution · M d’abord élevée puis diminuée · W d’abord diminuée puis élevée'
+    printLegend: 'P = Perception · T = Tolérance · N aucun changement · Up augmentation · Dn diminution · UD d’abord anormalement élevée puis diminuée · DU d’abord anormalement diminuée puis élevée'
   },
   categoryNames: {
     'catss-1': 'Stimuli physiques externes détectés ou imaginés par les sens primaires',

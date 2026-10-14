@@ -5,11 +5,11 @@ window.CATSS_CONFIG = {
   locale: 'es-ES',
   storageKey: 'mcsss.es.v1',
   codeLabel: {
-    N: 'Ningún cambio percibido',
-    U: 'Aumento',
-    D: 'Disminución',
-    M: 'Mixto: primero aumentó de manera anormal y después disminuyó',
-    W: 'Invertido: primero disminuyó de manera anormal y después aumentó'
+    N: 'Sin cambio',
+    Up: 'Aumento',
+    Dn: 'Disminución',
+    UD: 'Primero aumentó de manera anormal y después disminuyó de manera anormal al menos una vez durante el periodo',
+    DU: 'Primero disminuyó de manera anormal y después aumentó de manera anormal al menos una vez durante el periodo'
   },
   text: {
     ...window.CATSS_CONFIG.text,
@@ -18,7 +18,7 @@ window.CATSS_CONFIG = {
     enterComparison: 'Introduzca la fecha o el suceso anterior de comparación antes de imprimir o guardar el informe.',
     clearConfirmation: '¿Borrar todas las respuestas de CATSS y los datos personales de este dispositivo? Esta acción no se puede deshacer.',
     loadError: 'No se ha podido cargar la lista de estímulos sensoriales. Abra esta aplicación mediante su dirección web o un servidor local.',
-    printLegend: 'P = Percepción · T = Tolerancia · N sin cambio · U aumento · D disminución · M primero aumentó y después disminuyó · W primero disminuyó y después aumentó'
+    printLegend: 'P = Percepción · T = Tolerancia · N sin cambio · Up aumento · Dn disminución · UD primero aumentó de manera anormal y después disminuyó · DU primero disminuyó de manera anormal y después aumentó'
   },
   itemNames: {
     ...window.CATSS_CONFIG.itemNames,
