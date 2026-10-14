@@ -7,17 +7,17 @@
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="Expires" content="0">
   <title>History of MCS</title>
-  <link rel="stylesheet" href="suite.css?v=26.10.13.4">
+  <link rel="stylesheet" href="suite.css?v=26.10.14.1">
 </head>
 <body>
   <main class="page">
-    <p class="version suite-version">v.2026.10.14.b</p>
+    <p class="version suite-version">v.2026.10.14.c</p>
     <div class="landing-header">
       <div>
         <p class="eyebrow">Multiple Chemical Sensitivity</p>
         <h1>History of MCS</h1>
         <p class="intro landing-intro">
-          <span>Choose from 4 reports, each available in 12 languages.</span>
+          <span>Choose from 4 reports available in 12 languages that list MCS Biomarkers, Comorbid Disorders, Sensory Changes, and Treatments.</span>
           <span>Note translations are by ChatGPT from English and may contain errors.</span>
           <span>Latest versions available at <a href="https://ahdonnay.github.io/self-reports/MCS/">https://ahdonnay.github.io/self-reports/MCS/</a></span>
         </p>
@@ -29,7 +29,8 @@
       </a>
     </div>
 
-    <div class="choices">
+    <div class="report-groups">
+      <section class="choices report-group report-disorders" aria-label="MCS Comorbid Disorders">
       <a class="choice" href="MCSdx/">
         <h2><img class="flag" src="flags/ph.svg" alt="Philippines" title="English — U.S. spelling"> Disorders</h2>
         <p>Disorders Associated with Chemical Sensitivity in Some (DACSS)</p>
@@ -78,6 +79,8 @@
         <h2><img class="flag" src="flags/jp.svg" alt="日本"> 関連疾患</h2>
         <p>一部の人における化学物質過敏症関連疾患（DACSS）</p>
       </a>
+      </section>
+      <section class="choices report-group report-biomarkers" aria-label="MCS Biomarkers">
       <a class="choice" href="MCSbm/">
         <h2><img class="flag" src="flags/ph.svg" alt="Philippines" title="English — U.S. spelling"> Biomarkers</h2>
         <p>Biomarker Abnormalities Associated with Chemical Sensitivity in Some (BAACSS)</p>
@@ -126,6 +129,8 @@
         <h2><img class="flag" src="flags/jp.svg" alt="日本"> バイオマーカー</h2>
         <p>一部の人における化学物質過敏症関連バイオマーカー異常（BAACSS）</p>
       </a>
+      </section>
+      <section class="choices report-group report-treatments" aria-label="MCS Treatments">
       <a class="choice" href="MCStx/">
         <h2><img class="flag" src="flags/ph.svg" alt="Philippines" title="English — U.S. spelling"> Treatments</h2>
         <p>Treatments to Retry, Avoid, or Continue Taking for Sensory Sensitivities (TRACTSS)</p>
@@ -174,6 +179,8 @@
         <h2><img class="flag" src="flags/jp.svg" alt="日本"> 治療</h2>
         <p>感覚過敏に対して再試行、回避、または継続する治療（TRACTSS）</p>
       </a>
+      </section>
+      <section class="choices report-group report-sensory" aria-label="MCS Sensory Changes">
       <a class="choice" href="MCSss/">
         <h2><img class="flag" src="flags/ph.svg" alt="Philippines" title="English — U.S. spelling"> Sensory Changes</h2>
         <p>Changes in Awareness and Tolerance of Sensory Stimuli (CATSS)</p>
@@ -222,6 +229,7 @@
         <h2><img class="flag" src="flags/jp.svg" alt="日本"> 感覚の変化</h2>
         <p>感覚刺激に対する感知と耐容の変化（CATSS）</p>
       </a>
+      </section>
       <!-- Hidden until the Exposures report is ready and localized. -->
       <a class="choice" href="MCSex/" hidden>
         <h2><img class="flag" src="flags/ph.svg" alt="Philippines" title="English — U.S. spelling"> Exposures</h2>

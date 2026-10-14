@@ -123,6 +123,22 @@ h1 {
   gap: 11px;
 }
 
+.report-groups {
+  display: flex;
+  flex-direction: column;
+}
+
+.report-biomarkers { order: 1; }
+.report-disorders { order: 2; }
+.report-sensory { order: 3; }
+.report-treatments { order: 4; }
+
+.report-group:not(.report-biomarkers) {
+  margin-top: 22px;
+  padding-top: 22px;
+  border-top: 1px solid #b8cbd3;
+}
+
 .choice {
   min-height: 108px;
   padding: 15px 16px;
