@@ -85,17 +85,19 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
 .hint { margin: 4px 0 0; color: var(--ink-soft); font-size: .85rem; }
 
 .dashboard { border-color: #bfc6ca; }
-.dash-progress { margin: 0 0 14px; color: var(--accent-dark); font-weight: 700; }
+.dash-progress { margin: 0 0 14px; color: var(--accent-dark); font-size: 1.35rem; font-weight: 700; }
 .kpis { display: grid; grid-template-columns: repeat(6, 1fr); gap: 12px; }
 .kpi { padding: 10px 8px; text-align: center; background: #f7f8f8; border: 1px solid var(--line); border-radius: 8px; }
-.kpi-num { display: block; color: var(--accent-dark); font-size: 1.55rem; font-weight: 800; }
-.kpi-label { display: block; margin-top: 2px; color: var(--ink-soft); font-size: .76rem; }
-.dash-foot { margin: 12px 0 4px; color: var(--ink-soft); font-size: .82rem; }
+.kpi-num { display: block; color: var(--accent-dark); font-size: 1.35rem; font-weight: 800; }
+.kpi-label { display: block; margin-top: 2px; color: var(--ink-soft); font-size: 1.35rem; line-height: 1.2; }
+.dash-foot { margin: 16px 0 8px; color: var(--ink-soft); font-size: 1.35rem; line-height: 1.35; }
 .table-scroll { overflow-x: auto; }
-.dash-table { width: 100%; min-width: 780px; margin-top: 12px; border-collapse: collapse; font-size: .88rem; }
-.dash-table th, .dash-table td { padding: 7px 8px; text-align: center; border-bottom: 1px solid var(--line); }
-.dash-table th:first-child { text-align: left; }
-.dash-table thead th { color: var(--ink-soft); font-size: .74rem; letter-spacing: .03em; text-transform: uppercase; }
+.dash-table { width: 100%; min-width: 820px; margin-top: 12px; border-collapse: collapse; table-layout: fixed; font-size: 1.35rem; }
+.dash-table th, .dash-table td { padding: 10px 7px; text-align: center; border-bottom: 1px solid var(--line); }
+.dash-table thead tr:first-child th:first-child,
+.dash-table tbody th:first-child { width: 38%; text-align: left; white-space: normal; overflow-wrap: anywhere; }
+.dash-table thead tr:first-child th:nth-child(2) { width: 8%; }
+.dash-table thead th { color: var(--ink-soft); font-size: 1.35rem; line-height: 1.2; letter-spacing: .01em; text-transform: uppercase; }
 .dash-table .dimension-head {
   position: relative;
   border-bottom: 0;
@@ -185,6 +187,10 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .field-wide, .field:first-child { grid-column: 1 / -1; }
   .legend { grid-template-columns: 1fr; }
   .kpis { grid-template-columns: repeat(2, 1fr); }
+  .dash-table { min-width: 760px; }
+  .dash-table thead tr:first-child th:first-child,
+  .dash-table tbody th:first-child { width: 34%; }
+  .dash-table thead tr:first-child th:nth-child(2) { width: 9%; }
   .cat > h3 { align-items: flex-start; flex-direction: column; gap: 2px; }
   .cat-count { white-space: normal; }
   .stimulus { grid-template-columns: 1fr; grid-template-areas: "name" "awareness" "tolerance"; }
@@ -210,9 +216,11 @@ input:focus, select:focus, button:focus, summary:focus, [tabindex]:focus {
   .hint { display: none; }
   .kpis { grid-template-columns: repeat(6, 1fr); gap: 4px; }
   .kpi { padding: 4px; background: #fff !important; border-color: #888; }
+  .dash-progress { font-size: 8pt; }
   .kpi-num { color: #000; font-size: 12pt; }
   .kpi-label, .dash-foot { color: #000; font-size: 6.8pt; }
   .dash-table { min-width: 0; margin-top: 5px; font-size: 6.8pt; }
+  .dash-table thead th { font-size: 6.8pt; }
   .dash-table th, .dash-table td { padding: 2px 3px; border-color: #999; }
   .checklist { break-before: page; page-break-before: always; }
   .wrap-h { margin: 0 0 3px; font-size: 11pt; }

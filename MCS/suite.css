@@ -14,7 +14,7 @@ body {
 }
 
 .page {
-  width: min(100%, 900px);
+  width: min(100%, 1320px);
   margin: 48px auto;
 }
 
@@ -211,7 +211,7 @@ h1 {
 }
 
 .suite-license {
-  width: min(100%, 900px);
+  width: min(100%, 1320px);
   margin: 20px auto 48px;
   color: #425b66;
   font-size: 0.78rem;
@@ -222,6 +222,10 @@ h1 {
 .suite-license .service-line { color: #164f63; font-weight: 700; }
 .suite-license a { color: #164f63; }
 .suite-license .official-version { margin-top: 8px; }
+
+@media (min-width: 1280px) {
+  .choices { grid-template-columns: repeat(6, minmax(0, 1fr)); }
+}
 
 @media (max-width: 520px) {
   body { padding: 16px; }
